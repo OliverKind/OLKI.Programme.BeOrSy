@@ -97,7 +97,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
         /// <summary>
         /// Date when the application was published
         /// </summary>
-        private DateTime? _dateCreated = new DateTime();
+        private DateTime? _dateCreated = null;
         [Category("Sonstiges")]
         [Description("Datum als die Bewerbung angelegt wurde.")]
         [DisplayName("Angelegt")]
@@ -118,7 +118,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
         /// <summary>
         /// Date when the application period starts
         /// </summary>
-        private DateTime? _datePeriodStart = new DateTime();
+        private DateTime? _datePeriodStart = null;
         [Category("Bewerbungszeitraum")]
         [Description("Seitpunkt an dem Bewerbungen frühestens eingesendet werden sollen.")]
         [DisplayName("Beginn Bewerbungszeitraum")]
@@ -139,7 +139,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
         /// <summary>
         /// Date when the application period ends
         /// </summary>
-        private DateTime? _datePeriodEnd = new DateTime();
+        private DateTime? _datePeriodEnd = null;
         [Category("Bewerbungszeitraum")]
         [Description("Seitpunkt bis zu dem die Bewerbung spätestens eingegangen sein muss.")]
         [DisplayName("Ende Bewerbungszeitraum")]
