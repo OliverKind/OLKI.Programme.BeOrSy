@@ -301,7 +301,6 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles
             this.prgEditor.Refresh();
         }
         #endregion
-
         #endregion
     }
 }

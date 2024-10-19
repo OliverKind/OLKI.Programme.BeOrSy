@@ -118,23 +118,23 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
                 }
             }
 
-            int AppCount = 0;
+            int ApplCount = 0;
             if (this._projectForm.Project.Companies != null && this._projectForm.Project.Companies.Count > 0)
             {
-                foreach (CompanyItem ComItem in this._projectForm.Project.Companies.Values)
+                foreach (CompanyItem CompItem in this._projectForm.Project.Companies.Values)
                 {
-                    if (ComItem.Applications != null && ComItem.Applications.Count > 0)
+                    if (CompItem.Applications != null && CompItem.Applications.Count > 0)
                     {
-                        foreach (ApplicationItem AppItem in ComItem.Applications.Values)
+                        foreach (ApplicationItem ApplItem in CompItem.Applications.Values)
                         {
-                            AppCount++;
+                            ApplCount++;
                         }
                     }
                 }
             }
             this.tslApplicationsList.Text = string.Format(this._tslApplicationsList_OrgText, new object[] { 0 });
             this.tslApplicationsSelected.Text = string.Format(this._tslApplicationsSelected_OrgText, new object[] { 0 });
-            this.tslApplicationsTotal.Text = string.Format(this._tslApplicationsTotal_OrgText, new object[] { AppCount });
+            this.tslApplicationsTotal.Text = string.Format(this._tslApplicationsTotal_OrgText, new object[] { ApplCount });
             this.lsvApplication_SelectedIndexChanged(this, EventArgs.Empty);
         }
 
@@ -176,9 +176,9 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
             };
 
             List<Dictionary<IdBelongingIndikator, int>> ApplicationList = ApplicationFilter.Detail(this._projectForm.Project.Companies) ?? new List<Dictionary<IdBelongingIndikator, int>>();
-            foreach (Dictionary<IdBelongingIndikator, int> AppItem in ApplicationList)
+            foreach (Dictionary<IdBelongingIndikator, int> ApplItem in ApplicationList)
             {
-                ApplicationItem App = this._projectForm.Project.Companies[AppItem[IdBelongingIndikator.Company]].Applications[AppItem[IdBelongingIndikator.Application]];
+                ApplicationItem App = this._projectForm.Project.Companies[ApplItem[IdBelongingIndikator.Company]].Applications[ApplItem[IdBelongingIndikator.Application]];
                 ReminderItem NextReminder = App.ReminderNext;
                 ProgressItem ProgressMax = App.ProgressMax;
 
@@ -189,7 +189,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
                 ListViewItem.Font = App.ReminderNext == null ? ListViewItem.Font : new Font(ListViewItem.Font, ListViewItem.Font.Style | FontStyle.Bold);
                 ListViewItem.ForeColor = Toolbox.ColorAndPicture.Color.IdealTextColor(ProgressMax == null ? BackColor : ProgressMax.Color);
                 ListViewItem.ImageIndex = App.ImageIndex;
-                ListViewItem.Tag = AppItem;
+                ListViewItem.Tag = ApplItem;
                 ListViewItem.Text = App.TitleNoText;
 
                 ListViewItem.SubItems[1].Text = App.ReferenceCode;
@@ -198,11 +198,11 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
                 ListViewItem.SubItems[3].Text = ProgressMax == null ? "" : ProgressMax.TitleNoText;
                 ListViewItem.SubItems[4].Tag = ProgressMax?.Date;
                 ListViewItem.SubItems[4].Text = ProgressMax == null ? "" : ProgressMax.DateFormated;
-                ListViewItem.SubItems[5].Text = this._projectForm.Project.Companies[AppItem[IdBelongingIndikator.Company]].TitleNoText;
-                ListViewItem.SubItems[6].Tag = AppItem[IdBelongingIndikator.Company];
-                ListViewItem.SubItems[6].Text = AppItem[IdBelongingIndikator.Company].ToString();
-                ListViewItem.SubItems[7].Tag = AppItem[IdBelongingIndikator.Application];
-                ListViewItem.SubItems[7].Text = AppItem[IdBelongingIndikator.Application].ToString();
+                ListViewItem.SubItems[5].Text = this._projectForm.Project.Companies[ApplItem[IdBelongingIndikator.Company]].TitleNoText;
+                ListViewItem.SubItems[6].Tag = ApplItem[IdBelongingIndikator.Company];
+                ListViewItem.SubItems[6].Text = ApplItem[IdBelongingIndikator.Company].ToString();
+                ListViewItem.SubItems[7].Tag = ApplItem[IdBelongingIndikator.Application];
+                ListViewItem.SubItems[7].Text = ApplItem[IdBelongingIndikator.Application].ToString();
 
                 this.lsvApplication.Items.Add(ListViewItem);
             }
@@ -240,21 +240,21 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
 
             this.tolLA_btnGoToComFolder.Enabled = this._selectedCompId > 0;
             this._projectForm.lsvCompany.SetAllSelections(false);
-            foreach (ListViewItem ComItem in this._projectForm.lsvCompany.Items)
+            foreach (ListViewItem CompItem in this._projectForm.lsvCompany.Items)
             {
-                if ((int)ComItem.Tag == this._selectedCompId)
+                if ((int)CompItem.Tag == this._selectedCompId)
                 {
-                    ComItem.Selected = true;
+                    CompItem.Selected = true;
                     break;
                 }
             }
             this.tolLA_btnGoToAppFolder.Enabled = this._selectedApplId > 0;
             this._projectForm.lsvApplication.SetAllSelections(false);
-            foreach (ListViewItem AppItem in this._projectForm.lsvApplication.Items)
+            foreach (ListViewItem ApplItem in this._projectForm.lsvApplication.Items)
             {
-                if ((int)AppItem.Tag == this._selectedApplId)
+                if ((int)ApplItem.Tag == this._selectedApplId)
                 {
-                    AppItem.Selected = true;
+                    ApplItem.Selected = true;
                     break;
                 }
             }

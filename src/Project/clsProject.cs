@@ -93,17 +93,17 @@ namespace OLKI.Programme.BeOrSy.src.Project
                     SourceCompany = CheckState.Indeterminate,
                     Text = null
                 };
-                foreach (CompanyItem ComItem in this.Companies.Values)
+                foreach (CompanyItem CompItem in this.Companies.Values)
                 {
-                    foreach (ReminderItem RemItem in ComItem.Reminders.Values)
+                    foreach (ReminderItem RemiItem in CompItem.Reminders.Values)
                     {
-                        if (ReminderFilter.InFilter(RemItem, false, true)) return true;
+                        if (ReminderFilter.InFilter(RemiItem, false, true)) return true;
                     }
-                    foreach (ApplicationItem AppItem in ComItem.Applications.Values)
+                    foreach (ApplicationItem ApplItem in CompItem.Applications.Values)
                     {
-                        foreach (ReminderItem RemItem in AppItem.Reminders.Values)
+                        foreach (ReminderItem RemiItem in ApplItem.Reminders.Values)
                         {
-                            if (ReminderFilter.InFilter(RemItem, true, false)) return true;
+                            if (ReminderFilter.InFilter(RemiItem, true, false)) return true;
                         }
                     }
                 }

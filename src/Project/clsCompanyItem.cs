@@ -393,13 +393,13 @@ namespace OLKI.Programme.BeOrSy.src.Project
                 int MaxWAppId = -1;
                 int MaxWStaId = -1;
                 int MaxWeight = -1;
-                foreach (ApplicationItem AppItem in this.Applications.Values)
+                foreach (ApplicationItem ApplItem in this.Applications.Values)
                 {
-                    if (!AppItem.Archive && AppItem.ProgressMax != null && AppItem.ProgressMax.Weight > MaxWeight)
+                    if (!ApplItem.Archive && ApplItem.ProgressMax != null && ApplItem.ProgressMax.Weight > MaxWeight)
                     {
-                        MaxWAppId = AppItem.Id;
-                        MaxWeight = AppItem.ProgressMax.Weight;
-                        MaxWStaId = AppItem.ProgressMax.Id;
+                        MaxWAppId = ApplItem.Id;
+                        MaxWeight = ApplItem.ProgressMax.Weight;
+                        MaxWStaId = ApplItem.ProgressMax.Id;
                     }
                 }
                 if (MaxWeight > -1 && MaxWAppId > -1 && MaxWStaId > -1)
@@ -627,11 +627,11 @@ namespace OLKI.Programme.BeOrSy.src.Project
             CompanyItem ThisClone = (CompanyItem)this.MemberwiseClone();
 
             ThisClone.Applications = new Dictionary<int, ApplicationItem>();
-            foreach (KeyValuePair<int, ApplicationItem> AppItem in this.Applications)
+            foreach (KeyValuePair<int, ApplicationItem> ApplItem in this.Applications)
             {
-                ThisClone.Applications.Add(AppItem.Key, AppItem.Value.Clone());
-                ThisClone.Applications[AppItem.Key].ItemChanged -= base.Item_Changed;
-                ThisClone.Applications[AppItem.Key].ItemChanged += new EventHandler(ThisClone.Item_Changed);
+                ThisClone.Applications.Add(ApplItem.Key, ApplItem.Value.Clone());
+                ThisClone.Applications[ApplItem.Key].ItemChanged -= base.Item_Changed;
+                ThisClone.Applications[ApplItem.Key].ItemChanged += new EventHandler(ThisClone.Item_Changed);
             }
 
             ThisClone.Contacts = new Dictionary<int, ContactItem>();

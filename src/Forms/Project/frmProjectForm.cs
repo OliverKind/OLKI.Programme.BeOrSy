@@ -514,9 +514,9 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
             }
             if (this.lsvCompany.SelectedItems.Count > 0)
             {
-                foreach (ListViewItem AppItem in this.lsvApplication.Items)
+                foreach (ListViewItem ApplItem in this.lsvApplication.Items)
                 {
-                    this.UpdateListViewItemAppl(this.Project.Companies[(int)this.lsvCompany.SelectedItems[0].Tag].Applications[(int)AppItem.Tag], AppItem);
+                    this.UpdateListViewItemAppl(this.Project.Companies[(int)this.lsvCompany.SelectedItems[0].Tag].Applications[(int)ApplItem.Tag], ApplItem);
                 }
             }
         }

@@ -114,12 +114,12 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
             this.tolListReminders.Enabled = false;
 
             int RemCount = 0;
-            foreach (CompanyItem ComItem in this._projectForm.Project.Companies.Values)
+            foreach (CompanyItem CompItem in this._projectForm.Project.Companies.Values)
             {
-                foreach (ReminderItem RemItem in ComItem.Reminders.Values) RemCount++;
-                foreach (ApplicationItem AppItem in ComItem.Applications.Values)
+                foreach (ReminderItem RemiItem in CompItem.Reminders.Values) RemCount++;
+                foreach (ApplicationItem ApplItem in CompItem.Applications.Values)
                 {
-                    foreach (ReminderItem RemItem in AppItem.Reminders.Values) RemCount++;
+                    foreach (ReminderItem RemiItem in ApplItem.Reminders.Values) RemCount++;
                 }
             }
             this.tslApplicationsList.Text = string.Format(this._tslApplicationsList_OrgText, new object[] { 0 });
@@ -239,21 +239,21 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
 
             this.tolLR_btnGoToCompFolder.Enabled = this._selectedCompId > 0;
             this._projectForm.lsvCompany.SetAllSelections(false);
-            foreach (ListViewItem ComItem in this._projectForm.lsvCompany.Items)
+            foreach (ListViewItem CompItem in this._projectForm.lsvCompany.Items)
             {
-                if ((int)ComItem.Tag == this._selectedCompId)
+                if ((int)CompItem.Tag == this._selectedCompId)
                 {
-                    ComItem.Selected = true;
+                    CompItem.Selected = true;
                     break;
                 }
             }
             this.tolLR_btnGoToApplFolder.Enabled = this._selectedApplId > 0;
             this._projectForm.lsvApplication.SetAllSelections(false);
-            foreach (ListViewItem AppItem in this._projectForm.lsvApplication.Items)
+            foreach (ListViewItem ApplItem in this._projectForm.lsvApplication.Items)
             {
-                if ((int)AppItem.Tag == this._selectedApplId)
+                if ((int)ApplItem.Tag == this._selectedApplId)
                 {
-                    AppItem.Selected = true;
+                    ApplItem.Selected = true;
                     break;
                 }
             }
