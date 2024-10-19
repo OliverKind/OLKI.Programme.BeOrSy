@@ -72,14 +72,14 @@ namespace OLKI.Programme.BeOrSy.src.Project.ReportCeator
             /// </summary>
             /// <param name="appl">Application to check</param>
             /// <param name="comp">Company to check</param>
-            /// <returns>True if all elemts have a Id and are not in New state</returns>
-            private static bool CheckNewState(ApplicationItem appl, CompanyItem comp)
+            /// <returns>False if all elemts have a Id and are not in New state</returns>
+            private static bool IsNewItemOrSubItem(ApplicationItem appl, CompanyItem comp)
             {
-                if (appl.Id <= 0) return false;
-                if (appl.NewItemState != ItemBase.NewItemStateFlag.NotNew) return false;
-                if (comp.Id <= 0) return false;
-                if (comp.NewItemState != ItemBase.NewItemStateFlag.NotNew) return false;
-                return true;
+                if (appl.Id <= 0) return true;
+                if (appl.NewItemState != ItemBase.NewItemStateFlag.NotNew) return true;
+                if (comp.Id <= 0) return true;
+                if (comp.NewItemState != ItemBase.NewItemStateFlag.NotNew) return true;
+                return false;
             }
 
             /// <summary>
@@ -93,9 +93,9 @@ namespace OLKI.Programme.BeOrSy.src.Project.ReportCeator
             {
                 try
                 {
-                    CompanyItem Comp = project.Companies[companyId];
-                    ApplicationItem Appl = Comp.Applications[applicationId];
-                    if (!CheckNewState(Appl, Comp))
+                    CompanyItem Comp = project.Companies.ContainsKey(companyId) ? project.Companies[companyId] : null;
+                    ApplicationItem Appl = Comp != null && Comp.Applications.ContainsKey(applicationId) ? Comp.Applications[applicationId] : null;
+                    if (Comp == null || Appl == null || IsNewItemOrSubItem(Appl, Comp))
                     {
                         MessageBox.Show(owner, Stringtable._0x003Em, Stringtable._0x003Ec, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return;

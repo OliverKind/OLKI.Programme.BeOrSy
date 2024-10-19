@@ -71,12 +71,12 @@ namespace OLKI.Programme.BeOrSy.src.Project.ReportCeator
             /// Check if the Items have a Id and are not new
             /// </summary>
             /// <param name="comp">Company to check</param>
-            /// <returns>True if all elemts have a Id and are not in New state</returns>
-            private static bool CheckNewState(CompanyItem comp)
+            /// <returns>False if all elemts have a Id and are not in New state</returns>
+            private static bool IsNewItem(CompanyItem comp)
             {
-                if (comp.Id <= 0) return false;
-                if (comp.NewItemState != ItemBase.NewItemStateFlag.NotNew) return false;
-                return true;
+                if (comp.Id <= 0) return true;
+                if (comp.NewItemState != ItemBase.NewItemStateFlag.NotNew) return true;
+                return false;
             }
 
             /// <summary>
@@ -89,8 +89,8 @@ namespace OLKI.Programme.BeOrSy.src.Project.ReportCeator
             {
                 try
                 {
-                    CompanyItem Comp = project.Companies[companyId];
-                    if (!CheckNewState(Comp))
+                    CompanyItem Comp = project.Companies.ContainsKey(companyId) ? project.Companies[companyId] : null;
+                    if (Comp == null || IsNewItem(Comp))
                     {
                         MessageBox.Show(owner, Stringtable._0x003Em, Stringtable._0x003Ec, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return;
