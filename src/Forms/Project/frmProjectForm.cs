@@ -490,7 +490,6 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
 
             if (this._applicationEditForm.ShowDialog(this) == DialogResult.OK)
             {
-                this.Project.Changed = true;
                 CompSel.Applications.Add(NewId, this._applicationEditForm.Application);
                 this._applicationEditForm.Application.ItemChanged += new EventHandler(CompSel.Item_Changed);
                 this.Project.IdSet.Appl = NewId;
@@ -501,6 +500,8 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
                 this.lsvApplication.Items.Add(NewItem);
                 this.lsvApplication.SelectItemByIdTag(NewId);
                 this.lsvApplication.LastItemVisible();
+
+                this.Project.Changed = true;
             }
         }
 
@@ -595,7 +596,6 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
 
             if (this._companyEditForm.ShowDialog(this) == DialogResult.OK)
             {
-                this.Project.Changed = true;
                 this.Project.Companies.Add(NewId, this._companyEditForm.Company);
                 this._companyEditForm.Company.ItemChanged += new EventHandler(this.Project.Item_Changed);
                 this.Project.IdSet.Comp = NewId;
@@ -606,6 +606,8 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
                 this.lsvCompany.Items.Add(NewItem);
                 this.lsvCompany.SelectItemByIdTag(NewId);
                 this.lsvCompany.LastItemVisible();
+
+                this.Project.Changed = true;
             }
         }
 
