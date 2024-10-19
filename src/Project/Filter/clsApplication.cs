@@ -122,7 +122,7 @@ namespace OLKI.Programme.BeOrSy.src.Project.Filter
                 if (CompItem.Delete != ItemBase.DeleteFlag.None) continue;
                 foreach (ApplicationItem ApplItem in CompItem.Applications.Values)
                 {
-                    if (ApplItem.Delete == ItemBase.DeleteFlag.None) continue;
+                    if (ApplItem.Delete != ItemBase.DeleteFlag.None) continue;
                     if (this.InFilter(ApplItem)) ApplicationFilterList.Add(new Dictionary<IdBelongingIndikator, int> { { IdBelongingIndikator.Company, CompItem.Id }, { IdBelongingIndikator.Application, ApplItem.Id } });
                 }
             }
