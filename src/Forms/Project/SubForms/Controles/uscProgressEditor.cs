@@ -307,7 +307,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles
                 this.btnColor.BackColor = this.SelectedItem.Color;
                 this.grpProgressEdit.Enabled = true;
                 this.prgEditor.SelectedObject = this.SelectedItem;
-                this.mtbDate.Text = this.SelectedItem.Date.ToString();
+                this.mtbDate.Date = this.SelectedItem.Date;
                 this.nudWeight.Value = this.SelectedItem.Weight;
                 this.txtComment.Text = this.SelectedItem.Comment;
                 this.txtTitle.Text = this.SelectedItem.Title;
@@ -340,7 +340,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles
                 this.grpProgressEdit.Enabled = false;
                 this.prgEditor.SelectedObject = null;
                 this.nudWeight.Value = this.nudWeight.Minimum;
-                this.mtbDate.Text = "";
+                this.mtbDate.Date = null;
                 this.txtComment.Text = "";
                 this.txtTitle.Text = "";
             }

@@ -183,7 +183,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles
                 this.chkReminderAcknowledge.Checked = this.SelectedItem.Acknowledged;
                 this.grpReminderEdit.Enabled = true;
                 this.prgEditor.SelectedObject = this.SelectedItem;
-                this.mtbDate.Text = this.SelectedItem.Date.ToString();
+                this.mtbDate.Date = this.SelectedItem.Date;
                 this.txtComment.Text = this.SelectedItem.Comment;
                 this.txtTitle.Text = this.SelectedItem.Title;
             }
@@ -194,7 +194,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles
                 this.chkReminderAcknowledge.Checked = false;
                 this.grpReminderEdit.Enabled = false;
                 this.prgEditor.SelectedObject = null;
-                this.mtbDate.Text = "";
+                this.mtbDate.Date = null;
                 this.txtComment.Text = "";
                 this.txtTitle.Text = "";
             }

@@ -98,9 +98,9 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
 
             this.chkArchive.Checked = this.Application.Archive;
             this.chkSpeculativeApplication.Checked = this.Application.SpeculativeApplication;
-            this.mtbDateCreated.Text = this.Application.DateCreated.ToString();
-            this.mtbDatePeriodEnd.Text = this.Application.DatePeriodEnd.ToString();
-            this.mtbDatePeriodStart.Text = this.Application.DatePeriodStart.ToString();
+            this.mtbDateCreated.Date = this.Application.DateCreated;
+            this.mtbDatePeriodEnd.Date = this.Application.DatePeriodEnd;
+            this.mtbDatePeriodStart.Date = this.Application.DatePeriodStart;
             this.txtComment.Text = this.Application.Comment;
             this.txtDirectory.Text = this.Application.Directory;
             this.txtReferenceCode.Text = this.Application.ReferenceCode;
