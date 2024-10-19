@@ -174,6 +174,13 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
             if (this._systemChanged) return;
             if (this.uscEditorContacts.SelectedItem != null) this.uscEditorContacts.SelectedItem.ItemChanged += new EventHandler(this.Application.Item_Changed);
         }
+
+        private void txtTitle_TextChanged(object sender, EventArgs e)
+        {
+            if (this._systemChanged) return;
+            this.Application.Title = this.txtTitle.Text;
+            this.Text = this.Application.TitleNoText;
+        }
         #endregion
     }
 }
