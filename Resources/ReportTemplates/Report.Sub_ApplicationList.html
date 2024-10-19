@@ -1,0 +1,93 @@
+<tr>
+	<td>
+		<table>							
+			<tr class="IdField">
+				<td colspan="2" class="FullRow">
+					ID der Firma: {{$Company_Id}}
+				</td>
+			</tr>
+			<tr>
+				<td class="FullRow" colspan="2">
+					<h2>
+						Allgemeine Daten:
+					</h2>
+				</td>
+			</tr>
+			<tr>
+				<td class="FirstColumn">
+					Firmenname:
+				</td>
+				<td class="SecondColumn">
+					{{$Company_Title}}
+				</td>
+			</tr>
+			<tr>
+				<td class="FirstColumn">
+					Adresse:
+				</td>
+				<td class="SecondColumn">
+					{{$Company_Address}}
+				</td>
+			</tr>
+			<tr>
+				<td class="FirstColumn">
+					Branche:
+				</td>
+				<td class="SecondColumn">
+					{{$Company_Trade}}
+				</td>
+			</tr>
+		</table>
+	</td>
+	<td>
+		<table>							
+			<tr class="IdField">
+				<td class="FullRow" colspan="2">
+					ID der Bewerbung: {{$Application_Id}}
+				</td>
+			</tr>
+			<tr>
+				<td class="FullRow" colspan="2">
+					<h2>
+						Allgemeine Daten:
+					</h2>
+				</td>
+			</tr>
+			<tr>
+				<td class="FirstColumn">
+					Titel:
+				</td>
+				<td class="SecondColumn">
+					{{$Application_Title}}
+				</td>
+			</tr>
+			<tr>
+				<td class="FirstColumn">
+					Referenznummer:
+				</td>
+				<td class="SecondColumn">
+					{{$Application_ReferenceCode}}
+				</td>
+			</tr>
+			<tr>
+				<td class="FirstColumn">
+					Initiativbewerbung:
+				</td>
+				<td class="SecondColumn">
+					{{$Application_Speculative}}
+				</td>
+			</tr>
+			<tr>
+				<td class="FirstColumn">
+					Erstelldatum:
+				</td>
+				<td class="SecondColumn">
+					{{$Application_Created}}
+				</td>
+			</tr>
+		</table>
+	</td>
+	<td>
+		{{$Application_Progress}}
+	</td>
+</tr>

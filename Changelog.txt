@@ -1,0 +1,157 @@
+# BeOrSy - Bewerbungsorganisationssystem
+## [3.0.0.12] - 2024-10-19
+### Changed
+- Complete workover (Not compatible to older Versions, in any Direction)
+
+## [2.1.3.11] - 2019-08-30
+### Fixed
+- Scrollbars missing at multiline textboxes
+- Linebreaks are missing at report files
+
+## [2.1.3.11] - 2019-08-30
+### Changed
+- Librarys updated
+
+### Fixed
+- Contact Information, E-Mail adress was written to FAX-number.
+- Doupleclick at Apllication will not open edit form
+
+## [2.1.2.10] - 2018-05-17
+### Added
+- Avoide startingapplication twice
+- Filter Companys by pressing return on project main form if an filter widget is in focus
+- Priority filter to Apllicationlisting
+- Removes all leading and trailing white-space characters from company, application and contact main data on change of data
+- Settings directory will be removed on Uninstallation
+
+### Changed
+- Close "Filter Comapny Detail" form after filtering by default
+
+### Removed
+- "Installation Note" from setup
+- "Open Settings Directory" Button from settings form
+
+### Fixed
+- Creating empty ZIP-Code entrys while importing ZIP-Codes from file
+- Default file open dosn't work
+- Recenf files dosn't work
+
+## [2.1.1.9] - 2017-12-27
+### Fixed
+- By abbplications, only applications over or beyon the min- oder max filterdate will be shown, but not if min- oder max filterdate, while filtering by application creation date
+- By creating a new project, an database upgrade will ne necessary
+- Check of file association on startup disabled
+- Creating application report Button in application form withoud function
+
+
+## [2.1.0.8] - 2017-10-03
+### Added
+- ZIP-Code managemend
+
+### Changed
+- File attentnion supports now linking file and uploading file to project file
+- Save application settings in .NET settings engine
+- ZIP-Codes saved in settings file
+
+### Fixed
+- Filter application, shows only smaler or greater than the limits, but not if qual the limit date
+- Change of state number is not changed
+
+
+## [2.0.1.7] - 2017-18-03
+### Added
+- Filter by application type in application list
+
+### Changed
+- Replaced automatic list refresh at listing of applications, by changing the filter, by a button to press
+- Replaced automatic list refresh at listing of reminders, by changing the filter, by a button to press
+
+### Fixed
+- Fax contact of company is not shown in Propertygrid on MainForm
+
+
+## [2.0.0.6 (Cuttlefish)] - 2017-18-03
+### Added
+- Application priority
+- Search for application
+
+### Changed
+- Company Filter by Id changed controle from NumericTextbox to NumericUpDown controle
+- Removed portable mode (only avalible in Debuuging mode for developers)
+- Removed seperate liblarys for user controles (OLKI.Widgets.NumericTextBox and OLKI.Widgets.SortListView) and replaced by one liblary (OLKI.Widgets)
+- Renewed Setup
+- Search for ZIP-Code supports RegEX
+- Updatd OLKI.Tools.CommonTools to Version: 2.1.0.4
+
+### Fixed
+- Lost of Company color marker if the TabPage with the color marker ListView was not in selected bevor accepting changes
+
+
+## [1.3.0.5] - 2016-09-23
+### Added
+- Store company filter seetings during session
+- Highlight company filter button if filter is active
+
+### Changed
+- Added listview to filter applications in application list
+- Application states can be reorder by drag and drop in listview
+- Filter applications in application list with detail state list, using checkboxes
+- EULA Changed
+- Improved data management
+- Setup will not overwrite existing setting files (Settings.xml, ZIPcodeTable.cfg)
+
+### Fixed
+- Delete applications is not done in database file
+- Delete companys is not done in database file
+- Edit company and application items dosn't handle discard chages correctly
+- Fixed linking of states, files etc. by copying an application, instead of making a full copy
+- Filter company form was not closed changing the project
+- Open a second project, project form get not the focus
+- State in compny did't changed, creating a new application
+
+
+## [1.2.0.4] - 2016-08-26
+### Added
+- Auto complete City, State, Country by ZIP-Code
+- Copy complete Address of Company to Clipboard button added
+
+### Changed
+- Credits corrected
+
+### Fixed
+
+
+## [1.1.0.3] - 2016-08-26
+### Added
+- Check of database version
+- Portable Mode
+- Report of Reminders
+- Show active reminder in application mainlist
+- Show reminders on starup, if unreaded actual reminders
+
+### Changed
+- Improved apllication project management
+- New file organisation
+- New Icon for go to E-Mail
+- Order Application Descending by creation date
+- Reminder list, logic of backcolors changed
+- Rewrite sourcecode for a better sourcode organisation
+
+### Fixed
+- Avoid multiple open of a file
+- Fix show wrong apllications in applicationlist using more than one projektwindows at same time
+- Reminders can not be saved
+- "Save as..." creates now a copy of the existing file and save changes
+
+
+## [1.0.1.2] - 2016-06-04
+### Fixed
+- Fix archive state of an apllication is ignored by calculation the most relecant state of the applications of an company
+- Fix filter applications on applicationslist
+- Fix new files will be created witoud settings, cause to projectsettings can not saved an errormessages on file opening
+- Fix some mistakes in readme.txt
+- Fix spelling of "Brange" to "Branche"
+
+
+## [1.0.0.1 (Stingray)] - 2016-05-25
+### Initial release

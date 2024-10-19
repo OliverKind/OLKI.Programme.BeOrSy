@@ -1,0 +1,1354 @@
+﻿namespace OLKI.Programme.BOS.src.Forms.Project
+{
+    partial class ProjectForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectForm));
+            this.spcMain = new System.Windows.Forms.SplitContainer();
+            this.spcCompany = new System.Windows.Forms.SplitContainer();
+            this.lsvCompany = new OLKI.Toolbox.Widgets.SortListView();
+            this.chLsvCompanyMain_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvCompanyMain_AdressCity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvCompanyMain_AdressCountry = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvCompanyMain_Trade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvCompanyMain_ApplicationPriority = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvCompanyMain_ApplicationState = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvCompanyMain_ApplicationsDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvCompanyMain_Comment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvCompanyMain_Applications = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvCompanyMain_Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imlColorMarkers = new System.Windows.Forms.ImageList(this.components);
+            this.pnlCompanyFoot = new System.Windows.Forms.Panel();
+            this.btnCompanyAdressToClipboard = new System.Windows.Forms.Button();
+            this.btnCompanyReport = new System.Windows.Forms.Button();
+            this.btnCompanyGoToCareerpage = new System.Windows.Forms.Button();
+            this.btnCompanyGoToHomepage = new System.Windows.Forms.Button();
+            this.btnCompanyGoToDir = new System.Windows.Forms.Button();
+            this.btnCompanyDelete = new System.Windows.Forms.Button();
+            this.btnCompanyEdit = new System.Windows.Forms.Button();
+            this.btnCompanyAdd = new System.Windows.Forms.Button();
+            this.pnlCompanyHead = new System.Windows.Forms.Panel();
+            this.grbFilte = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.nudFilterId = new System.Windows.Forms.NumericUpDown();
+            this.btnFilterCompanyDetail = new System.Windows.Forms.Button();
+            this.chkFilterState = new System.Windows.Forms.CheckBox();
+            this.txtFilterName = new System.Windows.Forms.TextBox();
+            this.cboFilterTrade = new System.Windows.Forms.ComboBox();
+            this.cboFilterAdressCity = new System.Windows.Forms.ComboBox();
+            this.btnFilterCompany = new System.Windows.Forms.Button();
+            this.btnFilterReset = new System.Windows.Forms.Button();
+            this.chkFilterShowDead = new System.Windows.Forms.CheckBox();
+            this.lblFilterCity = new System.Windows.Forms.Label();
+            this.lblFilterName = new System.Windows.Forms.Label();
+            this.lblFilterId = new System.Windows.Forms.Label();
+            this.lblFilterTrade = new System.Windows.Forms.Label();
+            this.lblCompanyMain = new System.Windows.Forms.Label();
+            this.prgCompany = new System.Windows.Forms.PropertyGrid();
+            this.lblCompanyDetail = new System.Windows.Forms.Label();
+            this.spcApplication = new System.Windows.Forms.SplitContainer();
+            this.lsvApplication = new OLKI.Toolbox.Widgets.SortListView();
+            this.chLsvApplication_Title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvApplication_Number = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvApplication_Priority = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvApplication_Deadline = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvApplication_State = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvApplication_StateDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvApplication_ReminderText = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvApplication_ReminderDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvApplication_Created = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLsvApplication_Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imlApplicationType = new System.Windows.Forms.ImageList(this.components);
+            this.lblApplicationMain = new System.Windows.Forms.Label();
+            this.pnlApplicationFoot = new System.Windows.Forms.Panel();
+            this.btnApplicationReport = new System.Windows.Forms.Button();
+            this.btnApplicationDuplicate = new System.Windows.Forms.Button();
+            this.btnApplicationGoToDir = new System.Windows.Forms.Button();
+            this.btnApplicationDelete = new System.Windows.Forms.Button();
+            this.btnApplicationEdit = new System.Windows.Forms.Button();
+            this.btnApplicationAdd = new System.Windows.Forms.Button();
+            this.prgApplication = new System.Windows.Forms.PropertyGrid();
+            this.lblApplicationDetail = new System.Windows.Forms.Label();
+            this.mnuProjectForm = new System.Windows.Forms.MenuStrip();
+            this.mnuProjectForm_Company = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Company_Add = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Company_Edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Company_Delete = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Company_GoToDir = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Company_Report = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuProjectForm_Company_Filter = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.farbe1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.farbe2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.farbe3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.farbe4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.grünToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hellrotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rosaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rotToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.schwarzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.weißToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Application = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Application_Add = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Application_Edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Application_Delete = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Application_GoToDir = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Application_Report = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Application_Duplicate = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuProjectForm_Application_Filter = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuProjectForm_Application_AutoArchive = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_List = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_List_Application = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_List_Reminder = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.spcMain)).BeginInit();
+            this.spcMain.Panel1.SuspendLayout();
+            this.spcMain.Panel2.SuspendLayout();
+            this.spcMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spcCompany)).BeginInit();
+            this.spcCompany.Panel1.SuspendLayout();
+            this.spcCompany.Panel2.SuspendLayout();
+            this.spcCompany.SuspendLayout();
+            this.pnlCompanyFoot.SuspendLayout();
+            this.pnlCompanyHead.SuspendLayout();
+            this.grbFilte.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFilterId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spcApplication)).BeginInit();
+            this.spcApplication.Panel1.SuspendLayout();
+            this.spcApplication.Panel2.SuspendLayout();
+            this.spcApplication.SuspendLayout();
+            this.pnlApplicationFoot.SuspendLayout();
+            this.mnuProjectForm.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // spcMain
+            // 
+            this.spcMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.spcMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spcMain.Location = new System.Drawing.Point(0, 0);
+            this.spcMain.Name = "spcMain";
+            this.spcMain.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // spcMain.Panel1
+            // 
+            this.spcMain.Panel1.Controls.Add(this.spcCompany);
+            this.spcMain.Panel1MinSize = 250;
+            // 
+            // spcMain.Panel2
+            // 
+            this.spcMain.Panel2.Controls.Add(this.spcApplication);
+            this.spcMain.Panel2MinSize = 200;
+            this.spcMain.Size = new System.Drawing.Size(961, 564);
+            this.spcMain.SplitterDistance = 335;
+            this.spcMain.TabIndex = 3;
+            // 
+            // spcCompany
+            // 
+            this.spcCompany.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.spcCompany.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spcCompany.Location = new System.Drawing.Point(0, 0);
+            this.spcCompany.Name = "spcCompany";
+            // 
+            // spcCompany.Panel1
+            // 
+            this.spcCompany.Panel1.Controls.Add(this.lsvCompany);
+            this.spcCompany.Panel1.Controls.Add(this.pnlCompanyFoot);
+            this.spcCompany.Panel1.Controls.Add(this.pnlCompanyHead);
+            this.spcCompany.Panel1MinSize = 474;
+            // 
+            // spcCompany.Panel2
+            // 
+            this.spcCompany.Panel2.Controls.Add(this.prgCompany);
+            this.spcCompany.Panel2.Controls.Add(this.lblCompanyDetail);
+            this.spcCompany.Panel2MinSize = 200;
+            this.spcCompany.Size = new System.Drawing.Size(961, 335);
+            this.spcCompany.SplitterDistance = 635;
+            this.spcCompany.TabIndex = 0;
+            this.spcCompany.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.spcCompany_SplitterMoved);
+            // 
+            // lsvCompany
+            // 
+            this.lsvCompany.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lsvCompany.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chLsvCompanyMain_Name,
+            this.chLsvCompanyMain_AdressCity,
+            this.chLsvCompanyMain_AdressCountry,
+            this.chLsvCompanyMain_Trade,
+            this.chLsvCompanyMain_ApplicationPriority,
+            this.chLsvCompanyMain_ApplicationState,
+            this.chLsvCompanyMain_ApplicationsDate,
+            this.chLsvCompanyMain_Comment,
+            this.chLsvCompanyMain_Applications,
+            this.chLsvCompanyMain_Id});
+            this.lsvCompany.ColumnWidths = ((System.Collections.Generic.List<int>)(resources.GetObject("lsvCompany.ColumnWidths")));
+            this.lsvCompany.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvCompany.FullRowSelect = true;
+            this.lsvCompany.GridLines = true;
+            this.lsvCompany.HideSelection = false;
+            this.lsvCompany.Location = new System.Drawing.Point(0, 135);
+            this.lsvCompany.Name = "lsvCompany";
+            this.lsvCompany.Size = new System.Drawing.Size(631, 172);
+            this.lsvCompany.SmallImageList = this.imlColorMarkers;
+            this.lsvCompany.TabIndex = 1;
+            this.lsvCompany.UseCompatibleStateImageBehavior = false;
+            this.lsvCompany.View = System.Windows.Forms.View.Details;
+            this.lsvCompany.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lsvCompany_ColumnClick);
+            this.lsvCompany.ColumnWidthChanged += new System.Windows.Forms.ColumnWidthChangedEventHandler(this.lsvCompany_ColumnWidthChanged);
+            this.lsvCompany.SelectedIndexChanged += new System.EventHandler(this.lsvCompany_SelectedIndexChanged);
+            this.lsvCompany.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lsvCompany_MouseDoubleClick);
+            // 
+            // chLsvCompanyMain_Name
+            // 
+            this.chLsvCompanyMain_Name.Text = "Firma";
+            this.chLsvCompanyMain_Name.Width = 240;
+            // 
+            // chLsvCompanyMain_AdressCity
+            // 
+            this.chLsvCompanyMain_AdressCity.Text = "Statt";
+            // 
+            // chLsvCompanyMain_AdressCountry
+            // 
+            this.chLsvCompanyMain_AdressCountry.Text = "Land";
+            // 
+            // chLsvCompanyMain_Trade
+            // 
+            this.chLsvCompanyMain_Trade.Text = "Branche";
+            this.chLsvCompanyMain_Trade.Width = 120;
+            // 
+            // chLsvCompanyMain_ApplicationPriority
+            // 
+            this.chLsvCompanyMain_ApplicationPriority.Text = "Max. Priorität der Bewerbung";
+            this.chLsvCompanyMain_ApplicationPriority.Width = 30;
+            // 
+            // chLsvCompanyMain_ApplicationState
+            // 
+            this.chLsvCompanyMain_ApplicationState.Text = "Max. Bewerbungsstatus";
+            this.chLsvCompanyMain_ApplicationState.Width = 90;
+            // 
+            // chLsvCompanyMain_ApplicationsDate
+            // 
+            this.chLsvCompanyMain_ApplicationsDate.Text = "Zeitpunkt des Status";
+            this.chLsvCompanyMain_ApplicationsDate.Width = 90;
+            // 
+            // chLsvCompanyMain_Comment
+            // 
+            this.chLsvCompanyMain_Comment.Text = "Kommentar";
+            this.chLsvCompanyMain_Comment.Width = 280;
+            // 
+            // chLsvCompanyMain_Applications
+            // 
+            this.chLsvCompanyMain_Applications.Text = "Bewerbungen";
+            // 
+            // chLsvCompanyMain_Id
+            // 
+            this.chLsvCompanyMain_Id.Text = "Id";
+            this.chLsvCompanyMain_Id.Width = 30;
+            // 
+            // imlColorMarkers
+            // 
+            this.imlColorMarkers.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imlColorMarkers.ImageStream")));
+            this.imlColorMarkers.TransparentColor = System.Drawing.Color.Transparent;
+            this.imlColorMarkers.Images.SetKeyName(0, "00 - (Keine).png");
+            this.imlColorMarkers.Images.SetKeyName(1, "01 - Blau.png");
+            this.imlColorMarkers.Images.SetKeyName(2, "02 - Cyan.png");
+            this.imlColorMarkers.Images.SetKeyName(3, "03 - Durchsichtig.png");
+            this.imlColorMarkers.Images.SetKeyName(4, "04 - Gelb.png");
+            this.imlColorMarkers.Images.SetKeyName(5, "05 - Grau.png");
+            this.imlColorMarkers.Images.SetKeyName(6, "06 - Grün.png");
+            this.imlColorMarkers.Images.SetKeyName(7, "07 - Hellrot.png");
+            this.imlColorMarkers.Images.SetKeyName(8, "08 - Orange.png");
+            this.imlColorMarkers.Images.SetKeyName(9, "09 - Rosa.png");
+            this.imlColorMarkers.Images.SetKeyName(10, "10 - Rot.png");
+            this.imlColorMarkers.Images.SetKeyName(11, "11 - Schwarz.png");
+            this.imlColorMarkers.Images.SetKeyName(12, "12 - Weiß.png");
+            // 
+            // pnlCompanyFoot
+            // 
+            this.pnlCompanyFoot.Controls.Add(this.btnCompanyAdressToClipboard);
+            this.pnlCompanyFoot.Controls.Add(this.btnCompanyReport);
+            this.pnlCompanyFoot.Controls.Add(this.btnCompanyGoToCareerpage);
+            this.pnlCompanyFoot.Controls.Add(this.btnCompanyGoToHomepage);
+            this.pnlCompanyFoot.Controls.Add(this.btnCompanyGoToDir);
+            this.pnlCompanyFoot.Controls.Add(this.btnCompanyDelete);
+            this.pnlCompanyFoot.Controls.Add(this.btnCompanyEdit);
+            this.pnlCompanyFoot.Controls.Add(this.btnCompanyAdd);
+            this.pnlCompanyFoot.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlCompanyFoot.Location = new System.Drawing.Point(0, 307);
+            this.pnlCompanyFoot.Name = "pnlCompanyFoot";
+            this.pnlCompanyFoot.Size = new System.Drawing.Size(631, 24);
+            this.pnlCompanyFoot.TabIndex = 2;
+            // 
+            // btnCompanyAdressToClipboard
+            // 
+            this.btnCompanyAdressToClipboard.Enabled = false;
+            this.btnCompanyAdressToClipboard.Image = global::OLKI.Programme.BOS.Properties.Resources.AdressMail;
+            this.btnCompanyAdressToClipboard.Location = new System.Drawing.Point(379, 0);
+            this.btnCompanyAdressToClipboard.Name = "btnCompanyAdressToClipboard";
+            this.btnCompanyAdressToClipboard.Size = new System.Drawing.Size(35, 24);
+            this.btnCompanyAdressToClipboard.TabIndex = 6;
+            this.btnCompanyAdressToClipboard.UseVisualStyleBackColor = true;
+            this.btnCompanyAdressToClipboard.Click += new System.EventHandler(this.btnCompanyAdressToClipboard_Click);
+            // 
+            // btnCompanyReport
+            // 
+            this.btnCompanyReport.Image = global::OLKI.Programme.BOS.Properties.Resources.Report;
+            this.btnCompanyReport.Location = new System.Drawing.Point(256, 0);
+            this.btnCompanyReport.Name = "btnCompanyReport";
+            this.btnCompanyReport.Size = new System.Drawing.Size(35, 24);
+            this.btnCompanyReport.TabIndex = 3;
+            this.btnCompanyReport.UseVisualStyleBackColor = true;
+            this.btnCompanyReport.Click += new System.EventHandler(this.mnuProjectForm_Company_Report_Click);
+            // 
+            // btnCompanyGoToCareerpage
+            // 
+            this.btnCompanyGoToCareerpage.Image = global::OLKI.Programme.BOS.Properties.Resources.WebJob;
+            this.btnCompanyGoToCareerpage.Location = new System.Drawing.Point(338, 0);
+            this.btnCompanyGoToCareerpage.Name = "btnCompanyGoToCareerpage";
+            this.btnCompanyGoToCareerpage.Size = new System.Drawing.Size(35, 24);
+            this.btnCompanyGoToCareerpage.TabIndex = 5;
+            this.btnCompanyGoToCareerpage.UseVisualStyleBackColor = true;
+            this.btnCompanyGoToCareerpage.Click += new System.EventHandler(this.btnCompanyGoToCareerpage_Click);
+            // 
+            // btnCompanyGoToHomepage
+            // 
+            this.btnCompanyGoToHomepage.Image = global::OLKI.Programme.BOS.Properties.Resources.Web;
+            this.btnCompanyGoToHomepage.Location = new System.Drawing.Point(297, 0);
+            this.btnCompanyGoToHomepage.Name = "btnCompanyGoToHomepage";
+            this.btnCompanyGoToHomepage.Size = new System.Drawing.Size(35, 24);
+            this.btnCompanyGoToHomepage.TabIndex = 4;
+            this.btnCompanyGoToHomepage.UseVisualStyleBackColor = true;
+            this.btnCompanyGoToHomepage.Click += new System.EventHandler(this.btnCompanyGoToHomepage_Click);
+            // 
+            // btnCompanyGoToDir
+            // 
+            this.btnCompanyGoToDir.Image = global::OLKI.Programme.BOS.Properties.Resources.OpenFolder;
+            this.btnCompanyGoToDir.Location = new System.Drawing.Point(215, 0);
+            this.btnCompanyGoToDir.Name = "btnCompanyGoToDir";
+            this.btnCompanyGoToDir.Size = new System.Drawing.Size(35, 24);
+            this.btnCompanyGoToDir.TabIndex = 2;
+            this.btnCompanyGoToDir.UseVisualStyleBackColor = true;
+            this.btnCompanyGoToDir.Click += new System.EventHandler(this.mnuProjectForm_Company_GoToDir_Click);
+            // 
+            // btnCompanyDelete
+            // 
+            this.btnCompanyDelete.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCompanyDelete.Image = global::OLKI.Programme.BOS.Properties.Resources.Delete;
+            this.btnCompanyDelete.Location = new System.Drawing.Point(531, 0);
+            this.btnCompanyDelete.Name = "btnCompanyDelete";
+            this.btnCompanyDelete.Size = new System.Drawing.Size(100, 24);
+            this.btnCompanyDelete.TabIndex = 7;
+            this.btnCompanyDelete.Text = "Löschen";
+            this.btnCompanyDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCompanyDelete.UseVisualStyleBackColor = true;
+            this.btnCompanyDelete.Click += new System.EventHandler(this.mnuProjectForm_Company_Delete_Click);
+            // 
+            // btnCompanyEdit
+            // 
+            this.btnCompanyEdit.Image = global::OLKI.Programme.BOS.Properties.Resources.Settings;
+            this.btnCompanyEdit.Location = new System.Drawing.Point(109, 0);
+            this.btnCompanyEdit.Name = "btnCompanyEdit";
+            this.btnCompanyEdit.Size = new System.Drawing.Size(100, 24);
+            this.btnCompanyEdit.TabIndex = 1;
+            this.btnCompanyEdit.Text = "Bearbeiten";
+            this.btnCompanyEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCompanyEdit.UseVisualStyleBackColor = true;
+            this.btnCompanyEdit.Click += new System.EventHandler(this.mnuProjectForm_Company_Edit_Click);
+            // 
+            // btnCompanyAdd
+            // 
+            this.btnCompanyAdd.Image = global::OLKI.Programme.BOS.Properties.Resources.New;
+            this.btnCompanyAdd.Location = new System.Drawing.Point(3, 0);
+            this.btnCompanyAdd.Name = "btnCompanyAdd";
+            this.btnCompanyAdd.Size = new System.Drawing.Size(100, 24);
+            this.btnCompanyAdd.TabIndex = 0;
+            this.btnCompanyAdd.Text = "Hinzufügen";
+            this.btnCompanyAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCompanyAdd.UseVisualStyleBackColor = true;
+            this.btnCompanyAdd.Click += new System.EventHandler(this.mnuProjectForm_Company_Add_Click);
+            // 
+            // pnlCompanyHead
+            // 
+            this.pnlCompanyHead.Controls.Add(this.grbFilte);
+            this.pnlCompanyHead.Controls.Add(this.lblCompanyMain);
+            this.pnlCompanyHead.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCompanyHead.Location = new System.Drawing.Point(0, 0);
+            this.pnlCompanyHead.Name = "pnlCompanyHead";
+            this.pnlCompanyHead.Size = new System.Drawing.Size(631, 135);
+            this.pnlCompanyHead.TabIndex = 0;
+            // 
+            // grbFilte
+            // 
+            this.grbFilte.Controls.Add(this.comboBox1);
+            this.grbFilte.Controls.Add(this.nudFilterId);
+            this.grbFilte.Controls.Add(this.btnFilterCompanyDetail);
+            this.grbFilte.Controls.Add(this.chkFilterState);
+            this.grbFilte.Controls.Add(this.txtFilterName);
+            this.grbFilte.Controls.Add(this.cboFilterTrade);
+            this.grbFilte.Controls.Add(this.cboFilterAdressCity);
+            this.grbFilte.Controls.Add(this.btnFilterCompany);
+            this.grbFilte.Controls.Add(this.btnFilterReset);
+            this.grbFilte.Controls.Add(this.chkFilterShowDead);
+            this.grbFilte.Controls.Add(this.lblFilterCity);
+            this.grbFilte.Controls.Add(this.lblFilterName);
+            this.grbFilte.Controls.Add(this.lblFilterId);
+            this.grbFilte.Controls.Add(this.lblFilterTrade);
+            this.grbFilte.Location = new System.Drawing.Point(88, 4);
+            this.grbFilte.Name = "grbFilte";
+            this.grbFilte.Size = new System.Drawing.Size(368, 126);
+            this.grbFilte.TabIndex = 1;
+            this.grbFilte.TabStop = false;
+            this.grbFilte.Text = "Filter";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(83, 99);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(123, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // nudFilterId
+            // 
+            this.nudFilterId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.nudFilterId.Location = new System.Drawing.Point(236, 46);
+            this.nudFilterId.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.nudFilterId.Name = "nudFilterId";
+            this.nudFilterId.Size = new System.Drawing.Size(49, 20);
+            this.nudFilterId.TabIndex = 10;
+            this.nudFilterId.ThousandsSeparator = true;
+            // 
+            // btnFilterCompanyDetail
+            // 
+            this.btnFilterCompanyDetail.Image = global::OLKI.Programme.BOS.Properties.Resources.Filter2;
+            this.btnFilterCompanyDetail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFilterCompanyDetail.Location = new System.Drawing.Point(290, 44);
+            this.btnFilterCompanyDetail.Name = "btnFilterCompanyDetail";
+            this.btnFilterCompanyDetail.Size = new System.Drawing.Size(72, 23);
+            this.btnFilterCompanyDetail.TabIndex = 11;
+            this.btnFilterCompanyDetail.Text = "Detail";
+            this.btnFilterCompanyDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFilterCompanyDetail.UseVisualStyleBackColor = true;
+            // 
+            // chkFilterState
+            // 
+            this.chkFilterState.AutoSize = true;
+            this.chkFilterState.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkFilterState.Checked = true;
+            this.chkFilterState.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.chkFilterState.Location = new System.Drawing.Point(6, 101);
+            this.chkFilterState.Name = "chkFilterState";
+            this.chkFilterState.Size = new System.Drawing.Size(71, 17);
+            this.chkFilterState.TabIndex = 6;
+            this.chkFilterState.Text = "Status:    ";
+            this.chkFilterState.ThreeState = true;
+            this.chkFilterState.UseVisualStyleBackColor = true;
+            // 
+            // txtFilterName
+            // 
+            this.txtFilterName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtFilterName.Location = new System.Drawing.Point(62, 19);
+            this.txtFilterName.Name = "txtFilterName";
+            this.txtFilterName.Size = new System.Drawing.Size(144, 20);
+            this.txtFilterName.TabIndex = 1;
+            // 
+            // cboFilterTrade
+            // 
+            this.cboFilterTrade.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cboFilterTrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cboFilterTrade.FormattingEnabled = true;
+            this.cboFilterTrade.Location = new System.Drawing.Point(62, 72);
+            this.cboFilterTrade.Name = "cboFilterTrade";
+            this.cboFilterTrade.Size = new System.Drawing.Size(144, 21);
+            this.cboFilterTrade.TabIndex = 5;
+            // 
+            // cboFilterAdressCity
+            // 
+            this.cboFilterAdressCity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cboFilterAdressCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cboFilterAdressCity.FormattingEnabled = true;
+            this.cboFilterAdressCity.Location = new System.Drawing.Point(62, 45);
+            this.cboFilterAdressCity.Name = "cboFilterAdressCity";
+            this.cboFilterAdressCity.Size = new System.Drawing.Size(144, 21);
+            this.cboFilterAdressCity.TabIndex = 3;
+            // 
+            // btnFilterCompany
+            // 
+            this.btnFilterCompany.Image = global::OLKI.Programme.BOS.Properties.Resources.Filter;
+            this.btnFilterCompany.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFilterCompany.Location = new System.Drawing.Point(212, 70);
+            this.btnFilterCompany.Name = "btnFilterCompany";
+            this.btnFilterCompany.Size = new System.Drawing.Size(150, 23);
+            this.btnFilterCompany.TabIndex = 12;
+            this.btnFilterCompany.Text = "Filtern";
+            this.btnFilterCompany.UseVisualStyleBackColor = true;
+            // 
+            // btnFilterReset
+            // 
+            this.btnFilterReset.Image = global::OLKI.Programme.BOS.Properties.Resources.FilterReset;
+            this.btnFilterReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFilterReset.Location = new System.Drawing.Point(212, 97);
+            this.btnFilterReset.Name = "btnFilterReset";
+            this.btnFilterReset.Size = new System.Drawing.Size(150, 23);
+            this.btnFilterReset.TabIndex = 13;
+            this.btnFilterReset.Text = "Zurücksetzen";
+            this.btnFilterReset.UseVisualStyleBackColor = true;
+            // 
+            // chkFilterShowDead
+            // 
+            this.chkFilterShowDead.AutoSize = true;
+            this.chkFilterShowDead.Checked = true;
+            this.chkFilterShowDead.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.chkFilterShowDead.Location = new System.Drawing.Point(215, 21);
+            this.chkFilterShowDead.Name = "chkFilterShowDead";
+            this.chkFilterShowDead.Size = new System.Drawing.Size(147, 17);
+            this.chkFilterShowDead.TabIndex = 8;
+            this.chkFilterShowDead.Text = "Aufgelöste Firmen anzeig.";
+            this.chkFilterShowDead.ThreeState = true;
+            this.chkFilterShowDead.UseVisualStyleBackColor = false;
+            // 
+            // lblFilterCity
+            // 
+            this.lblFilterCity.AutoSize = true;
+            this.lblFilterCity.Location = new System.Drawing.Point(6, 49);
+            this.lblFilterCity.Name = "lblFilterCity";
+            this.lblFilterCity.Size = new System.Drawing.Size(35, 13);
+            this.lblFilterCity.TabIndex = 2;
+            this.lblFilterCity.Text = "Stadt:";
+            // 
+            // lblFilterName
+            // 
+            this.lblFilterName.AutoSize = true;
+            this.lblFilterName.Location = new System.Drawing.Point(6, 22);
+            this.lblFilterName.Name = "lblFilterName";
+            this.lblFilterName.Size = new System.Drawing.Size(35, 13);
+            this.lblFilterName.TabIndex = 0;
+            this.lblFilterName.Text = "Firma:";
+            // 
+            // lblFilterId
+            // 
+            this.lblFilterId.AutoSize = true;
+            this.lblFilterId.Location = new System.Drawing.Point(212, 49);
+            this.lblFilterId.Name = "lblFilterId";
+            this.lblFilterId.Size = new System.Drawing.Size(18, 13);
+            this.lblFilterId.TabIndex = 9;
+            this.lblFilterId.Text = "id:";
+            // 
+            // lblFilterTrade
+            // 
+            this.lblFilterTrade.AutoSize = true;
+            this.lblFilterTrade.Location = new System.Drawing.Point(6, 75);
+            this.lblFilterTrade.Name = "lblFilterTrade";
+            this.lblFilterTrade.Size = new System.Drawing.Size(50, 13);
+            this.lblFilterTrade.TabIndex = 4;
+            this.lblFilterTrade.Text = "Branche:";
+            // 
+            // lblCompanyMain
+            // 
+            this.lblCompanyMain.AutoSize = true;
+            this.lblCompanyMain.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblCompanyMain.Location = new System.Drawing.Point(0, 0);
+            this.lblCompanyMain.Name = "lblCompanyMain";
+            this.lblCompanyMain.Size = new System.Drawing.Size(82, 13);
+            this.lblCompanyMain.TabIndex = 0;
+            this.lblCompanyMain.Text = "Gelistete Firmen";
+            // 
+            // prgCompany
+            // 
+            this.prgCompany.CategoryForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.prgCompany.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prgCompany.LineColor = System.Drawing.SystemColors.ControlDark;
+            this.prgCompany.Location = new System.Drawing.Point(0, 13);
+            this.prgCompany.Name = "prgCompany";
+            this.prgCompany.Size = new System.Drawing.Size(318, 318);
+            this.prgCompany.TabIndex = 1;
+            this.prgCompany.ViewBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.prgCompany.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.prgCompany_PropertyValueChanged);
+            // 
+            // lblCompanyDetail
+            // 
+            this.lblCompanyDetail.AutoSize = true;
+            this.lblCompanyDetail.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblCompanyDetail.Location = new System.Drawing.Point(0, 0);
+            this.lblCompanyDetail.Name = "lblCompanyDetail";
+            this.lblCompanyDetail.Size = new System.Drawing.Size(84, 13);
+            this.lblCompanyDetail.TabIndex = 0;
+            this.lblCompanyDetail.Text = "Details zur Firma";
+            // 
+            // spcApplication
+            // 
+            this.spcApplication.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.spcApplication.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spcApplication.Location = new System.Drawing.Point(0, 0);
+            this.spcApplication.Name = "spcApplication";
+            // 
+            // spcApplication.Panel1
+            // 
+            this.spcApplication.Panel1.Controls.Add(this.lsvApplication);
+            this.spcApplication.Panel1.Controls.Add(this.lblApplicationMain);
+            this.spcApplication.Panel1.Controls.Add(this.pnlApplicationFoot);
+            this.spcApplication.Panel1MinSize = 474;
+            // 
+            // spcApplication.Panel2
+            // 
+            this.spcApplication.Panel2.Controls.Add(this.prgApplication);
+            this.spcApplication.Panel2.Controls.Add(this.lblApplicationDetail);
+            this.spcApplication.Panel2MinSize = 200;
+            this.spcApplication.Size = new System.Drawing.Size(961, 225);
+            this.spcApplication.SplitterDistance = 635;
+            this.spcApplication.TabIndex = 0;
+            this.spcApplication.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.spcApplication_SplitterMoved);
+            // 
+            // lsvApplication
+            // 
+            this.lsvApplication.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lsvApplication.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chLsvApplication_Title,
+            this.chLsvApplication_Number,
+            this.chLsvApplication_Priority,
+            this.chLsvApplication_Deadline,
+            this.chLsvApplication_State,
+            this.chLsvApplication_StateDate,
+            this.chLsvApplication_ReminderText,
+            this.chLsvApplication_ReminderDate,
+            this.chLsvApplication_Created,
+            this.chLsvApplication_Id});
+            this.lsvApplication.ColumnWidths = ((System.Collections.Generic.List<int>)(resources.GetObject("lsvApplication.ColumnWidths")));
+            this.lsvApplication.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvApplication.FullRowSelect = true;
+            this.lsvApplication.GridLines = true;
+            this.lsvApplication.HideSelection = false;
+            this.lsvApplication.Location = new System.Drawing.Point(0, 13);
+            this.lsvApplication.Name = "lsvApplication";
+            this.lsvApplication.Size = new System.Drawing.Size(631, 184);
+            this.lsvApplication.SmallImageList = this.imlApplicationType;
+            this.lsvApplication.TabIndex = 1;
+            this.lsvApplication.UseCompatibleStateImageBehavior = false;
+            this.lsvApplication.View = System.Windows.Forms.View.Details;
+            this.lsvApplication.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lsvApplication_ColumnClick);
+            this.lsvApplication.ColumnWidthChanged += new System.Windows.Forms.ColumnWidthChangedEventHandler(this.lsvApplication_ColumnWidthChanged);
+            this.lsvApplication.SelectedIndexChanged += new System.EventHandler(this.lsvApplication_SelectedIndexChanged);
+            this.lsvApplication.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lsvApplication_MouseDoubleClick);
+            // 
+            // chLsvApplication_Title
+            // 
+            this.chLsvApplication_Title.Text = "Benennung";
+            this.chLsvApplication_Title.Width = 120;
+            // 
+            // chLsvApplication_Number
+            // 
+            this.chLsvApplication_Number.Text = "Referenznummer";
+            // 
+            // chLsvApplication_Priority
+            // 
+            this.chLsvApplication_Priority.Text = "Priorität";
+            this.chLsvApplication_Priority.Width = 30;
+            // 
+            // chLsvApplication_Deadline
+            // 
+            this.chLsvApplication_Deadline.Text = "Bewerbungsfrist";
+            this.chLsvApplication_Deadline.Width = 120;
+            // 
+            // chLsvApplication_State
+            // 
+            this.chLsvApplication_State.Text = "Status der Bewerbung";
+            this.chLsvApplication_State.Width = 120;
+            // 
+            // chLsvApplication_StateDate
+            // 
+            this.chLsvApplication_StateDate.Text = "Zeitpunkt des Status";
+            this.chLsvApplication_StateDate.Width = 120;
+            // 
+            // chLsvApplication_ReminderText
+            // 
+            this.chLsvApplication_ReminderText.Text = "Nächste Erinnerung Text";
+            this.chLsvApplication_ReminderText.Width = 120;
+            // 
+            // chLsvApplication_ReminderDate
+            // 
+            this.chLsvApplication_ReminderDate.Text = "Nächste Erinnerung Datum";
+            this.chLsvApplication_ReminderDate.Width = 120;
+            // 
+            // chLsvApplication_Created
+            // 
+            this.chLsvApplication_Created.Text = "Erstelldatum";
+            this.chLsvApplication_Created.Width = 120;
+            // 
+            // chLsvApplication_Id
+            // 
+            this.chLsvApplication_Id.Text = "Id";
+            this.chLsvApplication_Id.Width = 30;
+            // 
+            // imlApplicationType
+            // 
+            this.imlApplicationType.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imlApplicationType.ImageStream")));
+            this.imlApplicationType.TransparentColor = System.Drawing.Color.Transparent;
+            this.imlApplicationType.Images.SetKeyName(0, "Application_advertised.png");
+            this.imlApplicationType.Images.SetKeyName(1, "Application_Speculative.png");
+            // 
+            // lblApplicationMain
+            // 
+            this.lblApplicationMain.AutoSize = true;
+            this.lblApplicationMain.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblApplicationMain.Location = new System.Drawing.Point(0, 0);
+            this.lblApplicationMain.Name = "lblApplicationMain";
+            this.lblApplicationMain.Size = new System.Drawing.Size(167, 13);
+            this.lblApplicationMain.TabIndex = 0;
+            this.lblApplicationMain.Text = "Bewerbungen bei gewählter Firma";
+            // 
+            // pnlApplicationFoot
+            // 
+            this.pnlApplicationFoot.Controls.Add(this.btnApplicationReport);
+            this.pnlApplicationFoot.Controls.Add(this.btnApplicationDuplicate);
+            this.pnlApplicationFoot.Controls.Add(this.btnApplicationGoToDir);
+            this.pnlApplicationFoot.Controls.Add(this.btnApplicationDelete);
+            this.pnlApplicationFoot.Controls.Add(this.btnApplicationEdit);
+            this.pnlApplicationFoot.Controls.Add(this.btnApplicationAdd);
+            this.pnlApplicationFoot.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlApplicationFoot.Location = new System.Drawing.Point(0, 197);
+            this.pnlApplicationFoot.Name = "pnlApplicationFoot";
+            this.pnlApplicationFoot.Size = new System.Drawing.Size(631, 24);
+            this.pnlApplicationFoot.TabIndex = 3;
+            // 
+            // btnApplicationReport
+            // 
+            this.btnApplicationReport.Image = global::OLKI.Programme.BOS.Properties.Resources.Report;
+            this.btnApplicationReport.Location = new System.Drawing.Point(256, 0);
+            this.btnApplicationReport.Name = "btnApplicationReport";
+            this.btnApplicationReport.Size = new System.Drawing.Size(35, 24);
+            this.btnApplicationReport.TabIndex = 3;
+            this.btnApplicationReport.UseVisualStyleBackColor = true;
+            this.btnApplicationReport.Click += new System.EventHandler(this.mnuProjectForm_Application_Report_Click);
+            // 
+            // btnApplicationDuplicate
+            // 
+            this.btnApplicationDuplicate.Image = global::OLKI.Programme.BOS.Properties.Resources.Copy;
+            this.btnApplicationDuplicate.Location = new System.Drawing.Point(297, 0);
+            this.btnApplicationDuplicate.Name = "btnApplicationDuplicate";
+            this.btnApplicationDuplicate.Size = new System.Drawing.Size(35, 24);
+            this.btnApplicationDuplicate.TabIndex = 4;
+            this.btnApplicationDuplicate.UseVisualStyleBackColor = true;
+            this.btnApplicationDuplicate.Click += new System.EventHandler(this.mnuProjectForm_Application_Duplicate_Click);
+            // 
+            // btnApplicationGoToDir
+            // 
+            this.btnApplicationGoToDir.Image = global::OLKI.Programme.BOS.Properties.Resources.OpenFolder;
+            this.btnApplicationGoToDir.Location = new System.Drawing.Point(215, 0);
+            this.btnApplicationGoToDir.Name = "btnApplicationGoToDir";
+            this.btnApplicationGoToDir.Size = new System.Drawing.Size(35, 24);
+            this.btnApplicationGoToDir.TabIndex = 2;
+            this.btnApplicationGoToDir.UseVisualStyleBackColor = true;
+            this.btnApplicationGoToDir.Click += new System.EventHandler(this.mnuProjectForm_Application_GoToDir_Click);
+            // 
+            // btnApplicationDelete
+            // 
+            this.btnApplicationDelete.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnApplicationDelete.Image = global::OLKI.Programme.BOS.Properties.Resources.Delete;
+            this.btnApplicationDelete.Location = new System.Drawing.Point(531, 0);
+            this.btnApplicationDelete.Name = "btnApplicationDelete";
+            this.btnApplicationDelete.Size = new System.Drawing.Size(100, 24);
+            this.btnApplicationDelete.TabIndex = 5;
+            this.btnApplicationDelete.Text = "Löschen";
+            this.btnApplicationDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnApplicationDelete.UseVisualStyleBackColor = true;
+            this.btnApplicationDelete.Click += new System.EventHandler(this.mnuProjectForm_Application_Delete_Click);
+            // 
+            // btnApplicationEdit
+            // 
+            this.btnApplicationEdit.Image = global::OLKI.Programme.BOS.Properties.Resources.Settings;
+            this.btnApplicationEdit.Location = new System.Drawing.Point(109, 0);
+            this.btnApplicationEdit.Name = "btnApplicationEdit";
+            this.btnApplicationEdit.Size = new System.Drawing.Size(100, 24);
+            this.btnApplicationEdit.TabIndex = 1;
+            this.btnApplicationEdit.Text = "Bearbeiten";
+            this.btnApplicationEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnApplicationEdit.UseVisualStyleBackColor = true;
+            this.btnApplicationEdit.Click += new System.EventHandler(this.mnuProjectForm_Application_Edit_Click);
+            // 
+            // btnApplicationAdd
+            // 
+            this.btnApplicationAdd.Image = global::OLKI.Programme.BOS.Properties.Resources.New;
+            this.btnApplicationAdd.Location = new System.Drawing.Point(3, 0);
+            this.btnApplicationAdd.Name = "btnApplicationAdd";
+            this.btnApplicationAdd.Size = new System.Drawing.Size(100, 24);
+            this.btnApplicationAdd.TabIndex = 0;
+            this.btnApplicationAdd.Text = "Hinzufügen";
+            this.btnApplicationAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnApplicationAdd.UseVisualStyleBackColor = true;
+            this.btnApplicationAdd.Click += new System.EventHandler(this.mnuProjectForm_Application_Add_Click);
+            // 
+            // prgApplication
+            // 
+            this.prgApplication.CategoryForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.prgApplication.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prgApplication.LineColor = System.Drawing.SystemColors.ControlDark;
+            this.prgApplication.Location = new System.Drawing.Point(0, 13);
+            this.prgApplication.Name = "prgApplication";
+            this.prgApplication.Size = new System.Drawing.Size(318, 208);
+            this.prgApplication.TabIndex = 1;
+            this.prgApplication.ViewBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.prgApplication.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.prgApplication_PropertyValueChanged);
+            // 
+            // lblApplicationDetail
+            // 
+            this.lblApplicationDetail.AutoSize = true;
+            this.lblApplicationDetail.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblApplicationDetail.Location = new System.Drawing.Point(0, 0);
+            this.lblApplicationDetail.Name = "lblApplicationDetail";
+            this.lblApplicationDetail.Size = new System.Drawing.Size(113, 13);
+            this.lblApplicationDetail.TabIndex = 0;
+            this.lblApplicationDetail.Text = "Details zur Bewerbung";
+            // 
+            // mnuProjectForm
+            // 
+            this.mnuProjectForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuProjectForm_Company,
+            this.mnuProjectForm_Application,
+            this.mnuProjectForm_List});
+            this.mnuProjectForm.Location = new System.Drawing.Point(0, 0);
+            this.mnuProjectForm.Name = "mnuProjectForm";
+            this.mnuProjectForm.Size = new System.Drawing.Size(961, 24);
+            this.mnuProjectForm.TabIndex = 4;
+            this.mnuProjectForm.Text = "menuStrip1";
+            this.mnuProjectForm.Visible = false;
+            // 
+            // mnuProjectForm_Company
+            // 
+            this.mnuProjectForm_Company.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuProjectForm_Company_Add,
+            this.mnuProjectForm_Company_Edit,
+            this.mnuProjectForm_Company_Delete,
+            this.mnuProjectForm_Company_GoToDir,
+            this.mnuProjectForm_Company_Report,
+            this.toolStripSeparator3,
+            this.mnuProjectForm_Company_Filter,
+            this.toolStripMenuItem1});
+            this.mnuProjectForm_Company.MergeAction = System.Windows.Forms.MergeAction.Insert;
+            this.mnuProjectForm_Company.MergeIndex = 1;
+            this.mnuProjectForm_Company.Name = "mnuProjectForm_Company";
+            this.mnuProjectForm_Company.Size = new System.Drawing.Size(49, 20);
+            this.mnuProjectForm_Company.Text = "Firma";
+            // 
+            // mnuProjectForm_Company_Add
+            // 
+            this.mnuProjectForm_Company_Add.Image = global::OLKI.Programme.BOS.Properties.Resources.New;
+            this.mnuProjectForm_Company_Add.Name = "mnuProjectForm_Company_Add";
+            this.mnuProjectForm_Company_Add.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.N)));
+            this.mnuProjectForm_Company_Add.Size = new System.Drawing.Size(334, 22);
+            this.mnuProjectForm_Company_Add.Text = "Hinzufügen";
+            this.mnuProjectForm_Company_Add.Click += new System.EventHandler(this.mnuProjectForm_Company_Add_Click);
+            // 
+            // mnuProjectForm_Company_Edit
+            // 
+            this.mnuProjectForm_Company_Edit.Image = global::OLKI.Programme.BOS.Properties.Resources.Settings;
+            this.mnuProjectForm_Company_Edit.Name = "mnuProjectForm_Company_Edit";
+            this.mnuProjectForm_Company_Edit.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.B)));
+            this.mnuProjectForm_Company_Edit.Size = new System.Drawing.Size(334, 22);
+            this.mnuProjectForm_Company_Edit.Text = "Bearbeiten";
+            this.mnuProjectForm_Company_Edit.Click += new System.EventHandler(this.mnuProjectForm_Company_Edit_Click);
+            // 
+            // mnuProjectForm_Company_Delete
+            // 
+            this.mnuProjectForm_Company_Delete.Image = global::OLKI.Programme.BOS.Properties.Resources.Delete;
+            this.mnuProjectForm_Company_Delete.Name = "mnuProjectForm_Company_Delete";
+            this.mnuProjectForm_Company_Delete.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.Delete)));
+            this.mnuProjectForm_Company_Delete.Size = new System.Drawing.Size(334, 22);
+            this.mnuProjectForm_Company_Delete.Text = "Löschen";
+            this.mnuProjectForm_Company_Delete.Click += new System.EventHandler(this.mnuProjectForm_Company_Delete_Click);
+            // 
+            // mnuProjectForm_Company_GoToDir
+            // 
+            this.mnuProjectForm_Company_GoToDir.Image = global::OLKI.Programme.BOS.Properties.Resources.OpenFolder;
+            this.mnuProjectForm_Company_GoToDir.Name = "mnuProjectForm_Company_GoToDir";
+            this.mnuProjectForm_Company_GoToDir.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.O)));
+            this.mnuProjectForm_Company_GoToDir.Size = new System.Drawing.Size(334, 22);
+            this.mnuProjectForm_Company_GoToDir.Text = "Ordner Öffnen";
+            this.mnuProjectForm_Company_GoToDir.Click += new System.EventHandler(this.mnuProjectForm_Company_GoToDir_Click);
+            // 
+            // mnuProjectForm_Company_Report
+            // 
+            this.mnuProjectForm_Company_Report.Image = global::OLKI.Programme.BOS.Properties.Resources.Report;
+            this.mnuProjectForm_Company_Report.Name = "mnuProjectForm_Company_Report";
+            this.mnuProjectForm_Company_Report.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.R)));
+            this.mnuProjectForm_Company_Report.Size = new System.Drawing.Size(334, 22);
+            this.mnuProjectForm_Company_Report.Text = "Bericht erstellen";
+            this.mnuProjectForm_Company_Report.Click += new System.EventHandler(this.mnuProjectForm_Company_Report_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(331, 6);
+            // 
+            // mnuProjectForm_Company_Filter
+            // 
+            this.mnuProjectForm_Company_Filter.Image = global::OLKI.Programme.BOS.Properties.Resources.Filter2;
+            this.mnuProjectForm_Company_Filter.Name = "mnuProjectForm_Company_Filter";
+            this.mnuProjectForm_Company_Filter.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F)));
+            this.mnuProjectForm_Company_Filter.Size = new System.Drawing.Size(334, 22);
+            this.mnuProjectForm_Company_Filter.Text = "Erweiterter Filter / Suchen";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.farbe1ToolStripMenuItem,
+            this.farbe2ToolStripMenuItem,
+            this.farbe3ToolStripMenuItem,
+            this.farbe4ToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.grünToolStripMenuItem,
+            this.hellrotToolStripMenuItem,
+            this.rotToolStripMenuItem,
+            this.rosaToolStripMenuItem,
+            this.rotToolStripMenuItem1,
+            this.schwarzToolStripMenuItem,
+            this.weißToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(334, 22);
+            this.toolStripMenuItem1.Text = "Schnellfarbzuweisung";
+            this.toolStripMenuItem1.Visible = false;
+            // 
+            // farbe1ToolStripMenuItem
+            // 
+            this.farbe1ToolStripMenuItem.Image = global::OLKI.Programme.BOS.Colormarkers._00____Keine_;
+            this.farbe1ToolStripMenuItem.Name = "farbe1ToolStripMenuItem";
+            this.farbe1ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D0)));
+            this.farbe1ToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
+            this.farbe1ToolStripMenuItem.Text = "Keine";
+            // 
+            // farbe2ToolStripMenuItem
+            // 
+            this.farbe2ToolStripMenuItem.Image = global::OLKI.Programme.BOS.Colormarkers._01___Blau;
+            this.farbe2ToolStripMenuItem.Name = "farbe2ToolStripMenuItem";
+            this.farbe2ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F1)));
+            this.farbe2ToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
+            this.farbe2ToolStripMenuItem.Text = "Blau";
+            // 
+            // farbe3ToolStripMenuItem
+            // 
+            this.farbe3ToolStripMenuItem.Image = global::OLKI.Programme.BOS.Colormarkers._02___Cyan;
+            this.farbe3ToolStripMenuItem.Name = "farbe3ToolStripMenuItem";
+            this.farbe3ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F2)));
+            this.farbe3ToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
+            this.farbe3ToolStripMenuItem.Text = "Cyan";
+            // 
+            // farbe4ToolStripMenuItem
+            // 
+            this.farbe4ToolStripMenuItem.Image = global::OLKI.Programme.BOS.Colormarkers._03___Durchsichtig;
+            this.farbe4ToolStripMenuItem.Name = "farbe4ToolStripMenuItem";
+            this.farbe4ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F3)));
+            this.farbe4ToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
+            this.farbe4ToolStripMenuItem.Text = "Durchsichtig";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Image = global::OLKI.Programme.BOS.Colormarkers._04___Gelb;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F4)));
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(272, 22);
+            this.toolStripMenuItem2.Text = "Gelb";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Image = global::OLKI.Programme.BOS.Colormarkers._05___Grau;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F5)));
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(272, 22);
+            this.toolStripMenuItem3.Text = "Grau";
+            // 
+            // grünToolStripMenuItem
+            // 
+            this.grünToolStripMenuItem.Image = global::OLKI.Programme.BOS.Colormarkers._06___Grün;
+            this.grünToolStripMenuItem.Name = "grünToolStripMenuItem";
+            this.grünToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F6)));
+            this.grünToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
+            this.grünToolStripMenuItem.Text = "Grün";
+            // 
+            // hellrotToolStripMenuItem
+            // 
+            this.hellrotToolStripMenuItem.Image = global::OLKI.Programme.BOS.Colormarkers._07___Hellrot;
+            this.hellrotToolStripMenuItem.Name = "hellrotToolStripMenuItem";
+            this.hellrotToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F7)));
+            this.hellrotToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
+            this.hellrotToolStripMenuItem.Text = "Hellrot";
+            // 
+            // rotToolStripMenuItem
+            // 
+            this.rotToolStripMenuItem.Image = global::OLKI.Programme.BOS.Colormarkers._08___Orange;
+            this.rotToolStripMenuItem.Name = "rotToolStripMenuItem";
+            this.rotToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F8)));
+            this.rotToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
+            this.rotToolStripMenuItem.Text = "Orange";
+            // 
+            // rosaToolStripMenuItem
+            // 
+            this.rosaToolStripMenuItem.Image = global::OLKI.Programme.BOS.Colormarkers._09___Rosa;
+            this.rosaToolStripMenuItem.Name = "rosaToolStripMenuItem";
+            this.rosaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F9)));
+            this.rosaToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
+            this.rosaToolStripMenuItem.Text = "Rosa";
+            // 
+            // rotToolStripMenuItem1
+            // 
+            this.rotToolStripMenuItem1.Image = global::OLKI.Programme.BOS.Colormarkers._10___Rot;
+            this.rotToolStripMenuItem1.Name = "rotToolStripMenuItem1";
+            this.rotToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F10)));
+            this.rotToolStripMenuItem1.Size = new System.Drawing.Size(272, 22);
+            this.rotToolStripMenuItem1.Text = "Rot";
+            // 
+            // schwarzToolStripMenuItem
+            // 
+            this.schwarzToolStripMenuItem.Image = global::OLKI.Programme.BOS.Colormarkers._11___Schwarz;
+            this.schwarzToolStripMenuItem.Name = "schwarzToolStripMenuItem";
+            this.schwarzToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F11)));
+            this.schwarzToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
+            this.schwarzToolStripMenuItem.Text = "Schwarz";
+            // 
+            // weißToolStripMenuItem
+            // 
+            this.weißToolStripMenuItem.Image = global::OLKI.Programme.BOS.Colormarkers._12___Weiß;
+            this.weißToolStripMenuItem.Name = "weißToolStripMenuItem";
+            this.weißToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F12)));
+            this.weißToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
+            this.weißToolStripMenuItem.Text = "Weiß";
+            // 
+            // mnuProjectForm_Application
+            // 
+            this.mnuProjectForm_Application.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuProjectForm_Application_Add,
+            this.mnuProjectForm_Application_Edit,
+            this.mnuProjectForm_Application_Delete,
+            this.mnuProjectForm_Application_GoToDir,
+            this.mnuProjectForm_Application_Report,
+            this.mnuProjectForm_Application_Duplicate,
+            this.toolStripSeparator4,
+            this.mnuProjectForm_Application_Filter,
+            this.toolStripSeparator1,
+            this.mnuProjectForm_Application_AutoArchive});
+            this.mnuProjectForm_Application.MergeAction = System.Windows.Forms.MergeAction.Insert;
+            this.mnuProjectForm_Application.MergeIndex = 2;
+            this.mnuProjectForm_Application.Name = "mnuProjectForm_Application";
+            this.mnuProjectForm_Application.Size = new System.Drawing.Size(79, 20);
+            this.mnuProjectForm_Application.Text = "Bewerbung";
+            // 
+            // mnuProjectForm_Application_Add
+            // 
+            this.mnuProjectForm_Application_Add.Image = global::OLKI.Programme.BOS.Properties.Resources.New;
+            this.mnuProjectForm_Application_Add.Name = "mnuProjectForm_Application_Add";
+            this.mnuProjectForm_Application_Add.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.N)));
+            this.mnuProjectForm_Application_Add.Size = new System.Drawing.Size(270, 22);
+            this.mnuProjectForm_Application_Add.Text = "Hinzufügen";
+            this.mnuProjectForm_Application_Add.Click += new System.EventHandler(this.mnuProjectForm_Application_Add_Click);
+            // 
+            // mnuProjectForm_Application_Edit
+            // 
+            this.mnuProjectForm_Application_Edit.Image = global::OLKI.Programme.BOS.Properties.Resources.Settings;
+            this.mnuProjectForm_Application_Edit.Name = "mnuProjectForm_Application_Edit";
+            this.mnuProjectForm_Application_Edit.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.B)));
+            this.mnuProjectForm_Application_Edit.Size = new System.Drawing.Size(270, 22);
+            this.mnuProjectForm_Application_Edit.Text = "Bearbeiten";
+            this.mnuProjectForm_Application_Edit.Click += new System.EventHandler(this.mnuProjectForm_Application_Edit_Click);
+            // 
+            // mnuProjectForm_Application_Delete
+            // 
+            this.mnuProjectForm_Application_Delete.Image = global::OLKI.Programme.BOS.Properties.Resources.Delete;
+            this.mnuProjectForm_Application_Delete.Name = "mnuProjectForm_Application_Delete";
+            this.mnuProjectForm_Application_Delete.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.Delete)));
+            this.mnuProjectForm_Application_Delete.Size = new System.Drawing.Size(270, 22);
+            this.mnuProjectForm_Application_Delete.Text = "Löschen";
+            this.mnuProjectForm_Application_Delete.Click += new System.EventHandler(this.mnuProjectForm_Application_Delete_Click);
+            // 
+            // mnuProjectForm_Application_GoToDir
+            // 
+            this.mnuProjectForm_Application_GoToDir.Image = global::OLKI.Programme.BOS.Properties.Resources.OpenFolder;
+            this.mnuProjectForm_Application_GoToDir.Name = "mnuProjectForm_Application_GoToDir";
+            this.mnuProjectForm_Application_GoToDir.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.O)));
+            this.mnuProjectForm_Application_GoToDir.Size = new System.Drawing.Size(270, 22);
+            this.mnuProjectForm_Application_GoToDir.Text = "Ordner Öffnen";
+            this.mnuProjectForm_Application_GoToDir.Click += new System.EventHandler(this.mnuProjectForm_Application_GoToDir_Click);
+            // 
+            // mnuProjectForm_Application_Report
+            // 
+            this.mnuProjectForm_Application_Report.Image = global::OLKI.Programme.BOS.Properties.Resources.Report;
+            this.mnuProjectForm_Application_Report.Name = "mnuProjectForm_Application_Report";
+            this.mnuProjectForm_Application_Report.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.R)));
+            this.mnuProjectForm_Application_Report.Size = new System.Drawing.Size(270, 22);
+            this.mnuProjectForm_Application_Report.Text = "Bericht erstellen";
+            this.mnuProjectForm_Application_Report.Click += new System.EventHandler(this.mnuProjectForm_Application_Report_Click);
+            // 
+            // mnuProjectForm_Application_Duplicate
+            // 
+            this.mnuProjectForm_Application_Duplicate.Image = global::OLKI.Programme.BOS.Properties.Resources.Copy;
+            this.mnuProjectForm_Application_Duplicate.Name = "mnuProjectForm_Application_Duplicate";
+            this.mnuProjectForm_Application_Duplicate.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.D)));
+            this.mnuProjectForm_Application_Duplicate.Size = new System.Drawing.Size(270, 22);
+            this.mnuProjectForm_Application_Duplicate.Text = "Duplizieren";
+            this.mnuProjectForm_Application_Duplicate.Click += new System.EventHandler(this.mnuProjectForm_Application_Duplicate_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(267, 6);
+            // 
+            // mnuProjectForm_Application_Filter
+            // 
+            this.mnuProjectForm_Application_Filter.Image = global::OLKI.Programme.BOS.Properties.Resources.Filter;
+            this.mnuProjectForm_Application_Filter.Name = "mnuProjectForm_Application_Filter";
+            this.mnuProjectForm_Application_Filter.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.F)));
+            this.mnuProjectForm_Application_Filter.Size = new System.Drawing.Size(270, 22);
+            this.mnuProjectForm_Application_Filter.Text = "Filtern / Suchen";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
+            // 
+            // mnuProjectForm_Application_AutoArchive
+            // 
+            this.mnuProjectForm_Application_AutoArchive.Image = global::OLKI.Programme.BOS.Properties.Resources.Autoarchive;
+            this.mnuProjectForm_Application_AutoArchive.Name = "mnuProjectForm_Application_AutoArchive";
+            this.mnuProjectForm_Application_AutoArchive.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.A)));
+            this.mnuProjectForm_Application_AutoArchive.Size = new System.Drawing.Size(270, 22);
+            this.mnuProjectForm_Application_AutoArchive.Text = "Automatisch archivieren";
+            // 
+            // mnuProjectForm_List
+            // 
+            this.mnuProjectForm_List.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuProjectForm_List_Application,
+            this.mnuProjectForm_List_Reminder});
+            this.mnuProjectForm_List.MergeAction = System.Windows.Forms.MergeAction.Insert;
+            this.mnuProjectForm_List.MergeIndex = 3;
+            this.mnuProjectForm_List.Name = "mnuProjectForm_List";
+            this.mnuProjectForm_List.Size = new System.Drawing.Size(87, 20);
+            this.mnuProjectForm_List.Text = "Auflistungen";
+            // 
+            // mnuProjectForm_List_Application
+            // 
+            this.mnuProjectForm_List_Application.Image = global::OLKI.Programme.BOS.Properties.Resources.Application;
+            this.mnuProjectForm_List_Application.Name = "mnuProjectForm_List_Application";
+            this.mnuProjectForm_List_Application.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.B)));
+            this.mnuProjectForm_List_Application.Size = new System.Drawing.Size(267, 22);
+            this.mnuProjectForm_List_Application.Text = "Bewerbungen";
+            // 
+            // mnuProjectForm_List_Reminder
+            // 
+            this.mnuProjectForm_List_Reminder.Image = global::OLKI.Programme.BOS.Properties.Resources.Reminder;
+            this.mnuProjectForm_List_Reminder.Name = "mnuProjectForm_List_Reminder";
+            this.mnuProjectForm_List_Reminder.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.E)));
+            this.mnuProjectForm_List_Reminder.Size = new System.Drawing.Size(267, 22);
+            this.mnuProjectForm_List_Reminder.Text = "Erinnerungen";
+            // 
+            // ProjectForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(961, 564);
+            this.Controls.Add(this.mnuProjectForm);
+            this.Controls.Add(this.spcMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(900, 550);
+            this.Name = "ProjectForm";
+            this.ShowInTaskbar = false;
+            this.Text = "ProjectForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Shown += new System.EventHandler(this.ProjectForm_Shown);
+            this.spcMain.Panel1.ResumeLayout(false);
+            this.spcMain.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spcMain)).EndInit();
+            this.spcMain.ResumeLayout(false);
+            this.spcCompany.Panel1.ResumeLayout(false);
+            this.spcCompany.Panel2.ResumeLayout(false);
+            this.spcCompany.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spcCompany)).EndInit();
+            this.spcCompany.ResumeLayout(false);
+            this.pnlCompanyFoot.ResumeLayout(false);
+            this.pnlCompanyHead.ResumeLayout(false);
+            this.pnlCompanyHead.PerformLayout();
+            this.grbFilte.ResumeLayout(false);
+            this.grbFilte.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFilterId)).EndInit();
+            this.spcApplication.Panel1.ResumeLayout(false);
+            this.spcApplication.Panel1.PerformLayout();
+            this.spcApplication.Panel2.ResumeLayout(false);
+            this.spcApplication.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spcApplication)).EndInit();
+            this.spcApplication.ResumeLayout(false);
+            this.pnlApplicationFoot.ResumeLayout(false);
+            this.mnuProjectForm.ResumeLayout(false);
+            this.mnuProjectForm.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        internal System.Windows.Forms.SplitContainer spcMain;
+        private System.Windows.Forms.SplitContainer spcCompany;
+        internal Toolbox.Widgets.SortListView lsvCompany;
+        private System.Windows.Forms.ColumnHeader chLsvCompanyMain_Name;
+        private System.Windows.Forms.ColumnHeader chLsvCompanyMain_AdressCity;
+        private System.Windows.Forms.ColumnHeader chLsvCompanyMain_AdressCountry;
+        private System.Windows.Forms.ColumnHeader chLsvCompanyMain_Trade;
+        private System.Windows.Forms.ColumnHeader chLsvCompanyMain_ApplicationPriority;
+        private System.Windows.Forms.ColumnHeader chLsvCompanyMain_ApplicationState;
+        private System.Windows.Forms.ColumnHeader chLsvCompanyMain_ApplicationsDate;
+        private System.Windows.Forms.ColumnHeader chLsvCompanyMain_Comment;
+        private System.Windows.Forms.ColumnHeader chLsvCompanyMain_Id;
+        private System.Windows.Forms.Panel pnlCompanyFoot;
+        private System.Windows.Forms.Button btnCompanyAdressToClipboard;
+        internal System.Windows.Forms.Button btnCompanyReport;
+        internal System.Windows.Forms.Button btnCompanyGoToCareerpage;
+        internal System.Windows.Forms.Button btnCompanyGoToHomepage;
+        internal System.Windows.Forms.Button btnCompanyGoToDir;
+        internal System.Windows.Forms.Button btnCompanyDelete;
+        internal System.Windows.Forms.Button btnCompanyEdit;
+        internal System.Windows.Forms.Button btnCompanyAdd;
+        private System.Windows.Forms.Panel pnlCompanyHead;
+        private System.Windows.Forms.GroupBox grbFilte;
+        private System.Windows.Forms.NumericUpDown nudFilterId;
+        private System.Windows.Forms.Button btnFilterCompanyDetail;
+        internal System.Windows.Forms.CheckBox chkFilterState;
+        internal System.Windows.Forms.TextBox txtFilterName;
+        internal System.Windows.Forms.ComboBox cboFilterTrade;
+        internal System.Windows.Forms.ComboBox cboFilterAdressCity;
+        private System.Windows.Forms.Button btnFilterCompany;
+        private System.Windows.Forms.Button btnFilterReset;
+        internal System.Windows.Forms.CheckBox chkFilterShowDead;
+        private System.Windows.Forms.Label lblFilterCity;
+        private System.Windows.Forms.Label lblFilterName;
+        private System.Windows.Forms.Label lblFilterId;
+        private System.Windows.Forms.Label lblFilterTrade;
+        private System.Windows.Forms.Label lblCompanyMain;
+        internal System.Windows.Forms.PropertyGrid prgCompany;
+        private System.Windows.Forms.Label lblCompanyDetail;
+        private System.Windows.Forms.SplitContainer spcApplication;
+        internal Toolbox.Widgets.SortListView lsvApplication;
+        private System.Windows.Forms.ColumnHeader chLsvApplication_Title;
+        private System.Windows.Forms.ColumnHeader chLsvApplication_Number;
+        private System.Windows.Forms.ColumnHeader chLsvApplication_Priority;
+        private System.Windows.Forms.ColumnHeader chLsvApplication_Deadline;
+        private System.Windows.Forms.ColumnHeader chLsvApplication_State;
+        private System.Windows.Forms.ColumnHeader chLsvApplication_StateDate;
+        private System.Windows.Forms.ColumnHeader chLsvApplication_ReminderText;
+        private System.Windows.Forms.ColumnHeader chLsvApplication_ReminderDate;
+        private System.Windows.Forms.ColumnHeader chLsvApplication_Created;
+        private System.Windows.Forms.ColumnHeader chLsvApplication_Id;
+        private System.Windows.Forms.Label lblApplicationMain;
+        private System.Windows.Forms.Panel pnlApplicationFoot;
+        internal System.Windows.Forms.Button btnApplicationReport;
+        internal System.Windows.Forms.Button btnApplicationDuplicate;
+        internal System.Windows.Forms.Button btnApplicationGoToDir;
+        internal System.Windows.Forms.Button btnApplicationDelete;
+        internal System.Windows.Forms.Button btnApplicationEdit;
+        internal System.Windows.Forms.Button btnApplicationAdd;
+        internal System.Windows.Forms.PropertyGrid prgApplication;
+        private System.Windows.Forms.Label lblApplicationDetail;
+        protected internal System.Windows.Forms.ImageList imlColorMarkers;
+        internal System.Windows.Forms.MenuStrip mnuProjectForm;
+        internal System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Company;
+        internal System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Company_Add;
+        internal System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Company_Edit;
+        internal System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Company_Delete;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        internal System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Company_Filter;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem farbe1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem farbe2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem farbe3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem farbe4ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        internal System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Application;
+        internal System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Application_Add;
+        internal System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Application_Edit;
+        internal System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Application_Delete;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        internal System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Application_Filter;
+        internal System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Application_AutoArchive;
+        internal System.Windows.Forms.ToolStripMenuItem mnuProjectForm_List;
+        private System.Windows.Forms.ToolStripMenuItem mnuProjectForm_List_Application;
+        private System.Windows.Forms.ToolStripMenuItem mnuProjectForm_List_Reminder;
+        protected internal System.Windows.Forms.ImageList imlApplicationType;
+        private System.Windows.Forms.ColumnHeader chLsvCompanyMain_Applications;
+        private System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Company_GoToDir;
+        private System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Company_Report;
+        private System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Application_GoToDir;
+        private System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Application_Report;
+        private System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Application_Duplicate;
+        private System.Windows.Forms.ToolStripMenuItem grünToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hellrotToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rotToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rosaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rotToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem schwarzToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem weißToolStripMenuItem;
+        internal System.Windows.Forms.ComboBox comboBox1;
+    }
+}

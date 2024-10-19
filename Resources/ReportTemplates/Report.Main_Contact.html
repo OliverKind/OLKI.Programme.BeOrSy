@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
+	<!--   ISO-8859-1   -->
+	<head>
+		<meta http-equiv="content-type" content="text/xhtml+xml; charset= ISO-8859-1" />
+		<title>
+			Bericht zur Kontakt &quot;{{$Contact_NameComplete}}&quot; vom: {{$ReportBasic_DateTime}}
+		</title>
+		{{$ReportBasic_Style}}
+	</head>
+	<body>
+		<div>
+			<h1>
+				Daten zur Person: {{$Contact_NameComplete}}
+			</h1>
+		</div>
+		<div>
+			<table>
+				<tr class="IdField">
+					<td colspan="4" class="FullRow">
+						ID der Firma: {{$Company_Id}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Firmenname:
+					</td>
+					<td class="SecondColumn">
+						{{$Company_Title}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Allgemeine Daten:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Titel:
+					</td>
+					<td class="SecondColumn">
+						{{$Contact_NameTitle}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Vorname:
+					</td>
+					<td class="SecondColumn">
+						{{$Contact_NameFirst}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Nachname:
+					</td>
+					<td class="SecondColumn">
+						{{$Contact_NameLast}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Kommentar:
+					</td>
+					<td class="SecondColumn">
+						{{$Contact_Comment}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Informationen zur Anstellung:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Abteilung:
+					</td>
+					<td class="SecondColumn">
+						{{$Contact_Division}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Position:
+					</td>
+					<td class="SecondColumn">
+						{{$Contact_Position}}
+					</td>
+				</tr>								
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Kontaktdaten:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Telefonnummer:
+					</td>
+					<td class="SecondColumn">
+						{{$Contact_ContactTelephone}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						FAX-Nummer:
+					</td>
+					<td class="SecondColumn">
+						{{$Contact_ContactFax}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Mobilfunknummer:
+					</td>
+					<td class="SecondColumn">
+						{{$Contact_ContactCellphone}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						E-Mail Adresse:
+					</td>
+					<td class="SecondColumn">
+						{{$Contact_ContactEMail}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Dateianh&auml;nge:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="SecondColumn" colspan="2">
+						{{$Contact_File}}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

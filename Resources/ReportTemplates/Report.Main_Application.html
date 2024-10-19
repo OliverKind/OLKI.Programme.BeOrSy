@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
+	<!--   ISO-8859-1   -->
+	<head>
+		<meta http-equiv="content-type" content="text/xhtml+xml; charset= ISO-8859-1" />
+		<title>
+			Bericht zur Bewerbung &quot;{{$Application_Title}}&quot; vom: {{$ReportBasic_DateTime}}
+		</title>
+		{{$ReportBasic_Style}}
+	</head>
+	<body>
+		<div>
+			<h1>
+				Daten zur Bewerbung: {{$Application_Title}}
+			</h1>
+			<h3>
+				Bericht vom: {{$ReportBasic_DateTime}}
+			</h3>
+		</div>
+		<div>
+			<table>
+				<tr class="IdField">
+					<td colspan="4" class="FullRow">
+						ID der Firma: {{$Company_Id}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Firmenname:
+					</td>
+					<td class="SecondColumn">
+						{{$Company_Title}}
+					</td>
+				</tr>
+				<tr class="IdField">
+					<td colspan="4" class="FullRow">
+						ID der Bewerbung: {{$Application_Id}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Allgemeine Daten:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Titel:
+					</td>
+					<td class="SecondColumn">
+						{{$Application_Title}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Referenznummer:
+					</td>
+					<td class="SecondColumn">
+						{{$Application_ReferenceCode}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Initiativbewerbung:
+					</td>
+					<td class="SecondColumn">
+						{{$Application_SpeculativeApplication}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Erstelldatum:
+					</td>
+					<td class="SecondColumn">
+						{{$Application_Created}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Bewerbungsfrist:
+					</td>
+					<td class="SecondColumn">
+						{{$Application_Period}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Kommentar:
+					</td>
+					<td class="SecondColumn">
+						{{$Application_Comment}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Fortschritt:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="SecondColumn" colspan="2">
+						{{$Application_Progress}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Ansprechpartner:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="SecondColumn" colspan="2">
+						{{$Application_Contact}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Dateianh&auml;nge:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="SecondColumn" colspan="2">
+						{{$Application_File}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Erinnerungen:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="SecondColumn" colspan="2">
+						{{$Application_Reminder}}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

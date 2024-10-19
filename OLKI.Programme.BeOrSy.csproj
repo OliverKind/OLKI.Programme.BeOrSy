@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2C3F9FE-04C7-440E-9DAB-91868AD8876C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OLKI.Programme.BeOrSy</RootNamespace>
+    <AssemblyName>BeOrSy</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>program_symbol.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>OLKI.Programme.BeOrSy.src.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Colormarkers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Colormarkers.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Stringtable.Designer.cs">
+      <DependentUpon>Stringtable.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="src\clsProjectManager.cs" />
+    <Compile Include="src\Forms\MainForm\frmMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\frmMainForm.Designer.cs">
+      <DependentUpon>frmMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\SubForms\frmApplicationSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\SubForms\frmApplicationSettingsForm.Designer.cs">
+      <DependentUpon>frmApplicationSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\PostcodeManger\frmPostcodeSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\PostcodeManger\frmPostcodeSelectorForm.Designer.cs">
+      <DependentUpon>frmPostcodeSelectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmApplicationAutoArchive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmApplicationAutoArchive.Designer.cs">
+      <DependentUpon>frmApplicationAutoArchive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmReminderSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmReminderSearchForm.Designer.cs">
+      <DependentUpon>frmReminderSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmApplicationSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmApplicationSearchForm.Designer.cs">
+      <DependentUpon>frmApplicationSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmCompanySearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmCompanySearchForm.Designer.cs">
+      <DependentUpon>frmCompanySearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\frmProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\frmProjectForm.Designer.cs">
+      <DependentUpon>frmProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmApplicationEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmApplicationEditForm.Designer.cs">
+      <DependentUpon>frmApplicationEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmCompanyEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmCompanyEditForm.Designer.cs">
+      <DependentUpon>frmCompanyEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmContactEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmContactEditForm.Designer.cs">
+      <DependentUpon>frmContactEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmProgressTemplateSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmProgressTemplateSelectorForm.Designer.cs">
+      <DependentUpon>frmProgressTemplateSelectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmProjectSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmProjectSettingsForm.Designer.cs">
+      <DependentUpon>frmProjectSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmRenameDirectoryExceptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmRenameDirectoryExceptions.Designer.cs">
+      <DependentUpon>frmRenameDirectoryExceptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\Controles\uscContactsEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\Controles\uscContactsEditor.Designer.cs">
+      <DependentUpon>uscContactsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\Controles\uscFilesEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\Controles\uscFilesEditor.Designer.cs">
+      <DependentUpon>uscFilesEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\Controles\uscReminderEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\Controles\uscReminderEditor.Designer.cs">
+      <DependentUpon>uscReminderEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\Controles\uscProgressEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\Controles\uscProgressEditor.Designer.cs">
+      <DependentUpon>uscProgressEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\Project\uscQuickFilterCompanyAppProgress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\PostcodeManger\PostcodeManager.cs" />
+    <Compile Include="src\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings_AppConst.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings_AppConst.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings_AppVar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings_AppVar.settings</DependentUpon>
+    </Compile>
+    <Compile Include="src\Project\clsApplicationItem.cs" />
+    <Compile Include="src\Project\clsItemBase.cs" />
+    <Compile Include="src\Project\clsCompanyItem.cs" />
+    <Compile Include="src\Project\clsContactItem.cs" />
+    <Compile Include="src\Project\Filter\clsReminder.cs" />
+    <Compile Include="src\Project\Filter\clsApplication.cs" />
+    <Compile Include="src\Project\Filter\clsCompany.cs" />
+    <Compile Include="src\Project\clsReminderItem.cs" />
+    <Compile Include="src\Project\clsFileItem.cs" />
+    <Compile Include="src\Project\clsIdSet.cs" />
+    <Compile Include="src\Project\clsSettings.cs" />
+    <Compile Include="src\Project\clsProject.cs" />
+    <Compile Include="src\Project\clsProgressItem.cs" />
+    <Compile Include="src\PostcodeManger\clsPostcodeItem.cs" />
+    <Compile Include="src\Project\Reporter\clsReporter.Application.cs" />
+    <Compile Include="src\Project\Reporter\clsReporter.ApplicationList.cs" />
+    <Compile Include="src\Project\Reporter\clsReporter.ReminderList.cs" />
+    <Compile Include="src\Project\Reporter\clsReporter.Contact.cs" />
+    <Compile Include="src\Project\Reporter\clsReporter.Company.cs" />
+    <Compile Include="src\Project\Reporter\clsReporter.cs" />
+    <EmbeddedResource Include="Properties\Colormarkers.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Colormarkers.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Stringtable.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Stringtable.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\MainForm\frmMainForm.resx">
+      <DependentUpon>frmMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\MainForm\SubForms\frmApplicationSettingsForm.resx">
+      <DependentUpon>frmApplicationSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\PostcodeManger\frmPostcodeSelectorForm.resx">
+      <DependentUpon>frmPostcodeSelectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\frmApplicationAutoArchive.resx">
+      <DependentUpon>frmApplicationAutoArchive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\frmReminderSearchForm.resx">
+      <DependentUpon>frmReminderSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\frmApplicationSearchForm.resx">
+      <DependentUpon>frmApplicationSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\frmCompanySearchForm.resx">
+      <DependentUpon>frmCompanySearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\frmProjectForm.resx">
+      <DependentUpon>frmProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\frmApplicationEditForm.resx">
+      <DependentUpon>frmApplicationEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\frmCompanyEditForm.resx">
+      <DependentUpon>frmCompanyEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\frmContactEditForm.resx">
+      <DependentUpon>frmContactEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\frmProgressTemplateSelectorForm.resx">
+      <DependentUpon>frmProgressTemplateSelectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\frmProjectSettingsForm.resx">
+      <DependentUpon>frmProjectSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\frmRenameDirectoryExceptions.resx">
+      <DependentUpon>frmRenameDirectoryExceptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\Controles\uscContactsEditor.resx">
+      <DependentUpon>uscContactsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\Controles\uscFilesEditor.resx">
+      <DependentUpon>uscFilesEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\Controles\uscReminderEditor.resx">
+      <DependentUpon>uscReminderEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\Controles\uscProgressEditor.resx">
+      <DependentUpon>uscProgressEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="CONTRIBUTING.md" />
+    <None Include="doc\Information.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="installation\setup__BeOrSy.nsi" />
+    <None Include="LICENSE" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Properties\Settings_AppConst.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings_AppConst.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings_AppVar.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings_AppVar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="README.md" />
+    <None Include="Resources\Files\PostcodeTemplate.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\OLKI.Toolbox\repository\OLKI.Toolbox.csproj">
+      <Project>{577d63e4-bd67-4316-9442-81b67f4b9f4a}</Project>
+      <Name>OLKI.Toolbox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Changelog.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="doc\ReadMe.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="licenses\CC4.0-License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="licenses\CPOL-License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="licenses\LGPL-License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="licenses\MIT-License %28CroweMan%3b 22.06.2010%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="licenses\MIT-License %28octokit.net%3b 16.08.2017%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="program_symbol.ico" />
+    <Content Include="Resources\Images\ColorMarkers\00 - %28Keine%29.png" />
+    <Content Include="Resources\Images\ColorMarkers\01 - Blau.png" />
+    <Content Include="Resources\Images\ColorMarkers\02 - Cyan.png" />
+    <Content Include="Resources\Images\ColorMarkers\03 - Durchsichtig.png" />
+    <Content Include="Resources\Images\ColorMarkers\04 - Gelb.png" />
+    <Content Include="Resources\Images\ColorMarkers\05 - Grau.png" />
+    <Content Include="Resources\Images\ColorMarkers\06 - Grün.png" />
+    <Content Include="Resources\Images\ColorMarkers\07 - Hellrot.png" />
+    <Content Include="Resources\Images\ColorMarkers\08 - Orange.png" />
+    <Content Include="Resources\Images\ColorMarkers\09 - Rosa.png" />
+    <Content Include="Resources\Images\ColorMarkers\10 - Rot.png" />
+    <Content Include="Resources\Images\ColorMarkers\11 - Schwarz.png" />
+    <Content Include="Resources\Images\ColorMarkers\12 - Weiß.png" />
+    <Content Include="Resources\Images\ColorMarkers\Application_SpeculativeArchive.png" />
+    <Content Include="Resources\Images\ColorMarkers\Application_VacantArchive.png" />
+    <None Include="Resources\Images\Icons\Application_SpeculativeArchive.png" />
+    <None Include="Resources\Images\Icons\Application_VacantArchive.png" />
+    <Content Include="Resources\Images\Icons\AutoArchive.ico" />
+    <Content Include="Resources\Images\Icons\AutoArchive.png" />
+    <Content Include="Resources\Images\Icons\Rename.ico" />
+    <Content Include="Resources\Images\Icons\Rename.png" />
+    <Content Include="Resources\Images\Icons\Accept.png" />
+    <Content Include="Resources\Images\Icons\AdditionalInfo.png" />
+    <Content Include="Resources\Images\Icons\Adress.png" />
+    <Content Include="Resources\Images\Icons\ApplicationSearch.ico" />
+    <Content Include="Resources\Images\Icons\ApplicationSearch.png" />
+    <Content Include="Resources\Images\Icons\Application_Speculative.png" />
+    <Content Include="Resources\Images\Icons\Application_Vacant.png" />
+    <Content Include="Resources\Images\Icons\Cancel.png" />
+    <Content Include="Resources\Images\Icons\Christmas.png" />
+    <Content Include="Resources\Images\Icons\CompanySearch.ico" />
+    <Content Include="Resources\Images\Icons\CompanySearch.png" />
+    <Content Include="Resources\Images\Icons\Document.png" />
+    <Content Include="Resources\Images\Icons\Document_Link.png" />
+    <Content Include="Resources\Images\Icons\Document_Upload.png" />
+    <Content Include="Resources\Images\Icons\PostcodeSearch.ico" />
+    <Content Include="Resources\Images\Icons\PostcodeSearch.png" />
+    <Content Include="Resources\Images\Icons\Progress_Active.png" />
+    <Content Include="Resources\Images\Icons\Progress_Finish.png" />
+    <Content Include="Resources\Images\Icons\Progress_FinishLowPriority.png" />
+    <Content Include="Resources\Images\Icons\Properties.ico" />
+    <Content Include="Resources\Images\Icons\Reminder.png" />
+    <Content Include="Resources\Images\Icons\Reminder_Acknowledge.png" />
+    <Content Include="Resources\Images\Icons\Progress.png" />
+    <Content Include="Resources\Images\Icons\Reminder_Application.png" />
+    <Content Include="Resources\Images\Icons\Reminder_Application_Acknowledge.png" />
+    <Content Include="Resources\Images\Icons\Reminder_Company.png" />
+    <Content Include="Resources\Images\Icons\Reminder_Company_Acknowledge.png" />
+    <Content Include="Resources\Images\Icons\Reminder_Search.ico" />
+    <Content Include="Resources\Images\Icons\Reminder_Search.png" />
+    <Content Include="Resources\Images\Icons\Undo.png" />
+    <Content Include="Resources\Images\Icons\User.png" />
+    <Content Include="Resources\Images\Icons\WebJob.png" />
+    <Content Include="Resources\ReportTemplates\Report.Style.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReportTemplates\Report.Main_Application.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReportTemplates\Report.Main_ApplicationList.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReportTemplates\Report.Main_Company.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReportTemplates\Report.Main_Contact.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReportTemplates\Report.Main_ReminderList.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReportTemplates\Report.Sub_Application.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReportTemplates\Report.Sub_ApplicationList.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReportTemplates\Report.Sub_Progress.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReportTemplates\Report.Sub_Contact.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReportTemplates\Report.Sub_File.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReportTemplates\Report.Sub_Reminder.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ReportTemplates\Report.Sub_ReminderList.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Images\Icons\Help.png" />
+    <None Include="Resources\Images\Icons\NewFile.png" />
+    <None Include="Resources\Images\Icons\Save.png" />
+    <None Include="Resources\Images\Icons\Web.png" />
+    <None Include="Resources\Images\Icons\WindowVertiacal.png" />
+    <None Include="Resources\Images\Icons\Settings.png" />
+    <None Include="Resources\Images\Icons\Search.png" />
+    <None Include="Resources\Images\Icons\Report.png" />
+    <None Include="Resources\Images\Icons\Properties.png" />
+    <None Include="Resources\Images\Icons\OpenToUpload.png" />
+    <None Include="Resources\Images\Icons\OpenToLink.png" />
+    <None Include="Resources\Images\Icons\OpenFolder.png" />
+    <None Include="Resources\Images\Icons\OpenFile.png" />
+    <None Include="Resources\Images\Icons\Open.png" />
+    <None Include="Resources\Images\Icons\OK.png" />
+    <None Include="Resources\Images\Icons\New.png" />
+    <None Include="Resources\Images\Icons\Import.png" />
+    <None Include="Resources\Images\Icons\WindowHorizontal.png" />
+    <None Include="Resources\Images\Icons\GoTo.png" />
+    <None Include="Resources\Images\Icons\FilterReset.png" />
+    <None Include="Resources\Images\Icons\Filter2.png" />
+    <None Include="Resources\Images\Icons\Filter.png" />
+    <None Include="Resources\Images\Icons\Export.png" />
+    <None Include="Resources\Images\Icons\Delete.png" />
+    <None Include="Resources\Images\Icons\Database.png" />
+    <None Include="Resources\Images\Icons\Copy.png" />
+    <None Include="Resources\Images\Icons\Company.png" />
+    <None Include="Resources\Images\Icons\Clipboard.png" />
+    <None Include="Resources\Images\Icons\WindowCascade.png" />
+    <None Include="Resources\Images\Icons\Application.png" />
+    <None Include="Resources\Images\Icons\AdressMail.png" />
+    <None Include="Resources\Images\Icons\EMail.png" />
+    <Content Include="Resources\Images\StateColors\Properties.Resources.Images.ColorMarkers.0_Black.png" />
+    <Content Include="Resources\Images\StateColors\Properties.Resources.Images.ColorMarkers.16711680_Red.png" />
+    <Content Include="Resources\Images\StateColors\Properties.Resources.Images.ColorMarkers.16777215_White.png" />
+    <Content Include="Resources\Images\StateColors\Properties.Resources.Images.ColorMarkers.255_Blue.png" />
+    <Content Include="Resources\Images\StateColors\Properties.Resources.Images.ColorMarkers.32768_Green.png" />
+    <Content Include="Resources\Images\StateColors\Properties.Resources.Images.ColorMarkers.65280_BrightGreen.png" />
+    <Content Include="Resources\Images\StateColors\Properties.Resources.Images.ColorMarkers.65535_Cyan.png" />
+    <Content Include="Resources\ProgamIcons\project_symbol\project_symbol.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ProgamIcons\project_symbol\project_symbol.svg" />
+    <Content Include="Resources\ProgamIcons\project_symbol\project_symbol_256.png" />
+    <Content Include="Resources\ProgamIcons\program_symbol\program_symbol.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ProgamIcons\program_symbol\program_symbol.svg" />
+    <Content Include="Resources\ProgamIcons\program_symbol\program_symbol_256.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

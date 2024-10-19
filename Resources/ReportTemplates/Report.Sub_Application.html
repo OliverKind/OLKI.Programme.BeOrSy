@@ -1,0 +1,39 @@
+<table class="SubTable">
+	<thead>
+		<tr>
+			<td class="SubTableCol_Date">
+				Datum
+			</td>
+			<td class="SubTableCol_Title">
+				Titel und Referenz
+			</td>
+			<td class="SubTableCol_Title">
+				Status
+			</td>
+			<td class="SubTableCol_Comment">
+				Kommentar
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				{{$Application_Date}}
+			</td>
+			<td>
+				{{$Application_TitleReference}}
+			</td>
+			<td>
+				{{$Application_Progress}}
+			</td>
+			<td>
+				{{$Application_Comment}}
+			</td>
+		</tr>
+		<tr class="IdField">
+			<td colspan="4">
+				ID der Bewerbung: {{$Application_Id}}
+			</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
+	<!--   ISO-8859-1   -->
+	<head>
+		<meta http-equiv="content-type" content="text/xhtml+xml; charset= ISO-8859-1" />
+		<title>
+			Auflistung von Erinnerungen im Zeitraum: {{$ReminderList_PeriodFrom}} - {{$ReminderList_PeriodTo}}; Best&auml;tigte Erinnerungen: {{$ReminderList_AcknowledgeState}}
+		</title>
+		{{$ReportBasic_Style}}
+	</head>
+	<body>
+		<div>
+			<h1 style="white-space:nowrap;">
+				Erinnerungen im Zeitraum: {{$ReminderList_PeriodFrom}} - {{$ReminderList_PeriodTo}}; Best&auml;tigte Erinnerungen: {{$ReminderList_AcknowledgeState}}
+			</h1>
+		</div>
+		<div>
+			<table class="MainTable">
+				<thead>
+					<tr>
+						<td colspan="3" class="FullRow">
+							<h2>
+								Erinnerungen:
+							</h2>
+						</td>
+					</tr>
+					<tr>
+						<td class="FirstColumn">
+							<h2>
+								Erinnerung
+							</h2>
+						</td>
+						<td class="SecondColumn">
+							<h2>
+								Firma
+							</h2>
+						</td>
+						<td class="ThirdColumn">
+							<h2>
+								Stelle
+							</h2>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					{{$ReminderList_Reminder}}
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

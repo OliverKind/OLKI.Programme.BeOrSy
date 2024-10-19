@@ -1,0 +1,10 @@
+#Aufbau der CSV-Datei
+#Postcode	City	State	Country	Comment Active
+#
+#Beispieleintrag:
+#13629	Berlin	Berlin	Deutschland	Charlottenburg-Nord	True
+#    Spaltentrennung durch Tabulator oder ;
+#    Zeilentrennung durch Zeilenumbruch
+#    Codierung UTF-8
+#    Kommentarzeile durch # am Zeilenanfang
+#

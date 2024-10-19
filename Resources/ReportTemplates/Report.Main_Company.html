@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
+	<!--   ISO-8859-1   -->
+	<head>
+		<meta http-equiv="content-type" content="text/xhtml+xml; charset= ISO-8859-1" />
+		<title>
+			Bericht zur Firma &quot;{{$Company_Title}}&quot; vom: {{$ReportBasic_DateTime}}
+		</title>
+		{{$ReportBasic_Style}}
+	</head>
+	<body>
+		<div>
+			<h1>
+				Daten zur Firma: {{$Company_Title}}
+			</h1>
+			<h3>
+				Bericht vom: {{$ReportBasic_DateTime}}
+			</h3>
+		</div>
+		<div>
+			<table>
+				<tr class="IdField">
+					<td colspan="2" class="FullRow">
+						ID der Firma: {{$Company_Id}}
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="FullRow">
+						<h2>
+							Allgemeine Daten:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Firmenname:
+					</td>
+					<td class="SecondColumn">
+						{{$Company_Title}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Adresse:
+					</td>
+					<td class="SecondColumn">
+						{{$Company_Adress}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Branche:
+					</td>
+					<td class="SecondColumn">
+						{{$Company_Trade}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Kommentar:
+					</td>
+					<td class="SecondColumn">
+							{{$Company_Comment}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Kontaktdaten:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Telefonnummer:
+					</td>
+					<td class="SecondColumn">
+						{{$Company_ContactTelephone}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						FAX-Nummer:
+					</td>
+					<td class="SecondColumn">
+						{{$Company_ContactFax}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						E-Mail Adresse:
+					</td>
+					<td class="SecondColumn">
+						{{$Company_ContactEMail}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Homepage:
+					</td>
+					<td class="SecondColumn">
+						{{$Company_ContactHomepage}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FirstColumn">
+						Kariereseite:
+					</td>
+					<td class="SecondColumn">
+						{{$Company_ContactCareerPage}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Bewerbungen:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="SecondColumn" colspan="2">
+						{{$Comapny_Application}}
+					</td>
+				</tr>
+
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Ansprechpartner:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="SecondColumn" colspan="2">
+						{{$Comapny_Contact}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Dateianh&auml;nge:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="SecondColumn" colspan="2">
+						{{$Comapny_File}}
+					</td>
+				</tr>
+				<tr>
+					<td class="FullRow" colspan="2">
+						<h2>
+							Erinnerungen:
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="SecondColumn" colspan="2">
+						{{$Comapny_Reminder}}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,93 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OLKI.Programme.BeOrSy.Properties" GeneratedClassName="Settings_AppConst">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppUpdate_ChangeLog" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Changelog.txt</Value>
+    </Setting>
+    <Setting Name="AppUpdate_Name" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">OLKI.Programme.BOS</Value>
+    </Setting>
+    <Setting Name="AppUpdate_Owner" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">OliverKind</Value>
+    </Setting>
+    <Setting Name="AppUpdate_SetupSearchPattern" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BeOrSy__v{0}__Setup.exe</Value>
+    </Setting>
+    <Setting Name="PostcodeFile_DefaultExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">csv</Value>
+    </Setting>
+    <Setting Name="PostcodeFile_FilterIndex" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="PostcodeFile_FilterList" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CSV-Datei (*.csv)|*.csv|Textdatei XML Base64-Encoded (*.txt)|*.txt|XML-Datei (*.xml)|*.xml</Value>
+    </Setting>
+    <Setting Name="FileAssociation_ExtensionDescription" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BeOrSy Database</Value>
+    </Setting>
+    <Setting Name="FileAssociation_ExtensionFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BeOrSy.Database</Value>
+    </Setting>
+    <Setting Name="FileAssociation_ExtensionIconFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Project_Symbol.ico</Value>
+    </Setting>
+    <Setting Name="ProjectFile_DefaultExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BeOrSy</Value>
+    </Setting>
+    <Setting Name="ProjectFile_FilterIndex" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ProjectFile_FilterList" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Projektdatei (*.BeOrSy)|*.BeOrSy|Alle Dateien (*.*)|*.*</Value>
+    </Setting>
+    <Setting Name="ProjectFile_VersionCompatibleNative" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ProjectFile_VersionCompatibleConvert" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ProjectFile_Version_Actual" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="RecentFiles_Seperator" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">|</Value>
+    </Setting>
+    <Setting Name="Debug_FormWidthOffset" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">309</Value>
+    </Setting>
+    <Setting Name="ProgressWeightWidth" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">99</Value>
+    </Setting>
+    <Setting Name="TempFileExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.~</Value>
+    </Setting>
+    <Setting Name="WriteDataBufferLength" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1024</Value>
+    </Setting>
+    <Setting Name="XMLheader" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</Value>
+    </Setting>
+    <Setting Name="ProgressListDefault" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PFByb2dyZXNzVGVtcGxhdGVMaXN0Pg0KICA8UHJvZ3Jlc3NJdGVtPg0KICAgIDxJZD42PC9JZD4NCiAgICA8Q29tbWVudD48L0NvbW1lbnQ+DQogICAgPERhdGVJdGVtQ3JhdGVkIC8+DQogICAgPERhdGVJdGVtRWRpdGVkIC8+DQogICAgPENvbG9yPiM4MEZGRkY8L0NvbG9yPg0KICAgIDxEYXRlPjIwMjQtMDgtMTdUMTM6MzM6MzMuNDkxNzUzOSswMjowMDwvRGF0ZT4NCiAgICA8T3JkZXI+MDwvT3JkZXI+DQogICAgPFN0YXRlPjA8L1N0YXRlPg0KICAgIDxUaWx0ZT5Jbml0aWF0aXYgYmV3ZXJiZW48L1RpbHRlPg0KICAgIDxXZWlnaHQ+NjAwPC9XZWlnaHQ+DQogIDwvUHJvZ3Jlc3NJdGVtPg0KICA8UHJvZ3Jlc3NJdGVtPg0KICAgIDxJZD43PC9JZD4NCiAgICA8Q29tbWVudD48L0NvbW1lbnQ+DQogICAgPERhdGVJdGVtQ3JhdGVkIC8+DQogICAgPERhdGVJdGVtRWRpdGVkIC8+DQogICAgPENvbG9yPiM4MEZGRkY8L0NvbG9yPg0KICAgIDxEYXRlPjIwMjQtMDgtMTdUMTM6MzM6MzMuNDkxNzUzOSswMjowMDwvRGF0ZT4NCiAgICA8T3JkZXI+MTwvT3JkZXI+DQogICAgPFN0YXRlPjA8L1N0YXRlPg0KICAgIDxUaWx0ZT5TdGVsbGVuYXVzc2NocmVpYnVuZyB2b3JoYW5kZW48L1RpbHRlPg0KICAgIDxXZWlnaHQ+NzAwPC9XZWlnaHQ+DQogIDwvUHJvZ3Jlc3NJdGVtPg0KICA8UHJvZ3Jlc3NJdGVtPg0KICAgIDxJZD44PC9JZD4NCiAgICA8Q29tbWVudD48L0NvbW1lbnQ+DQogICAgPERhdGVJdGVtQ3JhdGVkIC8+DQogICAgPERhdGVJdGVtRWRpdGVkIC8+DQogICAgPENvbG9yPiM4MEZGRkY8L0NvbG9yPg0KICAgIDxEYXRlPjIwMjQtMDgtMTdUMTM6MzM6MzMuNDkxNzUzOSswMjowMDwvRGF0ZT4NCiAgICA8T3JkZXI+MjwvT3JkZXI+DQogICAgPFN0YXRlPjA8L1N0YXRlPg0KICAgIDxUaWx0ZT5HZXNjaHJpZWJlbjwvVGlsdGU+DQogICAgPFdlaWdodD44MDA8L1dlaWdodD4NCiAgPC9Qcm9ncmVzc0l0ZW0+DQogIDxQcm9ncmVzc0l0ZW0+DQogICAgPElkPjk8L0lkPg0KICAgIDxDb21tZW50PjwvQ29tbWVudD4NCiAgICA8RGF0ZUl0ZW1DcmF0ZWQgLz4NCiAgICA8RGF0ZUl0ZW1FZGl0ZWQgLz4NCiAgICA8Q29sb3I+IzAwMDBGRjwvQ29sb3I+DQogICAgPERhdGU+MjAyNC0wOC0xN1QxMzozMzozMy40OTE3NTM5KzAyOjAwPC9EYXRlPg0KICAgIDxPcmRlcj4zPC9PcmRlcj4NCiAgICA8U3RhdGU+MDwvU3RhdGU+DQogICAgPFRpbHRlPkFiZ2VzZW5kZXQ8L1RpbHRlPg0KICAgIDxXZWlnaHQ+OTAwPC9XZWlnaHQ+DQogIDwvUHJvZ3Jlc3NJdGVtPg0KICA8UHJvZ3Jlc3NJdGVtPg0KICAgIDxJZD4xMDwvSWQ+DQogICAgPENvbW1lbnQ+PC9Db21tZW50Pg0KICAgIDxEYXRlSXRlbUNyYXRlZCAvPg0KICAgIDxEYXRlSXRlbUVkaXRlZCAvPg0KICAgIDxDb2xvcj4jMDAwMEZGPC9Db2xvcj4NCiAgICA8RGF0ZT4yMDI0LTA4LTE3VDEzOjMzOjMzLjQ5MTc1MzkrMDI6MDA8L0RhdGU+DQogICAgPE9yZGVyPjQ8L09yZGVyPg0KICAgIDxTdGF0ZT4wPC9TdGF0ZT4NCiAgICA8VGlsdGU+RWluZ2FuZ3NiZXN0w6R0aWd1bmc8L1RpbHRlPg0KICAgIDxXZWlnaHQ+MTAwMDwvV2VpZ2h0Pg0KICA8L1Byb2dyZXNzSXRlbT4NCiAgPFByb2dyZXNzSXRlbT4NCiAgICA8SWQ+MTE8L0lkPg0KICAgIDxDb21tZW50PjwvQ29tbWVudD4NCiAgICA8RGF0ZUl0ZW1DcmF0ZWQgLz4NCiAgICA8RGF0ZUl0ZW1FZGl0ZWQgLz4NCiAgICA8Q29sb3I+I0ZGRkY4MDwvQ29sb3I+DQogICAgPERhdGU+MjAyNC0wOC0xN1QxMzozMzozMy40OTE3NTM5KzAyOjAwPC9EYXRlPg0KICAgIDxPcmRlcj41PC9PcmRlcj4NCiAgICA8U3RhdGU+MDwvU3RhdGU+DQogICAgPFRpbHRlPlRlbGVmb25pbnRlcnZpZXc8L1RpbHRlPg0KICAgIDxXZWlnaHQ+MTEwMDwvV2VpZ2h0Pg0KICA8L1Byb2dyZXNzSXRlbT4NCiAgPFByb2dyZXNzSXRlbT4NCiAgICA8SWQ+MTI8L0lkPg0KICAgIDxDb21tZW50PjwvQ29tbWVudD4NCiAgICA8RGF0ZUl0ZW1DcmF0ZWQgLz4NCiAgICA8RGF0ZUl0ZW1FZGl0ZWQgLz4NCiAgICA8Q29sb3I+I0ZGRkY4MDwvQ29sb3I+DQogICAgPERhdGU+MjAyNC0wOC0xN1QxMzozMzozMy40OTE3NTM5KzAyOjAwPC9EYXRlPg0KICAgIDxPcmRlcj42PC9PcmRlcj4NCiAgICA8U3RhdGU+MDwvU3RhdGU+DQogICAgPFRpbHRlPkFjY2Vzc21lbnQgQ2VudGVyPC9UaWx0ZT4NCiAgICA8V2VpZ2h0PjEyMDA8L1dlaWdodD4NCiAgPC9Qcm9ncmVzc0l0ZW0+DQogIDxQcm9ncmVzc0l0ZW0+DQogICAgPElkPjEzPC9JZD4NCiAgICA8Q29tbWVudD48L0NvbW1lbnQ+DQogICAgPERhdGVJdGVtQ3JhdGVkIC8+DQogICAgPERhdGVJdGVtRWRpdGVkIC8+DQogICAgPENvbG9yPiNGRkZGODA8L0NvbG9yPg0KICAgIDxEYXRlPjIwMjQtMDgtMTdUMTM6MzM6MzMuNDkxNzUzOSswMjowMDwvRGF0ZT4NCiAgICA8T3JkZXI+NzwvT3JkZXI+DQogICAgPFN0YXRlPjA8L1N0YXRlPg0KICAgIDxUaWx0ZT4xLiBWb3JzdGVsbHVuZ3NnZXNwcsOkY2g8L1RpbHRlPg0KICAgIDxXZWlnaHQ+MTMwMDwvV2VpZ2h0Pg0KICA8L1Byb2dyZXNzSXRlbT4NCiAgPFByb2dyZXNzSXRlbT4NCiAgICA8SWQ+MTQ8L0lkPg0KICAgIDxDb21tZW50PjwvQ29tbWVudD4NCiAgICA8RGF0ZUl0ZW1DcmF0ZWQgLz4NCiAgICA8RGF0ZUl0ZW1FZGl0ZWQgLz4NCiAgICA8Q29sb3I+I0ZGRkY4MDwvQ29sb3I+DQogICAgPERhdGU+MjAyNC0wOC0xN1QxMzozMzozMy40OTI3NTA5KzAyOjAwPC9EYXRlPg0KICAgIDxPcmRlcj44PC9PcmRlcj4NCiAgICA8U3RhdGU+MDwvU3RhdGU+DQogICAgPFRpbHRlPjIuIFZvcnN0ZWxsdW5nc2dlc3Byw6RjaDwvVGlsdGU+DQogICAgPFdlaWdodD4xNDAwPC9XZWlnaHQ+DQogIDwvUHJvZ3Jlc3NJdGVtPg0KICA8UHJvZ3Jlc3NJdGVtPg0KICAgIDxJZD4xNTwvSWQ+DQogICAgPENvbW1lbnQ+PC9Db21tZW50Pg0KICAgIDxEYXRlSXRlbUNyYXRlZCAvPg0KICAgIDxEYXRlSXRlbUVkaXRlZCAvPg0KICAgIDxDb2xvcj4jRkZGRjgwPC9Db2xvcj4NCiAgICA8RGF0ZT4yMDI0LTA4LTE3VDEzOjMzOjMzLjQ5Mjc1MDkrMDI6MDA8L0RhdGU+DQogICAgPE9yZGVyPjk8L09yZGVyPg0KICAgIDxTdGF0ZT4wPC9TdGF0ZT4NCiAgICA8VGlsdGU+My4gVm9yc3RlbGx1bmdzZ2VzcHLDpGNoPC9UaWx0ZT4NCiAgICA8V2VpZ2h0PjE1MDA8L1dlaWdodD4NCiAgPC9Qcm9ncmVzc0l0ZW0+DQogIDxQcm9ncmVzc0l0ZW0+DQogICAgPElkPjE2PC9JZD4NCiAgICA8Q29tbWVudD48L0NvbW1lbnQ+DQogICAgPERhdGVJdGVtQ3JhdGVkIC8+DQogICAgPERhdGVJdGVtRWRpdGVkIC8+DQogICAgPENvbG9yPiM4MEZGODA8L0NvbG9yPg0KICAgIDxEYXRlPjIwMjQtMDgtMTdUMTM6MzM6MzMuNDkyNzUwOSswMjowMDwvRGF0ZT4NCiAgICA8T3JkZXI+MTA8L09yZGVyPg0KICAgIDxTdGF0ZT4wPC9TdGF0ZT4NCiAgICA8VGlsdGU+VmVydHJhZ3N2ZXJoYW5kbHVuZzwvVGlsdGU+DQogICAgPFdlaWdodD4xNjAwPC9XZWlnaHQ+DQogIDwvUHJvZ3Jlc3NJdGVtPg0KICA8UHJvZ3Jlc3NJdGVtPg0KICAgIDxJZD4xNzwvSWQ+DQogICAgPENvbW1lbnQ+PC9Db21tZW50Pg0KICAgIDxEYXRlSXRlbUNyYXRlZCAvPg0KICAgIDxEYXRlSXRlbUVkaXRlZCAvPg0KICAgIDxDb2xvcj4jODBGRjgwPC9Db2xvcj4NCiAgICA8RGF0ZT4yMDI0LTA4LTE3VDEzOjMzOjMzLjQ5Mjc1MDkrMDI6MDA8L0RhdGU+DQogICAgPE9yZGVyPjExPC9PcmRlcj4NCiAgICA8U3RhdGU+MDwvU3RhdGU+DQogICAgPFRpbHRlPlp1c2FnZTwvVGlsdGU+DQogICAgPFdlaWdodD4xNzAwPC9XZWlnaHQ+DQogIDwvUHJvZ3Jlc3NJdGVtPg0KICA8UHJvZ3Jlc3NJdGVtPg0KICAgIDxJZD4xODwvSWQ+DQogICAgPENvbW1lbnQ+PC9Db21tZW50Pg0KICAgIDxEYXRlSXRlbUNyYXRlZCAvPg0KICAgIDxEYXRlSXRlbUVkaXRlZCAvPg0KICAgIDxDb2xvcj4jMDA4MDAwPC9Db2xvcj4NCiAgICA8RGF0ZT4yMDI0LTA4LTE3VDEzOjMzOjMzLjQ5Mjc1MDkrMDI6MDA8L0RhdGU+DQogICAgPE9yZGVyPjEyPC9PcmRlcj4NCiAgICA8U3RhdGU+MTwvU3RhdGU+DQogICAgPFRpbHRlPkVpbnN0ZWxsdW5nPC9UaWx0ZT4NCiAgICA8V2VpZ2h0PjE4MDA8L1dlaWdodD4NCiAgPC9Qcm9ncmVzc0l0ZW0+DQogIDxQcm9ncmVzc0l0ZW0+DQogICAgPElkPjE8L0lkPg0KICAgIDxDb21tZW50PjwvQ29tbWVudD4NCiAgICA8RGF0ZUl0ZW1DcmF0ZWQgLz4NCiAgICA8RGF0ZUl0ZW1FZGl0ZWQgLz4NCiAgICA8Q29sb3I+I0ZGMDAwMDwvQ29sb3I+DQogICAgPERhdGU+MjAyNC0wOC0xN1QxMzozMzozMy40ODc3NjQyKzAyOjAwPC9EYXRlPg0KICAgIDxPcmRlcj4xMzwvT3JkZXI+DQogICAgPFN0YXRlPjI8L1N0YXRlPg0KICAgIDxUaWx0ZT5BYnNhZ2U8L1RpbHRlPg0KICAgIDxXZWlnaHQ+MTAwPC9XZWlnaHQ+DQogIDwvUHJvZ3Jlc3NJdGVtPg0KICA8UHJvZ3Jlc3NJdGVtPg0KICAgIDxJZD4yPC9JZD4NCiAgICA8Q29tbWVudD48L0NvbW1lbnQ+DQogICAgPERhdGVJdGVtQ3JhdGVkIC8+DQogICAgPERhdGVJdGVtRWRpdGVkIC8+DQogICAgPENvbG9yPiNGRjAwMDA8L0NvbG9yPg0KICAgIDxEYXRlPjIwMjQtMDgtMTdUMTM6MzM6MzMuNDkwNzU2NiswMjowMDwvRGF0ZT4NCiAgICA8T3JkZXI+MTQ8L09yZGVyPg0KICAgIDxTdGF0ZT4yPC9TdGF0ZT4NCiAgICA8VGlsdGU+WnVyw7xja2dlem9nZW48L1RpbHRlPg0KICAgIDxXZWlnaHQ+MjAwPC9XZWlnaHQ+DQogIDwvUHJvZ3Jlc3NJdGVtPg0KICA8UHJvZ3Jlc3NJdGVtPg0KICAgIDxJZD4zPC9JZD4NCiAgICA8Q29tbWVudD48L0NvbW1lbnQ+DQogICAgPERhdGVJdGVtQ3JhdGVkIC8+DQogICAgPERhdGVJdGVtRWRpdGVkIC8+DQogICAgPENvbG9yPiNGRjAwMDA8L0NvbG9yPg0KICAgIDxEYXRlPjIwMjQtMDgtMTdUMTM6MzM6MzMuNDkwNzU2NiswMjowMDwvRGF0ZT4NCiAgICA8T3JkZXI+MTU8L09yZGVyPg0KICAgIDxTdGF0ZT4yPC9TdGF0ZT4NCiAgICA8VGlsdGU+VmVyYWx0ZXQ8L1RpbHRlPg0KICAgIDxXZWlnaHQ+MzAwPC9XZWlnaHQ+DQogIDwvUHJvZ3Jlc3NJdGVtPg0KICA8UHJvZ3Jlc3NJdGVtPg0KICAgIDxJZD40PC9JZD4NCiAgICA8Q29tbWVudD48L0NvbW1lbnQ+DQogICAgPERhdGVJdGVtQ3JhdGVkIC8+DQogICAgPERhdGVJdGVtRWRpdGVkIC8+DQogICAgPENvbG9yPiMwMDAwMDA8L0NvbG9yPg0KICAgIDxEYXRlPjIwMjQtMDgtMTdUMTM6MzM6MzMuNDkwNzU2NiswMjowMDwvRGF0ZT4NCiAgICA8T3JkZXI+MTY8L09yZGVyPg0KICAgIDxTdGF0ZT4yPC9TdGF0ZT4NCiAgICA8VGlsdGU+R2Vrw7xuZGlndCAoQXJiZWl0Z2ViZXIpPC9UaWx0ZT4NCiAgICA8V2VpZ2h0PjQwMDwvV2VpZ2h0Pg0KICA8L1Byb2dyZXNzSXRlbT4NCiAgPFByb2dyZXNzSXRlbT4NCiAgICA8SWQ+NTwvSWQ+DQogICAgPENvbW1lbnQ+PC9Db21tZW50Pg0KICAgIDxEYXRlSXRlbUNyYXRlZCAvPg0KICAgIDxEYXRlSXRlbUVkaXRlZCAvPg0KICAgIDxDb2xvcj4jMDAwMDAwPC9Db2xvcj4NCiAgICA8RGF0ZT4yMDI0LTA4LTE3VDEzOjMzOjMzLjQ5MTc1MzkrMDI6MDA8L0RhdGU+DQogICAgPE9yZGVyPjE3PC9PcmRlcj4NCiAgICA8U3RhdGU+MjwvU3RhdGU+DQogICAgPFRpbHRlPkdla8O8bmRpZ3QgKHNlbGJzdCk8L1RpbHRlPg0KICAgIDxXZWlnaHQ+NTAwPC9XZWlnaHQ+DQogIDwvUHJvZ3Jlc3NJdGVtPg0KPC9Qcm9ncmVzc1RlbXBsYXRlTGlzdD4=</Value>
+    </Setting>
+    <Setting Name="DateTimeFormatForFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">yyy-MM-dd@HH-mm-ss</Value>
+    </Setting>
+    <Setting Name="Filename_Report_Application" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Bericht__Bewerbung__{0}__{1}.html</Value>
+    </Setting>
+    <Setting Name="Filename_Report_Company" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Bericht__Firma__{0}__{1}.html</Value>
+    </Setting>
+    <Setting Name="Filename_Report_Contact" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Bericht__Kontakt__{0}__{1}.html</Value>
+    </Setting>
+    <Setting Name="Filename_Report_ReminderList" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Bericht__Erinnerungen__{0}.html</Value>
+    </Setting>
+    <Setting Name="ProgressWeightMax" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">9999</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

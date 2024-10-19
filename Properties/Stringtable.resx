@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="0x0001c" xml:space="preserve">
+    <value>Inkompatible Datei!</value>
+  </data>
+  <data name="0x0001m" xml:space="preserve">
+    <value>Die Projektdatei ist nicht mit dieser Programmversion kompatibel.</value>
+  </data>
+  <data name="0x0002" xml:space="preserve">
+    <value>-- Keine Benennung --</value>
+  </data>
+  <data name="0x0003c" xml:space="preserve">
+    <value>Projekt öffnen fehlgeschlagen!</value>
+  </data>
+  <data name="0x0003m" xml:space="preserve">
+    <value>Die Datei "{0}" konnte nicht geöffnet werden.
+
+{1}</value>
+  </data>
+  <data name="0x0004c" xml:space="preserve">
+    <value>Projekt speichern fehlgeschlagen!</value>
+  </data>
+  <data name="0x0004m" xml:space="preserve">
+    <value>Das Projekt konnte nicht in die Datei "{0}" gespeichert werden.
+
+{1}</value>
+  </data>
+  <data name="0x0005c" xml:space="preserve">
+    <value>Projekt öffnen fehlgeschlagen!</value>
+  </data>
+  <data name="0x0005m" xml:space="preserve">
+    <value>Fehler beim Lesen der Projektdatei.
+
+{0}</value>
+  </data>
+  <data name="0x0006" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="0x0007" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="0x0008c" xml:space="preserve">
+    <value>Projekt öffnen fehlgeschlagen!</value>
+  </data>
+  <data name="0x0008m" xml:space="preserve">
+    <value>Die Datei ist bereits geöffnet und kann nicht erneut geöffnet werden.</value>
+  </data>
+  <data name="0x0009" xml:space="preserve">
+    <value>Neues Projekt</value>
+  </data>
+  <data name="0x000Ac" xml:space="preserve">
+    <value>Projekt speichern fehlgeschlagen!</value>
+  </data>
+  <data name="0x000Am" xml:space="preserve">
+    <value>Das Projekt konnte nicht in die Datei "{0}" gespeichert werden.
+
+{1}</value>
+  </data>
+  <data name="0x000B" xml:space="preserve">
+    <value>Öffnet die Datei.
+Änderungen an der Datei werden nicht in der Projektdatei gespeichert, sofern die Datei aus der Projektdatei geladen wurde.
+Hierzu muss die Datei neu in die Projektdatei gespeichert werden.</value>
+  </data>
+  <data name="0x000C" xml:space="preserve">
+    <value>Speichert die gewählte Datei in der Projektdatei.</value>
+  </data>
+  <data name="0x000D" xml:space="preserve">
+    <value>Legt eine Verknüpfung zu der gewählten Datei an.</value>
+  </data>
+  <data name="0x000Ec" xml:space="preserve">
+    <value>Projekt speichern?</value>
+  </data>
+  <data name="0x000Em" xml:space="preserve">
+    <value>Änderungen an Projekt "{0}" vor dem Schließen speichern?
+
+Ihre Änderungen gehen verloren, wenn Sie diese nicht speichern.</value>
+  </data>
+  <data name="0x000Fc" xml:space="preserve">
+    <value>Firmen löschen?</value>
+  </data>
+  <data name="0x000Fm" xml:space="preserve">
+    <value>Die ausgewählten Firmen werden gelöscht.
+
+Sollten die zugehörigen Ordner ebenfalls gelöscht werden?
+
+Die Ordner werden erst von der Festplatte gelöscht, wenn Sie das Projekt speichern. Sollten Sie sofortiges Speichern aktiviert haben erfolgt das Löschen der Ordner unverzüglich.</value>
+  </data>
+  <data name="0x0010c" xml:space="preserve">
+    <value>Kontakte löschen?</value>
+  </data>
+  <data name="0x0010m" xml:space="preserve">
+    <value>Möchten Sie die ausgewählten Kontakte tatsächlich löschen?</value>
+  </data>
+  <data name="0x0011" xml:space="preserve">
+    <value>Noch keine Id zugewiesen.</value>
+  </data>
+  <data name="0x0012c" xml:space="preserve">
+    <value>Dateien löschen?</value>
+  </data>
+  <data name="0x0012m" xml:space="preserve">
+    <value>Möchten Sie die ausgewählten Dateien tatsächlich löschen?</value>
+  </data>
+  <data name="0x0013c" xml:space="preserve">
+    <value>Datei überschreiben?</value>
+  </data>
+  <data name="0x0013m" xml:space="preserve">
+    <value>Der Datei sind bereits Daten angehangen. Wollen Sie diese überschreiben?</value>
+  </data>
+  <data name="0x0014c" xml:space="preserve">
+    <value>Fehler beim einlesen der Datei!</value>
+  </data>
+  <data name="0x0014m" xml:space="preserve">
+    <value>Beim Einlesen der Datei "{0}" ist ein Fehler aufgetreten.
+
+{1}</value>
+  </data>
+  <data name="0x0015c" xml:space="preserve">
+    <value>Datei öffnen fehlgeschlagen!</value>
+  </data>
+  <data name="0x0015m" xml:space="preserve">
+    <value>Die Datei konnte nicht geöffnet werden.
+
+{0}</value>
+  </data>
+  <data name="0x0016c" xml:space="preserve">
+    <value>Adresse kopiert.</value>
+  </data>
+  <data name="0x0016m" xml:space="preserve">
+    <value>Die Adresse wurde in die Zwischenablage kopiert.</value>
+  </data>
+  <data name="0x0017" xml:space="preserve">
+    <value>Der Ordner konnte nicht gefunden werden.</value>
+  </data>
+  <data name="0x0018" xml:space="preserve">
+    <value>Die Reihenfolge der Fortschritte scheint nicht plausibel zu sein.
+Bitte prüfen Sie die Reihenfolge aufmerksam und korrigieren Sie diese gegebenenfalls.
+
+Wenn Sie sehr viele Fortschrittselemente haben wir diese Warnung ebenfalls angezeigt.</value>
+  </data>
+  <data name="0x0019c" xml:space="preserve">
+    <value>Fehler beim Speichern!</value>
+  </data>
+  <data name="0x0019m" xml:space="preserve">
+    <value>Beim Speichern in Datei "{0}" ist ein Fehler aufgetreten.
+Möglicherweise konnten Ihre Daten nicht gespeichert werden.
+
+{1}</value>
+  </data>
+  <data name="0x0020c" xml:space="preserve">
+    <value>Fehler beim Suchen der Postleitzahlen!</value>
+  </data>
+  <data name="0x0020m" xml:space="preserve">
+    <value>Beim Durchsuchen der Postleitzahlen ist ein Fehler aufgetreten.
+
+{0}</value>
+  </data>
+  <data name="0x0021c" xml:space="preserve">
+    <value>Fehler beim Löschen temporärer Dateien!</value>
+  </data>
+  <data name="0x0021m" xml:space="preserve">
+    <value>Einige temporär angelegte Dateien konnte nicht gelöscht werden.
+Wahrscheinlich sind die Dateien noch geöffnet.
+
+Bitte schließen Sie die Dateien und löschen diese anschließend manuell.</value>
+  </data>
+  <data name="0x0022" xml:space="preserve">
+    <value>Die Eingabe entspricht keiner gültigen E-Mail-Adresse</value>
+  </data>
+  <data name="0x0023" xml:space="preserve">
+    <value>Die Eingabe entspricht keiner gültigen URL</value>
+  </data>
+  <data name="0x0024" xml:space="preserve">
+    <value>Die Eingabe entspricht keinem gültigen Datum.</value>
+  </data>
+  <data name="0x0025c" xml:space="preserve">
+    <value>Erinnerungen löschen?</value>
+  </data>
+  <data name="0x0025m" xml:space="preserve">
+    <value>Möchten Sie die ausgewählten Erinnerungen tatsächlich löschen?</value>
+  </data>
+  <data name="0x0026" xml:space="preserve">
+    <value>Das Anzeigen der Postleitzahlen wird vorbereitet.</value>
+  </data>
+  <data name="0x0027" xml:space="preserve">
+    <value>Standardordner der bei der Dateiauswahl angezeigt werden soll</value>
+  </data>
+  <data name="0x0028c" xml:space="preserve">
+    <value>Fehler beim Importieren von Postleitzahlen!</value>
+  </data>
+  <data name="0x0028m" xml:space="preserve">
+    <value>Beim Importieren von Postleitzahlen aus der Datei "{0}" ist ein Fehler aufgetreten.
+
+{1}</value>
+  </data>
+  <data name="0x0029c" xml:space="preserve">
+    <value>Es sind bereits Postleitzahlendatensätze vorhanden.</value>
+  </data>
+  <data name="0x0029m" xml:space="preserve">
+    <value>Es sind bereits Postleitzahlendatensätze vorhanden. Möchten Sie die vorhandenen Datensätze löschen bevor die neuen Postleitzahlen eingelesen werden?</value>
+  </data>
+  <data name="0x002Ac" xml:space="preserve">
+    <value>Sehr viele Elemente zum Anzeigen.</value>
+  </data>
+  <data name="0x002Am" xml:space="preserve">
+    <value>Es werden {0} Einträge zur Anzeige ausgewählt. Dies kann sehr lange dauern. Möchten Sie fortfahren?</value>
+  </data>
+  <data name="0x002Bc" xml:space="preserve">
+    <value>Fehler beim Exportieren von Postleitzahlen!</value>
+  </data>
+  <data name="0x002Bm" xml:space="preserve">
+    <value>Beim Exportieren von Postleitzahlen in die Datei "{0}" ist ein Fehler aufgetreten.
+
+{1}</value>
+  </data>
+  <data name="0x002Cc" xml:space="preserve">
+    <value>Postleitzahlen importiert.</value>
+  </data>
+  <data name="0x002Cm" xml:space="preserve">
+    <value>Die Postleitzahlen wurden erfolgreich aus der Datei "{0}" importiert.</value>
+  </data>
+  <data name="0x002Dc" xml:space="preserve">
+    <value>Postleitzahlen exportiert.</value>
+  </data>
+  <data name="0x002Dm" xml:space="preserve">
+    <value>Die Postleitzahlen wurden erfolgreich in die Datei "{0}" exportiert.</value>
+  </data>
+  <data name="0x002Ec" xml:space="preserve">
+    <value>Aktuelle Erinnerungen anzeigen?</value>
+  </data>
+  <data name="0x002Em" xml:space="preserve">
+    <value>Es gibt aktuelle Erinnerungen die noch nicht bestätigt wurden. Möchten Sie diese jetzt anzeigen?</value>
+  </data>
+  <data name="0x002Fc" xml:space="preserve">
+    <value>Projekt speichern?</value>
+  </data>
+  <data name="0x002Fm" xml:space="preserve">
+    <value>Änderungen an Projekt "{0}" vor dem Schließen speichern?
+
+Ihre Änderungen gehen verloren, wenn Sie diese nicht speichern.</value>
+  </data>
+  <data name="0x0030c" xml:space="preserve">
+    <value>Achtung, beim Bearbeiten der Gewichtung!</value>
+  </data>
+  <data name="0x0030m" xml:space="preserve">
+    <value>Das Überschreiben der Gewichtung kann unerwartete Effekte haben.
+Die Gewichtung wird nicht mehr, beim Verschieben eines Fortschritts, automatisch aktualisiert.
+
+Überprüfen Sie Ihre Eingaben auf Plausibilität.</value>
+  </data>
+  <data name="0x0031" xml:space="preserve">
+    <value>Firmenname</value>
+  </data>
+  <data name="0x0032" xml:space="preserve">
+    <value>Musterbewerbung</value>
+  </data>
+  <data name="0x0033" xml:space="preserve">
+    <value>-- Nicht möglich --</value>
+  </data>
+  <data name="0x0034c" xml:space="preserve">
+    <value>Fortschritte löschen?</value>
+  </data>
+  <data name="0x0034m" xml:space="preserve">
+    <value>Möchten Sie die ausgewählten Fortschritte tatsächlich löschen?</value>
+  </data>
+  <data name="0x0035c" xml:space="preserve">
+    <value>Ordner Umbenannt.</value>
+  </data>
+  <data name="0x0035m" xml:space="preserve">
+    <value>Die Ordner wurden erfolgreich umbenannt.</value>
+  </data>
+  <data name="0x0036c" xml:space="preserve">
+    <value>Einstellungen speichern?</value>
+  </data>
+  <data name="0x0036m" xml:space="preserve">
+    <value>Vor dem Umbenennen der Ordner müssen die Einstellungen gespeichert werden.
+Möchte Sie die Einstellungen jetzt speichern?</value>
+  </data>
+  <data name="0x0037c" xml:space="preserve">
+    <value>Ordner Umbenannt.</value>
+  </data>
+  <data name="0x0037m" xml:space="preserve">
+    <value>Es konnte nicht alle Ordner umbenannt werden. Es sind {0} Fehler aufgetreten.</value>
+  </data>
+  <data name="0x0038c" xml:space="preserve">
+    <value>Fehler beim Umbenennen!</value>
+  </data>
+  <data name="0x0038m" xml:space="preserve">
+    <value>Beim Umbenennen ist ein Fehler aufgetreten, das Umbenennen kann nicht fortgesetzt werden.
+
+Fehler:
+{0}</value>
+  </data>
+  <data name="0x0039c" xml:space="preserve">
+    <value>Projektordner Festlegen!</value>
+  </data>
+  <data name="0x0039m" xml:space="preserve">
+    <value>Es wurde noch kein Projektordner festgelegt. Sie müssen einen Projektordner festlegen bevor Sie Ordner für Firmen, Bewerbungen und Berichte erstellen können.</value>
+  </data>
+  <data name="0x003Ac" xml:space="preserve">
+    <value>Speichern erforderlich!</value>
+  </data>
+  <data name="0x003Am" xml:space="preserve">
+    <value>Die müssen das Projekt speichern bevor der Ordner angelegt werden kann. Möchten Sie das Projekt jetzt speichern?</value>
+  </data>
+  <data name="0x003Bc" xml:space="preserve">
+    <value>Standarddatei festgelegt.</value>
+  </data>
+  <data name="0x003Bm" xml:space="preserve">
+    <value>Das Projekt "{0}" wird ab sofort geöffnet, sobald die Anwendung gestartet wird.</value>
+  </data>
+  <data name="0x003Cc" xml:space="preserve">
+    <value>Berichterstellung fehlgeschlagen!</value>
+  </data>
+  <data name="0x003Cm" xml:space="preserve">
+    <value>Bei der Erstellung des Berichtes ist ein Fehler aufgetreten.
+
+{0}</value>
+  </data>
+  <data name="0x003D" xml:space="preserve">
+    <value>-- Keine Daten --</value>
+  </data>
+  <data name="0x003Ec" xml:space="preserve">
+    <value>Neue, ungespeicherte Daten.</value>
+  </data>
+  <data name="0x003Em" xml:space="preserve">
+    <value>Eine oder mehrere Elemente, die zu diesem Bericht gehören, sind neu und noch nicht gespeichert worden. Daher ist die Erstellung des Berichtes nicht möglich.
+
+Bitte speichern Sie zuerst das Projekt.</value>
+  </data>
+  <data name="0x003F" xml:space="preserve">
+    <value>Undefiniert</value>
+  </data>
+  <data name="0x0040c" xml:space="preserve">
+    <value>Bewerbungen löschen?</value>
+  </data>
+  <data name="0x0040m" xml:space="preserve">
+    <value>Die ausgewählten Bewerbungen werden gelöscht.
+
+Sollten die zugehörigen Ordner ebenfalls gelöscht werden?
+
+Die Ordner werden erst von der Festplatte gelöscht, wenn Sie das Projekt speichern. Sollten Sie sofortiges Speichern aktiviert haben erfolgt das Löschen der Ordner unverzüglich.</value>
+  </data>
+  <data name="0x0041c" xml:space="preserve">
+    <value>Archivierung abgeschlossen.</value>
+  </data>
+  <data name="0x0041m" xml:space="preserve">
+    <value>Die Automatische Archivierung wurde erfolgreich abgeschlossen.</value>
+  </data>
+  <data name="0x0042c" xml:space="preserve">
+    <value>Zurücksetzen der Archivierung abgeschlossen.</value>
+  </data>
+  <data name="0x0042m" xml:space="preserve">
+    <value>Alle Archivierungen von Bewerbungen wurden aufgehoben.</value>
+  </data>
+  <data name="0x0043c" xml:space="preserve">
+    <value>Fehler beim Setzen der Archivierung.</value>
+  </data>
+  <data name="0x0043m" xml:space="preserve">
+    <value>Beim Setzen der Archivierung ist ein Fehler aufgetreten.
+
+{0}</value>
+  </data>
+</root>

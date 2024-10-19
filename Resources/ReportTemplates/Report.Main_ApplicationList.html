@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
+	<!--   ISO-8859-1   -->
+	<head>
+		<meta http-equiv="content-type" content="text/xhtml+xml; charset= ISO-8859-1" />
+		<title>
+			Auflistung von Bewerbungen im Zeitraum: {{$ApplicationList_PeriodFrom}} - {{$ApplicationList_PeriodTo}}; Initiativbewerbungen: {{$ApplicationList_Speculative}}
+		</title>
+		{{$ReportBasic_Style}}
+	</head>
+	<body>
+		<div>
+			<h1 style="white-space:nowrap;">
+				Auflistung von Bewerbungen im Zeitraum: {{$ApplicationList_PeriodFrom}} - {{$ApplicationList_PeriodTo}}; Initiativbewerbungen: {{$ApplicationList_Speculative}}
+			</h1>
+		</div>
+		<div>
+			<table class="MainTable">
+				<thead>
+					<tr>
+						<td colspan="3">
+							<h2>
+								Bewerbungen:
+							</h2>
+						</td>
+					</tr>
+					<tr>
+						<td class="FirstColumn">
+							<h2>
+								Firma
+							</h2>
+						</td>
+						<td class="SecondColumn">
+							<h2>
+								Stelle
+							</h2>
+						</td>
+						<td class="ThirdColumn">
+							<h2>
+								Fortschritt
+							</h2>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					{{$ApplicationList_Application}}
+				</tbody>
+				</table>	
+		</div>
+	</body>
+</html>
