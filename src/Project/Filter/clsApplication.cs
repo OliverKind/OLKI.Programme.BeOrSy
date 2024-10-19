@@ -202,11 +202,8 @@ namespace OLKI.Programme.BeOrSy.src.Project.Filter
             {
                 if (application.Progresses.Count == 0) return false;
                 List<int> ProgressList = new List<int>();
-                foreach (ProgressItem ProgressItem in application.Progresses.Values)
-                {
-                    ProgressList.Add(ProgressItem.WeightBase100);
-                }
-                if (!Toolbox.Common.Search.List(this.ProgressWeight, ProgressList)) return false;
+                if (application.ProgressMax != null) ProgressList.Add(application.ProgressMax.WeightBase100);
+                if (!Toolbox.Common.Search.List(ProgressList, this.ProgressWeight)) return false;
             }
 
             //Filter Application Type
