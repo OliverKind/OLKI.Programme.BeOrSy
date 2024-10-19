@@ -142,19 +142,19 @@ namespace OLKI.Programme.BeOrSy.src.Project
         {
             get
             {
-                int CAppl = 0;
-                foreach (CompanyItem CItem in this.Companies.Values)
+                int CountAppl = 0;
+                foreach (CompanyItem CompItem in this.Companies.Values)
                 {
-                    CAppl += CItem.CountAppl;
+                    if (CompItem.Delete == ItemBase.DeleteFlag.None) CountAppl += CompItem.CountAppl;
                 }
-                return CAppl;
+                return CountAppl;
             }
         }
 
         /// <summary>
         /// Count of Companies
         /// </summary>
-        internal int CountComp => this.Companies.Count;
+        internal int CountComp => this.Companies.Count(C => C.Value.Delete == ItemBase.DeleteFlag.None);
         #endregion
         #endregion
 

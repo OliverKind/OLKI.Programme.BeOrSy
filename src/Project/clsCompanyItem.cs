@@ -494,7 +494,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
         [Description("Anzahl der angehangenen Bewerbungen")]
         [DisplayName("Anzahl Bewerbungen")]
         [ReadOnly(true)]
-        public int CountAppl => this.Applications.Count;
+        public int CountAppl => this.Applications.Count(C => C.Value.Delete == ItemBase.DeleteFlag.None);
 
         /// <summary>
         /// Get the count of added Contacts
