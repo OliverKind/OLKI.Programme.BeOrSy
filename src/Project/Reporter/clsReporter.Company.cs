@@ -92,7 +92,7 @@ namespace OLKI.Programme.BeOrSy.src.Project.ReportCeator
                     CompanyItem Comp = project.Companies.ContainsKey(companyId) ? project.Companies[companyId] : null;
                     if (Comp == null || IsNewItem(Comp))
                     {
-                        MessageBox.Show(owner, Stringtable._0x003Em, Stringtable._0x003Ec, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show(owner, Stringtable._0x003Em, Stringtable._0x003Ec, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
 

@@ -97,7 +97,7 @@ namespace OLKI.Programme.BeOrSy.src.Project.ReportCeator
                     ApplicationItem Appl = Comp != null && Comp.Applications.ContainsKey(applicationId) ? Comp.Applications[applicationId] : null;
                     if (Comp == null || Appl == null || IsNewItemOrSubItem(Appl, Comp))
                     {
-                        MessageBox.Show(owner, Stringtable._0x003Em, Stringtable._0x003Ec, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show(owner, Stringtable._0x003Em, Stringtable._0x003Ec, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
 
