@@ -86,17 +86,21 @@ namespace OLKI.Programme.BeOrSy.src.Project.Filter
         internal List<Dictionary<IdBelongingIndikator, int>> Detail(Dictionary<int, CompanyItem> companies)
         {
             List<Dictionary<IdBelongingIndikator, int>> ReminderFilterList = new List<Dictionary<IdBelongingIndikator, int>>();
-            foreach (CompanyItem ComItem in companies.Values)
+            foreach (CompanyItem CompItem in companies.Values)
             {
-                foreach (ReminderItem RemItem in ComItem.Reminders.Values)
+                if (CompItem.Delete != ItemBase.DeleteFlag.None) continue;
+                foreach (ReminderItem RemiItem in CompItem.Reminders.Values)
                 {
-                    if (this.InFilter(RemItem, false, true)) ReminderFilterList.Add(new Dictionary<IdBelongingIndikator, int> { { IdBelongingIndikator.Company, ComItem.Id }, { IdBelongingIndikator.Application, 0 }, { IdBelongingIndikator.Reminder, RemItem.Id } });
+                    if (RemiItem.Delete != ItemBase.DeleteFlag.None) continue;
+                    if (this.InFilter(RemiItem, false, true)) ReminderFilterList.Add(new Dictionary<IdBelongingIndikator, int> { { IdBelongingIndikator.Company, CompItem.Id }, { IdBelongingIndikator.Application, 0 }, { IdBelongingIndikator.Reminder, RemiItem.Id } });
                 }
-                foreach (ApplicationItem AppItem in ComItem.Applications.Values)
+                foreach (ApplicationItem ApplItem in CompItem.Applications.Values)
                 {
-                    foreach (ReminderItem RemItem in AppItem.Reminders.Values)
+                    if (ApplItem.Delete != ItemBase.DeleteFlag.None) continue;
+                    foreach (ReminderItem RemiItem in ApplItem.Reminders.Values)
                     {
-                        if (this.InFilter(RemItem, true, false)) ReminderFilterList.Add(new Dictionary<IdBelongingIndikator, int> { { IdBelongingIndikator.Company, ComItem.Id }, { IdBelongingIndikator.Application, AppItem.Id }, { IdBelongingIndikator.Reminder, RemItem.Id } });
+                        if (RemiItem.Delete != ItemBase.DeleteFlag.None) continue;
+                        if (this.InFilter(RemiItem, true, false)) ReminderFilterList.Add(new Dictionary<IdBelongingIndikator, int> { { IdBelongingIndikator.Company, CompItem.Id }, { IdBelongingIndikator.Application, ApplItem.Id }, { IdBelongingIndikator.Reminder, RemiItem.Id } });
                     }
                 }
             }

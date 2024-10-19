@@ -147,9 +147,10 @@ namespace OLKI.Programme.BeOrSy.src.Project.Filter
         internal List<int> Detail(Dictionary<int, CompanyItem> companies)
         {
             List<int> CompanyFilterList = new List<int>();
-            foreach (CompanyItem CompanyItem in companies.Values)
+            foreach (CompanyItem CompItem in companies.Values)
             {
-                if (InDetailFilter(CompanyItem)) CompanyFilterList.Add(CompanyItem.Id);
+                if (CompItem.Delete != ItemBase.DeleteFlag.None) continue;
+                if (InDetailFilter(CompItem)) CompanyFilterList.Add(CompItem.Id);
             }
             if (CompanyFilterList.Count == companies.Count) return null;
             return CompanyFilterList;
@@ -163,9 +164,10 @@ namespace OLKI.Programme.BeOrSy.src.Project.Filter
         internal List<int> Fast(Dictionary<int, CompanyItem> companies)
         {
             List<int> CompanyFilterList = new List<int>();
-            foreach (CompanyItem CompanyItem in companies.Values)
+            foreach (CompanyItem CompItem in companies.Values)
             {
-                if (InFastFilter(CompanyItem)) CompanyFilterList.Add(CompanyItem.Id);
+                if (CompItem.Delete != ItemBase.DeleteFlag.None) continue;
+                if (InFastFilter(CompItem)) CompanyFilterList.Add(CompItem.Id);
             }
             if (CompanyFilterList.Count == companies.Count) return null;
             return CompanyFilterList;

@@ -117,11 +117,13 @@ namespace OLKI.Programme.BeOrSy.src.Project.Filter
         internal List<Dictionary<IdBelongingIndikator, int>> Detail(Dictionary<int, CompanyItem> companies)
         {
             List<Dictionary<IdBelongingIndikator, int>> ApplicationFilterList = new List<Dictionary<IdBelongingIndikator, int>>();
-            foreach (CompanyItem ComItem in companies.Values)
+            foreach (CompanyItem CompItem in companies.Values)
             {
-                foreach (ApplicationItem AppItem in ComItem.Applications.Values)
+                if (CompItem.Delete != ItemBase.DeleteFlag.None) continue;
+                foreach (ApplicationItem ApplItem in CompItem.Applications.Values)
                 {
-                    if (this.InFilter(AppItem)) ApplicationFilterList.Add(new Dictionary<IdBelongingIndikator, int> { { IdBelongingIndikator.Company, ComItem.Id }, { IdBelongingIndikator.Application, AppItem.Id } });
+                    if (ApplItem.Delete == ItemBase.DeleteFlag.None) continue;
+                    if (this.InFilter(ApplItem)) ApplicationFilterList.Add(new Dictionary<IdBelongingIndikator, int> { { IdBelongingIndikator.Company, CompItem.Id }, { IdBelongingIndikator.Application, ApplItem.Id } });
                 }
             }
             //if (ApplicationFilterList.Count == AppCount) return null;
