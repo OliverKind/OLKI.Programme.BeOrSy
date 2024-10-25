@@ -1,4 +1,12 @@
 # BeOrSy - Bewerbungsorganisationssystem
+## [3.0.1.13] - 2024-10-25
+### Fixed
+- Application has preefilled dummy Dates
+- Application search issues
+- Application Tilte not updated on edit Form Title
+- Count item issues
+- Reporting issues if item is new
+
 ## [3.0.0.12] - 2024-10-19
 ### Changed
 - Complete workover (Not compatible to older Versions, in any Direction)
