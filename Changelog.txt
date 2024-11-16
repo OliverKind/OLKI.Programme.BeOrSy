@@ -1,4 +1,9 @@
 # BeOrSy - Bewerbungsorganisationssystem
+## [3.0.2.14] - 2024-11-16
+### Fixed
+- Changelog formating
+- Readmie wrong text
+
 ## [3.0.1.13] - 2024-10-25
 ### Fixed
 - Application has preefilled dummy Dates
@@ -94,7 +99,6 @@
 ### Fixed
 - Lost of Company color marker if the TabPage with the color marker ListView was not in selected bevor accepting changes
 
-
 ## [1.3.0.5] - 2016-09-23
 ### Added
 - Store company filter seetings during session
@@ -117,7 +121,6 @@
 - Open a second project, project form get not the focus
 - State in compny did't changed, creating a new application
 
-
 ## [1.2.0.4] - 2016-08-26
 ### Added
 - Auto complete City, State, Country by ZIP-Code
@@ -125,9 +128,6 @@
 
 ### Changed
 - Credits corrected
-
-### Fixed
-
 
 ## [1.1.0.3] - 2016-08-26
 ### Added
@@ -151,7 +151,6 @@
 - Reminders can not be saved
 - "Save as..." creates now a copy of the existing file and save changes
 
-
 ## [1.0.1.2] - 2016-06-04
 ### Fixed
 - Fix archive state of an apllication is ignored by calculation the most relecant state of the applications of an company
@@ -159,7 +158,6 @@
 - Fix new files will be created witoud settings, cause to projectsettings can not saved an errormessages on file opening
 - Fix some mistakes in readme.txt
 - Fix spelling of "Brange" to "Branche"
-
 
 ## [1.0.0.1 (Stingray)] - 2016-05-25
 ### Initial release
