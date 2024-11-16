@@ -40,7 +40,7 @@ Das Recht der Vermarktung fällt somit exklusiv dem Autor der Software zu.
 1 - Systemvoraussetzungen
 *************************
 
-Damit die Software 'BeOrSy - Reformating File names that contains a Date' einwandfrei läuft, muss
+Damit die Software 'BeOrSy - Bewerbungsorganisationssystem' einwandfrei läuft, muss
 das Computersystem folgende Voraussetzungen erfüllen:
 
 - Prozessor 1 GHz
@@ -66,7 +66,7 @@ Betriebssystem Unterschiede auftreten.
 **************************************************
 
 Stellen Sie sicher, dass folgende Voraussetzungen erfüllt sind,
-damit 'BeOrSy - Reformating File names that contains a Date' einwandfrei auf Ihrem Computer funktioniert:
+damit 'BeOrSy - Bewerbungsorganisationssystem' einwandfrei auf Ihrem Computer funktioniert:
 
 - Systemvoraussetzungen erfüllt
 - unter Umständen müssen Administrator-Rechte vorhanden sein
@@ -79,7 +79,7 @@ damit 'BeOrSy - Reformating File names that contains a Date' einwandfrei auf Ihr
 
 a) Erstinstallation
 -------------------
-Wird die Software "BeOrSy - Reformating File names that contains a Date" das erste mal, oder nach einer Deinstallation,
+Wird die Software "BeOrSy - Bewerbungsorganisationssystem" das erste mal, oder nach einer Deinstallation,
 installiert, so wird ein Verzeichnis angelegt in dem die  Benutzereinstellungen gespeichert werden.
 Der Pfad zu diesem Verzeichnis ist üblicherweise (Bei Windows 7 oder späteren Versionen):
 "C:\Users\[BENUTZERNAME]\AppData\Roaming\OLKI-Software\BeOrSy"
@@ -89,7 +89,7 @@ Weitere Informationen zu diesem Verzeichnis und den enthaltenen Dateien finden S
 
 b) Wiederholinstallation
 ------------------------
-Wird die Software "BeOrSy - Reformating File names that contains a Date" installiert, ohne das vorher eine Deinstallation,
+Wird die Software "BeOrSy - Bewerbungsorganisationssystem" installiert, ohne das vorher eine Deinstallation,
 stattgefunden hat bleiben die Dateien im Einstellungsverzeichnis üblicherweise (Bei Windows 7 oder späteren
 Versionen) "C:\Users\[BENUTZERNAME]\AppData\Roaming\OLKI-Software\BeOrSy" unbeeinflusst.
 Sollte es erwünscht sein das Diese Dateien neu erzeugt werden so müssen sie zuvor vom Benutzer gelöscht
