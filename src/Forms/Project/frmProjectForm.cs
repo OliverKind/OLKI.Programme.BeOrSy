@@ -62,14 +62,19 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
         private CompanyEditForm _companyEditForm;
 
         /// <summary>
+        /// Form to Export Companies
+        /// </summary>
+        private CompanyExportForm _companyExportForm;
+
+        /// <summary>
+        /// Form to Search Companies
+        /// </summary>
+        private CompanySearchForm _companySearchForm;
+
+        /// <summary>
         /// Form to show reminders
         /// </summary>
         private ApplicationSearchForm _searchFormApplication;
-
-        /// <summary>
-        /// Search form
-        /// </summary>
-        private CompanySearchForm _searchFormCompany;
 
         /// <summary>
         /// Form to show reminders
@@ -644,17 +649,23 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
             this._companyEditForm.ShowDialog(this);
         }
 
+        private void mnuProjectForm_Company_Export_Click(object sender, EventArgs e)
+        {
+            this._companyExportForm = new CompanyExportForm(this.lsvCompany.Items, this.Project);
+            this._companyExportForm.Show(this);
+        }
+
         internal void mnuProjectForm_Company_Filter_Click(object sender, EventArgs e)
         {
-            this._searchFormCompany = new CompanySearchForm(this.Project);
-            this._searchFormCompany.RequestListResults += new EventHandler(this.filterCompanyForm_RequestListResults);
-            this._searchFormCompany.Show(this);
+            this._companySearchForm = new CompanySearchForm(this.Project);
+            this._companySearchForm.RequestListResults += new EventHandler(this.filterCompanyForm_RequestListResults);
+            this._companySearchForm.Show(this);
         }
 
         private void filterCompanyForm_RequestListResults(object sender, EventArgs e)
         {
-            if (this._searchFormCompany == null) return;
-            this.FillListViewCompany(this._searchFormCompany.CompanyFilteredList);
+            if (this._companySearchForm == null) return;
+            this.FillListViewCompany(this._companySearchForm.CompanyFilteredList);
         }
 
         private void mnuProjectForm_Company_GoToDir_Click(object sender, EventArgs e)
@@ -754,7 +765,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
         private void ProjectForm_Leave(object sender, EventArgs e)
         {
             this.CloseSubForm(this._searchFormApplication);
-            this.CloseSubForm(this._searchFormCompany);
+            this.CloseSubForm(this._companySearchForm);
             this.CloseSubForm(this._searchFormReminder);
         }
 

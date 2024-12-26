@@ -89,6 +89,12 @@
     <Compile Include="src\Forms\PostcodeManger\frmPostcodeSelectorForm.Designer.cs">
       <DependentUpon>frmPostcodeSelectorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmCompanyExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Project\SubForms\frmCompanyExportForm.Designer.cs">
+      <DependentUpon>frmCompanyExportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\Forms\Project\SubForms\frmApplicationAutoArchive.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     <EmbeddedResource Include="src\Forms\PostcodeManger\frmPostcodeSelectorForm.resx">
       <DependentUpon>frmPostcodeSelectorForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Project\SubForms\frmCompanyExportForm.resx">
+      <DependentUpon>frmCompanyExportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\Project\SubForms\frmApplicationAutoArchive.resx">
       <DependentUpon>frmApplicationAutoArchive.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +365,7 @@
     <None Include="Resources\Images\Icons\Application_VacantArchive.png" />
     <Content Include="Resources\Images\Icons\AutoArchive.ico" />
     <Content Include="Resources\Images\Icons\AutoArchive.png" />
+    <Content Include="Resources\Images\Icons\Export.ico" />
     <Content Include="Resources\Images\Icons\Rename.ico" />
     <Content Include="Resources\Images\Icons\Rename.png" />
     <Content Include="Resources\Images\Icons\Accept.png" />

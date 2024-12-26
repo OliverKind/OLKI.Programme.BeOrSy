@@ -117,6 +117,7 @@
             this.rotToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.schwarzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.weißToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Company_Export = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProjectForm_Application = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProjectForm_Application_Add = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProjectForm_Application_Edit = new System.Windows.Forms.ToolStripMenuItem();
@@ -872,12 +873,13 @@
             this.mnuProjectForm_Company_Report,
             this.toolStripSeparator3,
             this.mnuProjectForm_Company_Filter,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.mnuProjectForm_Company_Export});
             this.mnuProjectForm_Company.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.mnuProjectForm_Company.MergeIndex = 1;
             this.mnuProjectForm_Company.Name = "mnuProjectForm_Company";
-            this.mnuProjectForm_Company.Size = new System.Drawing.Size(49, 20);
-            this.mnuProjectForm_Company.Text = "Firma";
+            this.mnuProjectForm_Company.Size = new System.Drawing.Size(59, 20);
+            this.mnuProjectForm_Company.Text = "Firmen ";
             // 
             // mnuProjectForm_Company_Add
             // 
@@ -1081,6 +1083,14 @@
             | System.Windows.Forms.Keys.F12)));
             this.weißToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.weißToolStripMenuItem.Text = "Weiß";
+            // 
+            // mnuProjectForm_Company_Export
+            // 
+            this.mnuProjectForm_Company_Export.Image = global::OLKI.Programme.BeOrSy.Properties.Resources.Export;
+            this.mnuProjectForm_Company_Export.Name = "mnuProjectForm_Company_Export";
+            this.mnuProjectForm_Company_Export.Size = new System.Drawing.Size(334, 22);
+            this.mnuProjectForm_Company_Export.Text = "Firmen exportieren";
+            this.mnuProjectForm_Company_Export.Click += new System.EventHandler(this.mnuProjectForm_Company_Export_Click);
             // 
             // mnuProjectForm_Application
             // 
@@ -1366,5 +1376,6 @@
         internal Toolbox.Widgets.SortListView lsvApplication;
         internal Toolbox.Widgets.SortListView lsvCompany;
         internal System.Windows.Forms.MenuStrip mnuProjectForm;
+        private System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Company_Export;
     }
 }
