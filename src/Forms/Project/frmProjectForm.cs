@@ -651,7 +651,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
 
         private void mnuProjectForm_Company_Export_Click(object sender, EventArgs e)
         {
-            this._companyExportForm = new CompanyExportForm(this.lsvCompany.Items, this.Project);
+            this._companyExportForm = new CompanyExportForm(this.lsvCompany.Items, this.lsvCompany.SelectedItems, this.Project);
             this._companyExportForm.Show(this);
         }
 
