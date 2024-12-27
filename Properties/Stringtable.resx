@@ -477,4 +477,19 @@ Die Ordner werden erst von der Festplatte gelöscht, wenn Sie das Projekt speich
 
 {0}</value>
   </data>
+  <data name="0x0044c" xml:space="preserve">
+    <value>Keine Daten zum Exportieren!</value>
+  </data>
+  <data name="0x0044m" xml:space="preserve">
+    <value>In ihrer Auswahl befinden sich keine Daten zum Exportieren.</value>
+  </data>
+  <data name="0x0045c" xml:space="preserve">
+    <value>Fehler beim Exportieren!</value>
+  </data>
+  <data name="0x0045m" xml:space="preserve">
+    <value>Beim Exportieren der Firmen ist ein Fehler aufgetreten.
+
+Fehler:
+{0}</value>
+  </data>
 </root>

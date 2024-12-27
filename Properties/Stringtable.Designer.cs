@@ -1031,5 +1031,44 @@ namespace OLKI.Programme.BeOrSy.Properties {
                 return ResourceManager.GetString("0x0043m", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Keine Daten zum Exportieren! ähnelt.
+        /// </summary>
+        internal static string _0x0044c {
+            get {
+                return ResourceManager.GetString("0x0044c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die In ihrer Auswahl befinden sich keine Daten zum Exportieren. ähnelt.
+        /// </summary>
+        internal static string _0x0044m {
+            get {
+                return ResourceManager.GetString("0x0044m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fehler beim Exportieren! ähnelt.
+        /// </summary>
+        internal static string _0x0045c {
+            get {
+                return ResourceManager.GetString("0x0045c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Beim Exportieren der Firmen ist ein Fehler aufgetreten.
+        ///
+        ///Fehler:
+        ///{0} ähnelt.
+        /// </summary>
+        internal static string _0x0045m {
+            get {
+                return ResourceManager.GetString("0x0045m", resourceCulture);
+            }
+        }
     }
 }
