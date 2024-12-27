@@ -455,6 +455,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
             {
                 SaveFileDialog SaveFileDialog = new SaveFileDialog
                 {
+                    DefaultExt = Settings_AppConst.Default.ProjectFile_DefaultExtension,
                     Filter = Settings_AppConst.Default.ProjectFile_FilterList,
                     FilterIndex = Settings_AppConst.Default.ProjectFile_FilterIndex,
                     InitialDirectory = this.Settings.ProjectDirPath,
