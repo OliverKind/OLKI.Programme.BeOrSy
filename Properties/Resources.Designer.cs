@@ -221,6 +221,15 @@ namespace OLKI.Programme.BeOrSy.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Firmenname;Branche;Aufgeloest;Adresse;Postleitzahl;Stadt;Bundesland;Land;Telefonnummer;Faxnummer;E-Mail Adresse;Homepage;Kariereseite;Kommentar ähnelt.
+        /// </summary>
+        internal static string CompanyTemplate {
+            get {
+                return ResourceManager.GetString("CompanyTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Copy {

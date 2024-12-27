@@ -315,6 +315,7 @@
       <LastGenOutput>Settings_AppVar.Designer.cs</LastGenOutput>
     </None>
     <None Include="README.md" />
+    <None Include="Resources\Files\CompanyTemplate.csv" />
     <None Include="Resources\Files\PostcodeTemplate.csv" />
   </ItemGroup>
   <ItemGroup>
