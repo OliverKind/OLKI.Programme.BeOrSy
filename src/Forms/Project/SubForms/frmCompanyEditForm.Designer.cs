@@ -478,7 +478,7 @@
             // lblContactCareerPage
             // 
             this.lblContactCareerPage.AutoSize = true;
-            this.lblContactCareerPage.Location = new System.Drawing.Point(352, 48);
+            this.lblContactCareerPage.Location = new System.Drawing.Point(346, 48);
             this.lblContactCareerPage.Name = "lblContactCareerPage";
             this.lblContactCareerPage.Size = new System.Drawing.Size(65, 13);
             this.lblContactCareerPage.TabIndex = 10;
@@ -496,11 +496,11 @@
             // lblContactHomepage
             // 
             this.lblContactHomepage.AutoSize = true;
-            this.lblContactHomepage.Location = new System.Drawing.Point(352, 22);
+            this.lblContactHomepage.Location = new System.Drawing.Point(346, 23);
             this.lblContactHomepage.Name = "lblContactHomepage";
-            this.lblContactHomepage.Size = new System.Drawing.Size(59, 13);
+            this.lblContactHomepage.Size = new System.Drawing.Size(62, 13);
             this.lblContactHomepage.TabIndex = 7;
-            this.lblContactHomepage.Text = "Homepage";
+            this.lblContactHomepage.Text = "Homepage:";
             // 
             // lblContactTelephone
             // 
@@ -516,9 +516,9 @@
             this.lblContatEMail.AutoSize = true;
             this.lblContatEMail.Location = new System.Drawing.Point(6, 74);
             this.lblContatEMail.Name = "lblContatEMail";
-            this.lblContatEMail.Size = new System.Drawing.Size(77, 13);
+            this.lblContatEMail.Size = new System.Drawing.Size(80, 13);
             this.lblContatEMail.TabIndex = 4;
-            this.lblContatEMail.Text = "E-Mail-Adresse";
+            this.lblContatEMail.Text = "E-Mail-Adresse:";
             // 
             // lblContactFax
             // 
