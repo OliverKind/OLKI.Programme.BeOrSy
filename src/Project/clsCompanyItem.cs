@@ -131,7 +131,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
             }
             set
             {
-                this._adressState = value;
+                this._adressState = value.Trim();
                 base.Changed = true;
             }
         }
@@ -156,7 +156,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
             }
             set
             {
-                this._adressStreet = value.Trim();
+                this._adressStreet = value.Trim().Replace("\r\n", "\n");
                 base.Changed = true;
             }
         }
@@ -180,7 +180,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
             }
             set
             {
-                this._adressPostcode = value.Trim().Replace("\r\n", "\n");
+                this._adressPostcode = value.Trim();
                 base.Changed = true;
             }
         }
@@ -806,4 +806,4 @@ namespace OLKI.Programme.BeOrSy.src.Project
         }
         #endregion
     }
-}
+\
