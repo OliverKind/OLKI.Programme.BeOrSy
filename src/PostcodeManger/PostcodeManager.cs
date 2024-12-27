@@ -359,9 +359,21 @@ namespace OLKI.Programme.BeOrSy.src.PostcodeManger
             StringBuilder DataSring = new StringBuilder();
             DataSring.AppendLine(Resources.PostcodeTemplate);
 
+            StringBuilder DataLine = new StringBuilder();
             foreach (PostcodeItem Item in this.PostcodeList.OrderBy(o => o.CodePostcode))
             {
-                DataSring.AppendLine(Item.CodePostcode + ";" + Item.CodeCity + ";" + Item.CodeState + ";" + Item.CodeNation + ";" + Item.CodeActive.ToString());
+                DataLine.Clear();
+                DataLine.Append(Item.CodePostcode);
+                DataLine.Append(";");
+                DataLine.Append(Item.CodeCity);
+                DataLine.Append(";");
+                DataLine.Append(Item.CodeState);
+                DataLine.Append(";");
+                DataLine.Append(Item.CodeNation);
+                DataLine.Append(";");
+                DataLine.Append(Item.CodeActive.ToString());
+
+                DataSring.AppendLine(DataLine.ToString());
             }
             using (StreamWriter outputFile = new StreamWriter(targetFile.FullName, false))
             {
