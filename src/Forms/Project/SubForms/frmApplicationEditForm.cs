@@ -22,7 +22,6 @@
  * 
  * */
 
-using OLKI.Programme.BeOrSy.Properties;
 using OLKI.Programme.BeOrSy.src.Project;
 using OLKI.Programme.BeOrSy.src.Project.ReportCeator;
 using System;
