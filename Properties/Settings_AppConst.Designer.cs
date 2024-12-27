@@ -12,7 +12,7 @@ namespace OLKI.Programme.BeOrSy.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.11.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.12.0.0")]
     internal sealed partial class Settings_AppConst : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings_AppConst defaultInstance = ((Settings_AppConst)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings_AppConst())));
@@ -377,6 +377,33 @@ namespace OLKI.Programme.BeOrSy.Properties {
         public int ProgressWeightMax {
             get {
                 return ((int)(this["ProgressWeightMax"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("csv")]
+        public string CompanyExportFile_DefaultExtension {
+            get {
+                return ((string)(this["CompanyExportFile_DefaultExtension"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int CompanyExportFile_FilterIndex {
+            get {
+                return ((int)(this["CompanyExportFile_FilterIndex"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("CSV-Datei (*.csv)|*.csv")]
+        public string CompanyExportFile_FilterList {
+            get {
+                return ((string)(this["CompanyExportFile_FilterList"]));
             }
         }
     }
