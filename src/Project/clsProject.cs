@@ -457,7 +457,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
                 {
                     Filter = Settings_AppConst.Default.ProjectFile_FilterList,
                     FilterIndex = Settings_AppConst.Default.ProjectFile_FilterIndex,
-                    InitialDirectory = Settings.ProjectDirPath,
+                    InitialDirectory = this.Settings.ProjectDirPath,
                     SupportMultiDottedExtensions = true
                 };
 
