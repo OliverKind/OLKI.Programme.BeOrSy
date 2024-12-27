@@ -1088,6 +1088,8 @@
             // 
             this.mnuProjectForm_Company_Export.Image = global::OLKI.Programme.BeOrSy.Properties.Resources.Export;
             this.mnuProjectForm_Company_Export.Name = "mnuProjectForm_Company_Export";
+            this.mnuProjectForm_Company_Export.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.E)));
             this.mnuProjectForm_Company_Export.Size = new System.Drawing.Size(334, 22);
             this.mnuProjectForm_Company_Export.Text = "Firmen exportieren";
             this.mnuProjectForm_Company_Export.Click += new System.EventHandler(this.mnuProjectForm_Company_Export_Click);
