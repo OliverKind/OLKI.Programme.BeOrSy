@@ -234,10 +234,10 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
             listViewItem.SubItems[5].Text = StateWeightetMax == null ? "" : StateWeightetMax.TitleNoText;
             listViewItem.SubItems[6].Tag = StateWeightetMax?.Date;
             listViewItem.SubItems[6].Text = StateWeightetMax == null ? "" : StateWeightetMax.DateFormated;
-            listViewItem.SubItems[7].Text = company.Comment;
-            listViewItem.SubItems[8].Text = NextReminder == null ? "" : NextReminder.TitleNoText;
-            listViewItem.SubItems[9].Tag = NextReminder?.Date;
-            listViewItem.SubItems[9].Text = NextReminder == null ? "" : NextReminder.DateFormated;
+            listViewItem.SubItems[7].Text = NextReminder == null ? "" : NextReminder.TitleNoText;
+            listViewItem.SubItems[8].Tag = NextReminder?.Date;
+            listViewItem.SubItems[8].Text = NextReminder == null ? "" : NextReminder.DateFormated;
+            listViewItem.SubItems[9].Text = company.Comment;
             listViewItem.SubItems[10].Tag = company.Applications.Count;
             listViewItem.SubItems[10].Text = company.Applications.Count <= 0 ? "" : company.Applications.Count.ToString();
             listViewItem.SubItems[11].Tag = company.Id;
