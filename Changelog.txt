@@ -1,4 +1,8 @@
 # BeOrSy - Bewerbungsorganisationssystem
+## [3.1.0.15] - 2024-12-28
+### Added
+- Export Companies to CSV-File
+
 ## [3.0.2.14] - 2024-11-16
 ### Fixed
 - Changelog formating
