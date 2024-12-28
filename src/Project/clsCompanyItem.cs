@@ -430,6 +430,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
                     foreach (ReminderItem ReminderItem in this.Reminders.Values.OrderBy(o => o.Date))
                     {
                         if (ReminderItem.Date != null && DateTime.Compare((DateTime)ReminderItem.Date, DateTime.Today) >= 0) return ReminderItem;
+                        if (ReminderItem.Date != null && DateTime.Compare((DateTime)ReminderItem.Date, DateTime.Today) <= 0 && !ReminderItem.Acknowledged) return ReminderItem;
                     }
                     return null;
                 }
