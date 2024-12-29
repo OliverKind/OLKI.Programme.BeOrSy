@@ -1,4 +1,12 @@
 # BeOrSy - Bewerbungsorganisationssystem
+## [3.1.1.16] - 2024-12-29
+### Changed
+- Code improvement
+
+### Fixed
+- Not acknowledged reminders not bold
+- Wrong column order content in company list
+
 ## [3.1.0.15] - 2024-12-28
 ### Added
 - Export Companies to CSV-File
