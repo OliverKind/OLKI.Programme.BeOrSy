@@ -353,31 +353,30 @@ namespace OLKI.Programme.BeOrSy.src.PostcodeManger
         /// <summary>
         /// Write Postcode Date to an CSV-File
         /// </summary>
+        /// <param name="owner">Owner Form to show exceptions</param>
         /// <param name="targetFile">File to read from</param>
         private void WritePostcodesToFile_CSV(FileInfo targetFile)
         {
-            StringBuilder DataSring = new StringBuilder();
-            DataSring.AppendLine(Resources.PostcodeTemplate);
+            string Template = Resources.PostcodeTemplate;
 
-            StringBuilder DataLine = new StringBuilder();
+            List<List<string>> DataLines = new List<List<string>>();
             foreach (PostcodeItem Item in this.PostcodeList.OrderBy(o => o.CodePostcode))
             {
-                DataLine.Clear();
-                DataLine.Append(Item.CodePostcode);
-                DataLine.Append(";");
-                DataLine.Append(Item.CodeCity);
-                DataLine.Append(";");
-                DataLine.Append(Item.CodeState);
-                DataLine.Append(";");
-                DataLine.Append(Item.CodeNation);
-                DataLine.Append(";");
-                DataLine.Append(Item.CodeActive.ToString());
+                List<string> ItemData = new List<string>
+                {
+                    Item.CodePostcode,
+                    Item.CodeCity,
+                    Item.CodeState,
+                    Item.CodeNation,
+                    Item.CodeActive.ToString()
+                };
 
-                DataSring.AppendLine(DataLine.ToString());
+                DataLines.Add(ItemData);
             }
-            using (StreamWriter outputFile = new StreamWriter(targetFile.FullName, false))
+            CSVwriter CSVwriter = new CSVwriter();
+            if (!CSVwriter.WriteCSVtoFile(targetFile.FullName, Template, DataLines, null, ";", out Exception Exception))
             {
-                outputFile.WriteLine(DataSring.ToString());
+                throw Exception;
             }
         }
 

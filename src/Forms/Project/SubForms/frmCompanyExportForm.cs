@@ -24,12 +24,11 @@
 
 using OLKI.Programme.BeOrSy.Properties;
 using OLKI.Programme.BeOrSy.src.Project;
+using OLKI.Toolbox.Common;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
@@ -83,74 +82,41 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
         /// <param name="companies">Companies to export</param>
         /// <param name="newline">Replacement for NewLine</param>
         /// <param name="seperator">Seperator for Columns</param>
-        private void ExportCompanies(string targetFile, List<CompanyItem> companies, string newline, string seperator)
+        private bool ExportCompanies(string targetFile, List<CompanyItem> companies, string newline, string seperator)
         {
             string Template = Resources.CompanyTemplate;
             Template = Template.Replace(";", seperator);
 
-            StringBuilder DataSring = new StringBuilder();
-            DataSring.AppendLine(Template);
-
-            StringBuilder DataLineBuilder = new StringBuilder();
-            List<string> CompanyData = new List<string>();
+            List<List<string>> DataLines = new List<List<string>>();
             foreach (CompanyItem Item in companies.OrderBy(o => o.TitleNoText))
             {
-                CompanyData.Clear();
-
-                CompanyData.Add(Item.TitleNoText);
-                CompanyData.Add(Item.Trade);
-                CompanyData.Add(Item.Terminated.ToString());
-                CompanyData.Add(Item.AdressStreet.Replace("\r\n", newline));
-                CompanyData.Add(Item.AdressPostcode);
-                CompanyData.Add(Item.AdressCity);
-                CompanyData.Add(Item.AdressState);
-                CompanyData.Add(Item.AdressCountry);
-                CompanyData.Add(Item.ContactTelephone);
-                CompanyData.Add(Item.ContactFax);
-                CompanyData.Add(Item.ContactEMail);
-                CompanyData.Add(Item.ContactHomepage);
-                CompanyData.Add(Item.ContactCareerPage);
-                CompanyData.Add(Item.Comment.Replace("\r\n", newline));
-
-                DataSring.AppendLine(this.GetDataLine(DataLineBuilder, CompanyData, newline, seperator));
-            }
-            using (StreamWriter outputFile = new StreamWriter(targetFile, false))
-            {
-                outputFile.WriteLine(DataSring.ToString());
-            }
-        }
-
-        /// <summary>
-        /// Get the data Line
-        /// </summary>
-        /// <param name="dataLineBuilder">StringBuilder to create a data line</param>
-        /// <param name="companyData">Data of the Company, to create a data line from</param>
-        /// <param name="newline">Newline replacement</param>
-        /// <param name="seperator">Column seperator</param>
-        /// <returns>Data line for CSV-File</returns>
-        string GetDataLine(StringBuilder dataLineBuilder, List<string> companyData, string newline, string seperator)
-        {
-            dataLineBuilder.Clear();
-            for (int i = 0; i < companyData.Count; i++)
-            {
-                if (i > 0) dataLineBuilder.Append(seperator);
-
-                string CompanyData = companyData[i];
-                CompanyData = CompanyData.Replace("\r\n", newline);
-                CompanyData = CompanyData.Replace("\"", "\"\"");
-                if (CompanyData.Contains(seperator))
+                List<string> ItemData = new List<string>
                 {
-                    dataLineBuilder.Append("\"");
-                    dataLineBuilder.Append(CompanyData);
-                    dataLineBuilder.Append("\"");
-                }
-                else
-                {
-                    dataLineBuilder.Append(CompanyData);
-                }
-            }
+                    Item.TitleNoText,
+                    Item.Trade,
+                    Item.Terminated.ToString(),
+                    Item.AdressStreet.Replace("\r\n", newline),
+                    Item.AdressPostcode,
+                    Item.AdressCity,
+                    Item.AdressState,
+                    Item.AdressCountry,
+                    Item.ContactTelephone,
+                    Item.ContactFax,
+                    Item.ContactEMail,
+                    Item.ContactHomepage,
+                    Item.ContactCareerPage,
+                    Item.Comment.Replace("\r\n", newline)
+                };
 
-            return dataLineBuilder.ToString();
+                DataLines.Add(ItemData);
+            }
+            CSVwriter CSVwriter = new CSVwriter();
+            if (!CSVwriter.WriteCSVtoFile(targetFile, Template, DataLines, newline, seperator, out Exception Exception))
+            {
+                MessageBox.Show(this, string.Format(Stringtable._0x0045m, new object[] { Exception.Message }), Stringtable._0x0045c, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
 
         /// <summary>
@@ -244,15 +210,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
             if (this.rabSeperatorTabulator.Checked) Seperator = "\t";
             if (this.rabSeperatorCustom.Checked) Seperator = this.txtSeperatorCustom.Text;
 
-            try
-            {
-                this.ExportCompanies(TargetPath, Companies, Newline, Seperator);
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, string.Format(Stringtable._0x0045m, new object[] { ex.Message }), Stringtable._0x0045c, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            if (this.ExportCompanies(TargetPath, Companies, Newline, Seperator)) this.Close();
         }
         #endregion
         #endregion
