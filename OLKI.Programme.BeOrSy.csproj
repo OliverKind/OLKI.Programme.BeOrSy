@@ -188,7 +188,7 @@
     <Compile Include="src\Forms\Project\uscQuickFilterCompanyAppProgress.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="src\PostcodeManger\PostcodeManager.cs" />
+    <Compile Include="src\PostcodeManger\clsPostcodeManager.cs" />
     <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings_AppConst.Designer.cs">
