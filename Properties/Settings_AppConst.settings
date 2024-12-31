@@ -6,7 +6,7 @@
       <Value Profile="(Default)">Changelog.txt</Value>
     </Setting>
     <Setting Name="AppUpdate_Name" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">OLKI.Programme.BOS</Value>
+      <Value Profile="(Default)">OLKI.Programme.BeOrSy</Value>
     </Setting>
     <Setting Name="AppUpdate_Owner" Type="System.String" Scope="Application">
       <Value Profile="(Default)">OliverKind</Value>

@@ -34,7 +34,7 @@ namespace OLKI.Programme.BeOrSy.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("OLKI.Programme.BOS")]
+        [global::System.Configuration.DefaultSettingValueAttribute("OLKI.Programme.BeOrSy")]
         public string AppUpdate_Name {
             get {
                 return ((string)(this["AppUpdate_Name"]));
