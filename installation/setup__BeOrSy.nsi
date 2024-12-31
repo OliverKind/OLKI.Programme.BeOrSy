@@ -1,4 +1,4 @@
-;NSIS Installer for BeOrSy 3.1.1.16
+;NSIS Installer for BeOrSy 3.1.2.17
 ;Using Modern Interface, Setup-Options, etc.
 ;Written by Oliver Kind
 
@@ -21,7 +21,7 @@
 ;Defining
 
   !define AppName          'BeOrSy'
-  !define Version          '3.1.1.16'
+  !define Version          '3.1.2.17'
   !define Company          'OLKI-Software'
   !define Comments         'Ein Programm für Bewerber/-innen um sie im Bewerbungsprozess zu unterstützen.'
   !define Copyright        '2024 - Oliver Kind'

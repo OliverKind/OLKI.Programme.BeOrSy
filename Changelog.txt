@@ -1,4 +1,8 @@
 # BeOrSy - Bewerbungsorganisationssystem
+## [3.1.2.17] - 2024-12-31
+### Fixed
+- Check for Updates not working
+
 ## [3.1.1.16] - 2024-12-29
 ### Changed
 - Code improvement
