@@ -1,4 +1,8 @@
 # BeOrSy - Bewerbungsorganisationssystem
+## [3.1.3.18] - 2025-02-26
+### Added
+- Option to set acutal Date to new Progress
+
 ## [3.1.2.17] - 2024-12-31
 ### Fixed
 - Check for Updates not working
