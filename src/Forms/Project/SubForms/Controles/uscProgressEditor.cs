@@ -368,7 +368,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles
             this.prgEditor.Refresh();
         }
 
-        private void btnShowClassSelector_Click(object sender, EventArgs e)
+        private void btnShowTemplateSelector_Click(object sender, EventArgs e)
         {
             if (this.lsvItems.SelectedItems.Count != 1 || this._systemChanged) return;
             if (this._templateSelector.ShowDialog(this) != DialogResult.OK) return;

@@ -33,7 +33,7 @@
             this.prgEditor = new System.Windows.Forms.PropertyGrid();
             this.mtbDate = new OLKI.Toolbox.Widgets.DateInputAndValidator();
             this.lblStateDate = new System.Windows.Forms.Label();
-            this.btnShowClassSelector = new System.Windows.Forms.Button();
+            this.btnShowTemplateSelector = new System.Windows.Forms.Button();
             this.nudWeight = new System.Windows.Forms.NumericUpDown();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.lblStateTitle = new System.Windows.Forms.Label();
@@ -90,15 +90,15 @@
             this.lblStateDate.TabIndex = 7;
             this.lblStateDate.Text = "Datum:";
             // 
-            // btnShowClassSelector
+            // btnShowTemplateSelector
             // 
-            this.btnShowClassSelector.Location = new System.Drawing.Point(75, 19);
-            this.btnShowClassSelector.Name = "btnShowClassSelector";
-            this.btnShowClassSelector.Size = new System.Drawing.Size(377, 24);
-            this.btnShowClassSelector.TabIndex = 0;
-            this.btnShowClassSelector.Text = "Grundtyp auswählen";
-            this.btnShowClassSelector.UseVisualStyleBackColor = false;
-            this.btnShowClassSelector.Click += new System.EventHandler(this.btnShowClassSelector_Click);
+            this.btnShowTemplateSelector.Location = new System.Drawing.Point(75, 19);
+            this.btnShowTemplateSelector.Name = "btnShowTemplateSelector";
+            this.btnShowTemplateSelector.Size = new System.Drawing.Size(377, 24);
+            this.btnShowTemplateSelector.TabIndex = 0;
+            this.btnShowTemplateSelector.Text = "Vorlage auswählen";
+            this.btnShowTemplateSelector.UseVisualStyleBackColor = false;
+            this.btnShowTemplateSelector.Click += new System.EventHandler(this.btnShowTemplateSelector_Click);
             // 
             // nudWeight
             // 
@@ -223,7 +223,7 @@
             this.grpProgressEdit.Controls.Add(this.chkWeight);
             this.grpProgressEdit.Controls.Add(this.mtbDate);
             this.grpProgressEdit.Controls.Add(this.lblStateDate);
-            this.grpProgressEdit.Controls.Add(this.btnShowClassSelector);
+            this.grpProgressEdit.Controls.Add(this.btnShowTemplateSelector);
             this.grpProgressEdit.Controls.Add(this.nudWeight);
             this.grpProgressEdit.Controls.Add(this.txtTitle);
             this.grpProgressEdit.Controls.Add(this.lblStateTitle);
@@ -347,7 +347,7 @@
         private System.Windows.Forms.PropertyGrid prgEditor;
         private Toolbox.Widgets.DateInputAndValidator mtbDate;
         private System.Windows.Forms.Label lblStateDate;
-        private System.Windows.Forms.Button btnShowClassSelector;
+        private System.Windows.Forms.Button btnShowTemplateSelector;
         private System.Windows.Forms.NumericUpDown nudWeight;
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Label lblStateTitle;
