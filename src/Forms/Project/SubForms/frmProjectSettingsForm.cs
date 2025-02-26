@@ -111,7 +111,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
                 }
             }
             this.lsvProgressTemplates.LastItemVisible();
-            this.chkTemplateWeight.Enabled = Properties.Settings.Default.AllowApplicationWeightOverride;
+            this.chkTemplateWeight.Enabled = Properties.Settings.Default.ProgressAllowWeightOverride;
             this.chkTemplateWeight_CheckedChanged(this, EventArgs.Empty);
             this.lsvProgressTemplates_SelectedIndexChanged(this, EventArgs.Empty);
             this._systemChanged = false;
@@ -495,20 +495,20 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
 
         private void chkTemplateWeight_CheckedChanged(object sender, EventArgs e)
         {
-            this.nudTemplateWeight.Enabled = this.chkTemplateWeight.Checked && Properties.Settings.Default.AllowApplicationWeightOverride;
+            this.nudTemplateWeight.Enabled = this.chkTemplateWeight.Checked && Properties.Settings.Default.ProgressAllowWeightOverride;
         }
 
         private void lblWeightActivateOverride_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MainForm.SubForms.ApplicationSettingsForm ApplicationSettingsForm = new MainForm.SubForms.ApplicationSettingsForm(2);
             ApplicationSettingsForm.ShowDialog(this);
-            this.chkTemplateWeight.Enabled = Properties.Settings.Default.AllowApplicationWeightOverride;
+            this.chkTemplateWeight.Enabled = Properties.Settings.Default.ProgressAllowWeightOverride;
             this.chkTemplateWeight_CheckedChanged(sender, EventArgs.Empty);
         }
 
         private void lsvProgressTemplates_DragDrop(object sender, DragEventArgs e)
         {
-            if (!Properties.Settings.Default.AllowApplicationWeightOverride || !this.chkTemplateWeight.Checked)
+            if (!Properties.Settings.Default.ProgressAllowWeightOverride || !this.chkTemplateWeight.Checked)
             {
                 this.RecalcProgressWeightAndOrder();
                 this.CheckSequencePlausibility();
@@ -533,7 +533,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
                 this.nudTemplateWeight.Value = this.nudTemplateWeight.Minimum;
             }
             this.chkTemplateWeight.Checked = false;
-            this.chkTemplateWeight.Enabled = Properties.Settings.Default.AllowApplicationWeightOverride;
+            this.chkTemplateWeight.Enabled = Properties.Settings.Default.ProgressAllowWeightOverride;
             this._systemChanged = false;
         }
 

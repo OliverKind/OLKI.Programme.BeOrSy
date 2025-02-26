@@ -110,7 +110,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.MainForm.SubForms
             //Initial common
             this.chkAppUpdateCheckAtStartUp.Checked = Settings.Default.AppUpdate_CheckAtStartUp;
             this.chkFileAssociationCheckOnStartup.Checked = Settings.Default.FileAssociation_CheckOnStartup;
-            this.chkProgressAllowWeightOverride.Checked = Settings.Default.AllowApplicationWeightOverride;
+            this.chkProgressAllowWeightOverride.Checked = Settings.Default.ProgressAllowWeightOverride;
             this.chkProgressNewSetActualDate.Checked = Settings.Default.ProgressNewSetActualDate;
             this.nudNumRecentFiles.Value = Settings.Default.RecentFiles_MaxLength;
             this.nudPostcodeListItemsWarning.Value = Settings.Default.PostcodeListItemsWarning;
@@ -137,7 +137,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.MainForm.SubForms
             Settings.Default.RecentFiles_MaxLength = (int)this.nudNumRecentFiles.Value;
             Settings.Default.PostcodeList = this._postcodeManager.PostcodeListAsBase64EncodetXML;
             Settings.Default.PostcodeListItemsWarning = (int)this.nudPostcodeListItemsWarning.Value;
-            Settings.Default.AllowApplicationWeightOverride = this.chkProgressAllowWeightOverride.Checked;
+            Settings.Default.ProgressAllowWeightOverride = this.chkProgressAllowWeightOverride.Checked;
             Settings.Default.ProgressNewSetActualDate = this.chkProgressNewSetActualDate.Checked;
             Settings.Default.Startup_DefaultFileOpen = this.txtStartupDefaultFileOpen.Text;
             Settings.Default.Save();

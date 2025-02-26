@@ -127,7 +127,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles
             this.toolTip.SetToolTip(this.nudWeight, Stringtable._0x0030m);
             this.toolTip.SetToolTip(this.lblWeightActivateOverride, Stringtable._0x0030m);
 
-            this.chkWeight.Enabled = Properties.Settings.Default.AllowApplicationWeightOverride;
+            this.chkWeight.Enabled = Properties.Settings.Default.ProgressAllowWeightOverride;
             this.chkWeight_CheckedChanged(this, EventArgs.Empty);
         }
 
@@ -228,7 +228,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles
             listViewItem.Tag = progress.Id;
             listViewItem.Text = progress.Date == null ? "" : progress.DateFormated;
 
-            if (Properties.Settings.Default.AllowApplicationWeightOverride)
+            if (Properties.Settings.Default.ProgressAllowWeightOverride)
             {
                 listViewItem.SubItems[1].Text = string.Format("{0}-{1}", new object[] { progress.Weight, progress.TitleNoText });
             }
@@ -285,7 +285,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles
 
         private void lsvItems_DragDrop(object sender, DragEventArgs e)
         {
-            if (!Properties.Settings.Default.AllowApplicationWeightOverride || !this.chkWeight.Checked)
+            if (!Properties.Settings.Default.ProgressAllowWeightOverride || !this.chkWeight.Checked)
             {
                 this.RecalcProgressWeight();
                 this.CheckSequencePlausibility();
@@ -346,7 +346,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles
                 this.txtTitle.Text = "";
             }
             this.chkWeight.Checked = false;
-            this.chkWeight.Enabled = Properties.Settings.Default.AllowApplicationWeightOverride;
+            this.chkWeight.Enabled = Properties.Settings.Default.ProgressAllowWeightOverride;
             this._systemChanged = false;
         }
         #endregion
@@ -412,14 +412,14 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles
 
         private void chkWeight_CheckedChanged(object sender, EventArgs e)
         {
-            this.nudWeight.Enabled = this.chkWeight.Checked && Properties.Settings.Default.AllowApplicationWeightOverride;
+            this.nudWeight.Enabled = this.chkWeight.Checked && Properties.Settings.Default.ProgressAllowWeightOverride;
         }
 
         private void lblWeightActivateOverride_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MainForm.SubForms.ApplicationSettingsForm ApplicationSettingsForm = new MainForm.SubForms.ApplicationSettingsForm(2);
             ApplicationSettingsForm.ShowDialog(this);
-            this.chkWeight.Enabled = Properties.Settings.Default.AllowApplicationWeightOverride;
+            this.chkWeight.Enabled = Properties.Settings.Default.ProgressAllowWeightOverride;
             this.chkWeight_CheckedChanged(this, EventArgs.Empty);
         }
 

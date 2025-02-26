@@ -105,12 +105,12 @@ namespace OLKI.Programme.BeOrSy.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
-        public bool AllowApplicationWeightOverride {
+        public bool ProgressAllowWeightOverride {
             get {
-                return ((bool)(this["AllowApplicationWeightOverride"]));
+                return ((bool)(this["ProgressAllowWeightOverride"]));
             }
             set {
-                this["AllowApplicationWeightOverride"] = value;
+                this["ProgressAllowWeightOverride"] = value;
             }
         }
         
