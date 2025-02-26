@@ -245,6 +245,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles
             this.IdSet.Prog = NewId;
 
             ProgressItem NewProg = this._templateSelector.SelectedTemplate.Clone(NewId);
+            NewProg.Date = Properties.Settings.Default.ProgressNewSetActualDate ? (DateTime?)DateTime.Now : null;
             this.Items.Add(NewId, NewProg);
 
             ListViewItem NewItem = new ListViewItem();

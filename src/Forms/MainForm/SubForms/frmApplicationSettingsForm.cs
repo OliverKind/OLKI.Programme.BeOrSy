@@ -111,6 +111,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.MainForm.SubForms
             this.chkAppUpdateCheckAtStartUp.Checked = Settings.Default.AppUpdate_CheckAtStartUp;
             this.chkFileAssociationCheckOnStartup.Checked = Settings.Default.FileAssociation_CheckOnStartup;
             this.chkProgressAllowWeightOverride.Checked = Settings.Default.AllowApplicationWeightOverride;
+            this.chkProgressNewSetActualDate.Checked = Settings.Default.ProgressNewSetActualDate;
             this.nudNumRecentFiles.Value = Settings.Default.RecentFiles_MaxLength;
             this.nudPostcodeListItemsWarning.Value = Settings.Default.PostcodeListItemsWarning;
             this.txtDateFormat.Text = Settings.Default.DateFormat;
@@ -129,15 +130,16 @@ namespace OLKI.Programme.BeOrSy.src.Forms.MainForm.SubForms
         private void btnOk_Click(object sender, EventArgs e)
         {
             Settings.Default.AppUpdate_CheckAtStartUp = this.chkAppUpdateCheckAtStartUp.Checked;
-            Settings.Default.FileAssociation_CheckOnStartup = this.chkFileAssociationCheckOnStartup.Checked;
-            Settings.Default.AllowApplicationWeightOverride = this.chkProgressAllowWeightOverride.Checked;
-            Settings.Default.RecentFiles_MaxLength = (int)this.nudNumRecentFiles.Value;
-            Settings.Default.PostcodeListItemsWarning = (int)this.nudPostcodeListItemsWarning.Value;
             Settings.Default.DateFormat = this.txtDateFormat.Text;
             Settings.Default.DateTimeFormat = this.txtDateTimeFormat.Text;
-            Settings.Default.Startup_DefaultFileOpen = this.txtStartupDefaultFileOpen.Text;
             Settings.Default.DirectoryFile_DefaultPath = this.txtDirectoryFileDefaultPath.Text;
+            Settings.Default.FileAssociation_CheckOnStartup = this.chkFileAssociationCheckOnStartup.Checked;
+            Settings.Default.RecentFiles_MaxLength = (int)this.nudNumRecentFiles.Value;
             Settings.Default.PostcodeList = this._postcodeManager.PostcodeListAsBase64EncodetXML;
+            Settings.Default.PostcodeListItemsWarning = (int)this.nudPostcodeListItemsWarning.Value;
+            Settings.Default.AllowApplicationWeightOverride = this.chkProgressAllowWeightOverride.Checked;
+            Settings.Default.ProgressNewSetActualDate = this.chkProgressNewSetActualDate.Checked;
+            Settings.Default.Startup_DefaultFileOpen = this.txtStartupDefaultFileOpen.Text;
             Settings.Default.Save();
 
             this._postcodeManager.RemoveDeletedItems();

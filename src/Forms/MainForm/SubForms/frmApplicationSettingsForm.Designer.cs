@@ -87,6 +87,8 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.erpDateFormat = new System.Windows.Forms.ErrorProvider(this.components);
+            this.grbProgressAllowWeightOverride = new System.Windows.Forms.GroupBox();
+            this.chkProgressNewSetActualDate = new System.Windows.Forms.CheckBox();
             this.tpTabSettings_Common.SuspendLayout();
             this.grbFormating.SuspendLayout();
             this.grbProjectFolder.SuspendLayout();
@@ -99,6 +101,7 @@
             this.tabSettings.SuspendLayout();
             this.tpTabSettings_AppProgress.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpDateFormat)).BeginInit();
+            this.grbProgressAllowWeightOverride.SuspendLayout();
             this.SuspendLayout();
             // 
             // tpTabSettings_Common
@@ -365,10 +368,10 @@
             // chkProgressAllowWeightOverride
             // 
             this.chkProgressAllowWeightOverride.AutoSize = true;
-            this.chkProgressAllowWeightOverride.Location = new System.Drawing.Point(6, 3);
+            this.chkProgressAllowWeightOverride.Location = new System.Drawing.Point(6, 19);
             this.chkProgressAllowWeightOverride.Name = "chkProgressAllowWeightOverride";
             this.chkProgressAllowWeightOverride.Size = new System.Drawing.Size(232, 17);
-            this.chkProgressAllowWeightOverride.TabIndex = 6;
+            this.chkProgressAllowWeightOverride.TabIndex = 0;
             this.chkProgressAllowWeightOverride.Text = "Erlaube das Überschreiben der Gewichtung";
             this.chkProgressAllowWeightOverride.CheckedChanged += new System.EventHandler(this.chkProgressAllowWeightOverride_CheckedChanged);
             // 
@@ -654,8 +657,8 @@
             // 
             // tpTabSettings_AppProgress
             // 
-            this.tpTabSettings_AppProgress.Controls.Add(this.lblAppProgressAllowWeightOverride);
-            this.tpTabSettings_AppProgress.Controls.Add(this.chkProgressAllowWeightOverride);
+            this.tpTabSettings_AppProgress.Controls.Add(this.chkProgressNewSetActualDate);
+            this.tpTabSettings_AppProgress.Controls.Add(this.grbProgressAllowWeightOverride);
             this.tpTabSettings_AppProgress.ImageIndex = 2;
             this.tpTabSettings_AppProgress.Location = new System.Drawing.Point(4, 23);
             this.tpTabSettings_AppProgress.Name = "tpTabSettings_AppProgress";
@@ -669,10 +672,10 @@
             // 
             this.lblAppProgressAllowWeightOverride.AutoSize = true;
             this.lblAppProgressAllowWeightOverride.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppProgressAllowWeightOverride.Location = new System.Drawing.Point(6, 23);
+            this.lblAppProgressAllowWeightOverride.Location = new System.Drawing.Point(6, 39);
             this.lblAppProgressAllowWeightOverride.Name = "lblAppProgressAllowWeightOverride";
             this.lblAppProgressAllowWeightOverride.Size = new System.Drawing.Size(566, 80);
-            this.lblAppProgressAllowWeightOverride.TabIndex = 7;
+            this.lblAppProgressAllowWeightOverride.TabIndex = 1;
             this.lblAppProgressAllowWeightOverride.Text = "Es wird empfohlen die Gewichtung automatisch berechnen zu lassen.\r\n\r\nFalsche Eing" +
     "aben der Gewichtung können zu unerwarteten Verhalten\r\nder Anwendung führen.\r\n";
             // 
@@ -716,6 +719,26 @@
             this.erpDateFormat.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.erpDateFormat.ContainerControl = this;
             // 
+            // grbProgressAllowWeightOverride
+            // 
+            this.grbProgressAllowWeightOverride.Controls.Add(this.chkProgressAllowWeightOverride);
+            this.grbProgressAllowWeightOverride.Controls.Add(this.lblAppProgressAllowWeightOverride);
+            this.grbProgressAllowWeightOverride.Location = new System.Drawing.Point(6, 29);
+            this.grbProgressAllowWeightOverride.Name = "grbProgressAllowWeightOverride";
+            this.grbProgressAllowWeightOverride.Size = new System.Drawing.Size(668, 122);
+            this.grbProgressAllowWeightOverride.TabIndex = 1;
+            this.grbProgressAllowWeightOverride.TabStop = false;
+            this.grbProgressAllowWeightOverride.Text = "Gewichtung überschreiben";
+            // 
+            // chkProgressNewSetActualDate
+            // 
+            this.chkProgressNewSetActualDate.AutoSize = true;
+            this.chkProgressNewSetActualDate.Location = new System.Drawing.Point(6, 6);
+            this.chkProgressNewSetActualDate.Name = "chkProgressNewSetActualDate";
+            this.chkProgressNewSetActualDate.Size = new System.Drawing.Size(314, 17);
+            this.chkProgressNewSetActualDate.TabIndex = 0;
+            this.chkProgressNewSetActualDate.Text = "Beim Anlegen eines Fortschritts das aktuelle Datum eintragen";
+            // 
             // ApplicationSettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -751,6 +774,8 @@
             this.tpTabSettings_AppProgress.ResumeLayout(false);
             this.tpTabSettings_AppProgress.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpDateFormat)).EndInit();
+            this.grbProgressAllowWeightOverride.ResumeLayout(false);
+            this.grbProgressAllowWeightOverride.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -814,5 +839,7 @@
         private System.Windows.Forms.NumericUpDown nudPostcodeListItemsWarning;
         private System.Windows.Forms.Label lblPostcodeListItemsWarning;
         private System.Windows.Forms.CheckBox chkPostcodeSettAllActive;
+        private System.Windows.Forms.GroupBox grbProgressAllowWeightOverride;
+        private System.Windows.Forms.CheckBox chkProgressNewSetActualDate;
     }
 }
