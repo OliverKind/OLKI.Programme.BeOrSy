@@ -58,7 +58,6 @@ namespace OLKI.Programme.BeOrSy.src
         /// </summary>
         [STAThread]
         static void Main(string[] args)
-
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
