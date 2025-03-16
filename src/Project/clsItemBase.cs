@@ -211,8 +211,9 @@ namespace OLKI.Programme.BeOrSy.src.Project
         {
             get => string.IsNullOrEmpty(this._title) ? Stringtable._0x0002 : this.Title;
         }
+
         /// <summary>
-        /// Get the Name of the Item, remove all cahrs tghea are not valid for a file path
+        /// Get the Name of the Item, remove all cahrs they are not valid for a file path
         /// </summary>
         [Browsable(false)]
         public string TitlePathSafe
