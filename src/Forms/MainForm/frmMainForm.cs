@@ -219,6 +219,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.MainForm
                 tolMain_Company_Filter.Enabled = false;
             }
         }
+
         #region Events
         #region Form Events
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
