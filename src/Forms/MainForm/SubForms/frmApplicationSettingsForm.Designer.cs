@@ -82,13 +82,13 @@
             this.prgPostcodeData = new OLKI.Toolbox.Widgets.ReadOnlyPropertyGrid();
             this.tabSettings = new System.Windows.Forms.TabControl();
             this.tpTabSettings_AppProgress = new System.Windows.Forms.TabPage();
+            this.chkProgressNewSetActualDate = new System.Windows.Forms.CheckBox();
+            this.grbProgressAllowWeightOverride = new System.Windows.Forms.GroupBox();
             this.lblAppProgressAllowWeightOverride = new System.Windows.Forms.Label();
             this.imlRegister = new System.Windows.Forms.ImageList(this.components);
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.erpDateFormat = new System.Windows.Forms.ErrorProvider(this.components);
-            this.grbProgressAllowWeightOverride = new System.Windows.Forms.GroupBox();
-            this.chkProgressNewSetActualDate = new System.Windows.Forms.CheckBox();
             this.tpTabSettings_Common.SuspendLayout();
             this.grbFormating.SuspendLayout();
             this.grbProjectFolder.SuspendLayout();
@@ -100,8 +100,8 @@
             this.pnlManagePostcode.SuspendLayout();
             this.tabSettings.SuspendLayout();
             this.tpTabSettings_AppProgress.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.erpDateFormat)).BeginInit();
             this.grbProgressAllowWeightOverride.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erpDateFormat)).BeginInit();
             this.SuspendLayout();
             // 
             // tpTabSettings_Common
@@ -163,7 +163,7 @@
             this.lblDateTimeFormatPreview.Location = new System.Drawing.Point(251, 48);
             this.lblDateTimeFormatPreview.Name = "lblDateTimeFormatPreview";
             this.lblDateTimeFormatPreview.Size = new System.Drawing.Size(133, 13);
-            this.lblDateTimeFormatPreview.TabIndex = 9;
+            this.lblDateTimeFormatPreview.TabIndex = 5;
             this.lblDateTimeFormatPreview.Text = "lblDateTimeFormatPreview";
             // 
             // lblDateFormatPreview
@@ -172,7 +172,7 @@
             this.lblDateFormatPreview.Location = new System.Drawing.Point(251, 22);
             this.lblDateFormatPreview.Name = "lblDateFormatPreview";
             this.lblDateFormatPreview.Size = new System.Drawing.Size(110, 13);
-            this.lblDateFormatPreview.TabIndex = 8;
+            this.lblDateFormatPreview.TabIndex = 2;
             this.lblDateFormatPreview.Text = "lblDateFormatPreview";
             // 
             // txtDateTimeFormat
@@ -181,7 +181,7 @@
             this.txtDateTimeFormat.Location = new System.Drawing.Point(95, 45);
             this.txtDateTimeFormat.Name = "txtDateTimeFormat";
             this.txtDateTimeFormat.Size = new System.Drawing.Size(150, 20);
-            this.txtDateTimeFormat.TabIndex = 7;
+            this.txtDateTimeFormat.TabIndex = 4;
             this.txtDateTimeFormat.TextChanged += new System.EventHandler(this.txtDateTimeFormat_TextChanged);
             // 
             // lblDateTimeFormat
@@ -190,7 +190,7 @@
             this.lblDateTimeFormat.Location = new System.Drawing.Point(6, 48);
             this.lblDateTimeFormat.Name = "lblDateTimeFormat";
             this.lblDateTimeFormat.Size = new System.Drawing.Size(83, 13);
-            this.lblDateTimeFormat.TabIndex = 6;
+            this.lblDateTimeFormat.TabIndex = 3;
             this.lblDateTimeFormat.Text = "Datum und Zeit:";
             // 
             // txtDateFormat
@@ -199,7 +199,7 @@
             this.txtDateFormat.Location = new System.Drawing.Point(95, 19);
             this.txtDateFormat.Name = "txtDateFormat";
             this.txtDateFormat.Size = new System.Drawing.Size(150, 20);
-            this.txtDateFormat.TabIndex = 5;
+            this.txtDateFormat.TabIndex = 1;
             this.txtDateFormat.TextChanged += new System.EventHandler(this.txtDateFormat_TextChanged);
             // 
             // lblDateFormat
@@ -668,6 +668,26 @@
             this.tpTabSettings_AppProgress.Text = "Bewerbungsfortschritt";
             this.tpTabSettings_AppProgress.UseVisualStyleBackColor = true;
             // 
+            // chkProgressNewSetActualDate
+            // 
+            this.chkProgressNewSetActualDate.AutoSize = true;
+            this.chkProgressNewSetActualDate.Location = new System.Drawing.Point(6, 6);
+            this.chkProgressNewSetActualDate.Name = "chkProgressNewSetActualDate";
+            this.chkProgressNewSetActualDate.Size = new System.Drawing.Size(314, 17);
+            this.chkProgressNewSetActualDate.TabIndex = 0;
+            this.chkProgressNewSetActualDate.Text = "Beim Anlegen eines Fortschritts das aktuelle Datum eintragen";
+            // 
+            // grbProgressAllowWeightOverride
+            // 
+            this.grbProgressAllowWeightOverride.Controls.Add(this.chkProgressAllowWeightOverride);
+            this.grbProgressAllowWeightOverride.Controls.Add(this.lblAppProgressAllowWeightOverride);
+            this.grbProgressAllowWeightOverride.Location = new System.Drawing.Point(6, 29);
+            this.grbProgressAllowWeightOverride.Name = "grbProgressAllowWeightOverride";
+            this.grbProgressAllowWeightOverride.Size = new System.Drawing.Size(668, 122);
+            this.grbProgressAllowWeightOverride.TabIndex = 1;
+            this.grbProgressAllowWeightOverride.TabStop = false;
+            this.grbProgressAllowWeightOverride.Text = "Gewichtung überschreiben";
+            // 
             // lblAppProgressAllowWeightOverride
             // 
             this.lblAppProgressAllowWeightOverride.AutoSize = true;
@@ -719,26 +739,6 @@
             this.erpDateFormat.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.erpDateFormat.ContainerControl = this;
             // 
-            // grbProgressAllowWeightOverride
-            // 
-            this.grbProgressAllowWeightOverride.Controls.Add(this.chkProgressAllowWeightOverride);
-            this.grbProgressAllowWeightOverride.Controls.Add(this.lblAppProgressAllowWeightOverride);
-            this.grbProgressAllowWeightOverride.Location = new System.Drawing.Point(6, 29);
-            this.grbProgressAllowWeightOverride.Name = "grbProgressAllowWeightOverride";
-            this.grbProgressAllowWeightOverride.Size = new System.Drawing.Size(668, 122);
-            this.grbProgressAllowWeightOverride.TabIndex = 1;
-            this.grbProgressAllowWeightOverride.TabStop = false;
-            this.grbProgressAllowWeightOverride.Text = "Gewichtung überschreiben";
-            // 
-            // chkProgressNewSetActualDate
-            // 
-            this.chkProgressNewSetActualDate.AutoSize = true;
-            this.chkProgressNewSetActualDate.Location = new System.Drawing.Point(6, 6);
-            this.chkProgressNewSetActualDate.Name = "chkProgressNewSetActualDate";
-            this.chkProgressNewSetActualDate.Size = new System.Drawing.Size(314, 17);
-            this.chkProgressNewSetActualDate.TabIndex = 0;
-            this.chkProgressNewSetActualDate.Text = "Beim Anlegen eines Fortschritts das aktuelle Datum eintragen";
-            // 
             // ApplicationSettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -773,9 +773,9 @@
             this.tabSettings.ResumeLayout(false);
             this.tpTabSettings_AppProgress.ResumeLayout(false);
             this.tpTabSettings_AppProgress.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.erpDateFormat)).EndInit();
             this.grbProgressAllowWeightOverride.ResumeLayout(false);
             this.grbProgressAllowWeightOverride.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erpDateFormat)).EndInit();
             this.ResumeLayout(false);
 
         }
