@@ -662,6 +662,12 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
             this._companySearchForm.Show(this);
         }
 
+        private void mnuProjectForm_Company_Import_Click(object sender, EventArgs e)
+        {
+            //TODO: Add Code
+            throw new NotImplementedException();    
+        }
+
         private void filterCompanyForm_RequestListResults(object sender, EventArgs e)
         {
             if (this._companySearchForm == null) return;

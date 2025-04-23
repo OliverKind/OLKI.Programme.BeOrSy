@@ -132,6 +132,7 @@
             this.mnuProjectForm_List = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProjectForm_List_Application = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProjectForm_List_Reminder = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProjectForm_Company_Import = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.spcMain)).BeginInit();
             this.spcMain.Panel1.SuspendLayout();
             this.spcMain.Panel2.SuspendLayout();
@@ -874,7 +875,8 @@
             this.toolStripSeparator3,
             this.mnuProjectForm_Company_Filter,
             this.toolStripMenuItem1,
-            this.mnuProjectForm_Company_Export});
+            this.mnuProjectForm_Company_Export,
+            this.mnuProjectForm_Company_Import});
             this.mnuProjectForm_Company.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.mnuProjectForm_Company.MergeIndex = 1;
             this.mnuProjectForm_Company.Name = "mnuProjectForm_Company";
@@ -1234,6 +1236,16 @@
             this.mnuProjectForm_List_Reminder.Text = "Erinnerungen";
             this.mnuProjectForm_List_Reminder.Click += new System.EventHandler(this.mnuProjectForm_List_Reminder_Click);
             // 
+            // mnuProjectForm_Company_Import
+            // 
+            this.mnuProjectForm_Company_Import.Image = global::OLKI.Programme.BeOrSy.Properties.Resources.Import;
+            this.mnuProjectForm_Company_Import.Name = "mnuProjectForm_Company_Import";
+            this.mnuProjectForm_Company_Import.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.I)));
+            this.mnuProjectForm_Company_Import.Size = new System.Drawing.Size(334, 22);
+            this.mnuProjectForm_Company_Import.Text = "Firmen importieren";
+            this.mnuProjectForm_Company_Import.Click += new System.EventHandler(this.mnuProjectForm_Company_Import_Click);
+            // 
             // ProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1379,5 +1391,6 @@
         internal Toolbox.Widgets.SortListView lsvCompany;
         internal System.Windows.Forms.MenuStrip mnuProjectForm;
         private System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Company_Export;
+        private System.Windows.Forms.ToolStripMenuItem mnuProjectForm_Company_Import;
     }
 }
