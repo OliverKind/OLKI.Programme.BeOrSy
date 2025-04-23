@@ -238,7 +238,13 @@ namespace OLKI.Programme.BeOrSy.src.Project
             get
             {
                 if (this.Progresses.Count == 0) return null;
-                return this.Progresses.OrderBy(o => o.Value.Order).LastOrDefault().Value;
+                Dictionary<int, ProgressItem> TempProgresses = new Dictionary<int, ProgressItem>();
+                foreach (KeyValuePair<int, ProgressItem> ProgressItem in this.Progresses.OrderBy(o => o.Value.Order))
+                {
+                    if (ProgressItem.Value.Delete == DeleteFlag.None) TempProgresses.Add(ProgressItem.Key, ProgressItem.Value);
+                }
+                if (TempProgresses.Count == 0) return null;
+                return TempProgresses.OrderBy(o => o.Value.Order).LastOrDefault().Value;
             }
         }
 
@@ -251,7 +257,13 @@ namespace OLKI.Programme.BeOrSy.src.Project
             get
             {
                 if (this.Progresses.Count == 0) return null;
-                return this.Progresses.OrderBy(o => o.Value.Order).FirstOrDefault().Value;
+                Dictionary<int, ProgressItem> TempProgresses = new Dictionary<int, ProgressItem>();
+                foreach (KeyValuePair<int, ProgressItem> ProgressItem in this.Progresses.OrderBy(o => o.Value.Order))
+                {
+                    if (ProgressItem.Value.Delete == DeleteFlag.None) TempProgresses.Add(ProgressItem.Key, ProgressItem.Value);
+                }
+                if (TempProgresses.Count == 0) return null;
+                return TempProgresses.OrderBy(o => o.Value.Order).FirstOrDefault().Value;
             }
         }
 
