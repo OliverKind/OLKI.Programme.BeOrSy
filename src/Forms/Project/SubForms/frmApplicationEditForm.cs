@@ -114,9 +114,9 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
 
             this.uscEditorFiles.IdSet = this.IdSet;
             this.uscEditorFiles.Items = this.Application.Files;
-            this.uscStateEditor.IdSet = this.IdSet;
-            this.uscStateEditor.Items = this.Application.Progresses;
-            this.uscStateEditor.Project = this.Project;
+            this.uscProgressEditor.IdSet = this.IdSet;
+            this.uscProgressEditor.Items = this.Application.Progresses;
+            this.uscProgressEditor.Project = this.Project;
             this.uscEditorReminders.IdSet = this.IdSet;
             this.uscEditorReminders.Items = this.Application.Reminders;
 
@@ -139,7 +139,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
             this.uscEditorContacts.Items = this.Project.Companies[this.Company.Id].Contacts;
             this.Application.AssociatedContacts = this.uscEditorContacts.AssociatedContacts;
             this.Application.Files = this.uscEditorFiles.Items;
-            this.Application.Progresses = this.uscStateEditor.Items;
+            this.Application.Progresses = this.uscProgressEditor.Items;
             this.Application.Reminders = this.uscEditorReminders.Items;
 
             this.Application.Changed = true;

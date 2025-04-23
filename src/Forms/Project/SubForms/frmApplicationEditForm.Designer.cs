@@ -55,7 +55,7 @@
             this.grbComment = new System.Windows.Forms.GroupBox();
             this.txtComment = new System.Windows.Forms.TextBox();
             this.tpTabApplication_Progress = new System.Windows.Forms.TabPage();
-            this.uscStateEditor = new OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles.ProgressEditor();
+            this.uscProgressEditor = new OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles.ProgressEditor();
             this.tpTabApplication_Contact = new System.Windows.Forms.TabPage();
             this.uscEditorContacts = new OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles.ContactsEditor();
             this.tpTabApplication_Files = new System.Windows.Forms.TabPage();
@@ -346,7 +346,7 @@
             // 
             // tpTabApplication_Progress
             // 
-            this.tpTabApplication_Progress.Controls.Add(this.uscStateEditor);
+            this.tpTabApplication_Progress.Controls.Add(this.uscProgressEditor);
             this.tpTabApplication_Progress.ImageIndex = 1;
             this.tpTabApplication_Progress.Location = new System.Drawing.Point(4, 23);
             this.tpTabApplication_Progress.Name = "tpTabApplication_Progress";
@@ -358,12 +358,12 @@
             // 
             // uscStateEditor
             // 
-            this.uscStateEditor.IdSet = null;
-            this.uscStateEditor.Items = null;
-            this.uscStateEditor.Location = new System.Drawing.Point(6, 6);
-            this.uscStateEditor.Name = "uscStateEditor";
-            this.uscStateEditor.Size = new System.Drawing.Size(979, 226);
-            this.uscStateEditor.TabIndex = 0;
+            this.uscProgressEditor.IdSet = null;
+            this.uscProgressEditor.Items = null;
+            this.uscProgressEditor.Location = new System.Drawing.Point(6, 6);
+            this.uscProgressEditor.Name = "uscStateEditor";
+            this.uscProgressEditor.Size = new System.Drawing.Size(979, 226);
+            this.uscProgressEditor.TabIndex = 0;
             // 
             // tpTabApplication_Contact
             // 
@@ -605,6 +605,6 @@
         private Toolbox.Widgets.DateInputAndValidator mtbDateCreated;
         private Toolbox.Widgets.DateInputAndValidator mtbDatePeriodStart;
         private Toolbox.Widgets.DateInputAndValidator mtbDatePeriodEnd;
-        private Controles.ProgressEditor uscStateEditor;
+        private Controles.ProgressEditor uscProgressEditor;
     }
 }
