@@ -121,7 +121,7 @@
     <value>Inkompatible Datei!</value>
   </data>
   <data name="0x0001m" xml:space="preserve">
-    <value>Die Projektdatei ist nicht mit dieser Programmversion kompatibel.</value>
+    <value>Die Datei ist nicht mit dieser Programmversion kompatibel.</value>
   </data>
   <data name="0x0002" xml:space="preserve">
     <value>-- Keine Benennung --</value>
@@ -491,5 +491,13 @@ Die Ordner werden erst von der Festplatte gelöscht, wenn Sie das Projekt speich
 
 Fehler:
 {0}</value>
+  </data>
+  <data name="0x0046c" xml:space="preserve">
+    <value>Fehler beim Importieren!</value>
+  </data>
+  <data name="0x0046m" xml:space="preserve">
+    <value>Beim Importieren der Firmen aus der Datei "{0}" ist ein Fehler aufgetreten. Es wurden keine Frimen importiert.
+
+{1}</value>
   </data>
 </root>

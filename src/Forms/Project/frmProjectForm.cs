@@ -68,6 +68,11 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
         private CompanyExportForm _companyExportForm;
 
         /// <summary>
+        /// Form to Import Companies
+        /// </summary>
+        private CompanyImportForm _companyImportForm;
+
+        /// <summary>
         /// Form to Search Companies
         /// </summary>
         private CompanySearchForm _companySearchForm;
@@ -686,8 +691,30 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
 
         private void mnuProjectForm_Company_Import_Click(object sender, EventArgs e)
         {
-            //TODO: Add Code
-            throw new NotImplementedException();    
+            OpenFileDialog OpenFileDialog = new OpenFileDialog
+            {
+                DefaultExt = Settings_AppConst.Default.CompanyExportFile_DefaultExtension,
+                Filter = Settings_AppConst.Default.CompanyExportFile_FilterList,
+                FilterIndex = Settings_AppConst.Default.CompanyExportFile_FilterIndex,
+                InitialDirectory = Properties.Settings.Default.DirectoryFile_DefaultPath,
+                SupportMultiDottedExtensions = true
+            };
+            if (OpenFileDialog.ShowDialog(this) != DialogResult.OK) return;
+
+            switch (new FileInfo(OpenFileDialog.FileName).Extension.ToLower())
+            {
+                case ".csv":
+                    this._companyImportForm = new CompanyImportForm(CompanyImportForm.FormMode.ImportCSV, this.Project, OpenFileDialog.FileName);
+                    this._companyImportForm.ShowDialog(this);
+                    break;
+                case ".xml":
+                    this._companyImportForm = new CompanyImportForm(CompanyImportForm.FormMode.ImportXML, this.Project, OpenFileDialog.FileName);
+                    //this._companyImportForm.ShowDialog(this);
+                    break;
+                default:
+                    return;
+            }
+            this.FillListViewCompany(null);
         }
 
         private void filterCompanyForm_RequestListResults(object sender, EventArgs e)

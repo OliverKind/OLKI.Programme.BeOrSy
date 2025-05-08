@@ -70,7 +70,7 @@ namespace OLKI.Programme.BeOrSy.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Die Projektdatei ist nicht mit dieser Programmversion kompatibel. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Die Datei ist nicht mit dieser Programmversion kompatibel. ähnelt.
         /// </summary>
         internal static string _0x0001m {
             get {
@@ -1068,6 +1068,26 @@ namespace OLKI.Programme.BeOrSy.Properties {
         internal static string _0x0045m {
             get {
                 return ResourceManager.GetString("0x0045m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fehler beim Importieren! ähnelt.
+        /// </summary>
+        internal static string _0x0046c {
+            get {
+                return ResourceManager.GetString("0x0046c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Beim Importieren der Firmen aus der Datei &quot;{0}&quot; ist ein Fehler aufgetreten. Es wurden keine Frimen importiert.
+        ///
+        ///{1} ähnelt.
+        /// </summary>
+        internal static string _0x0046m {
+            get {
+                return ResourceManager.GetString("0x0046m", resourceCulture);
             }
         }
     }
