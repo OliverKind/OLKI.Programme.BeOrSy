@@ -145,7 +145,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
                 DataLines.Add(ItemData);
             }
             CSVwriter CSVwriter = new CSVwriter();
-            if (!CSVwriter.WriteCSVtoFile(targetFile, Template, DataLines, newline, seperator, out Exception Exception))
+            if (!CSVwriter.WriteCSVtoFile(targetFile, Template, DataLines, newline, seperator.ToString(), out Exception Exception))
             {
                 MessageBox.Show(this, string.Format(Stringtable._0x0045m, new object[] { Exception.Message }), Stringtable._0x0045c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
