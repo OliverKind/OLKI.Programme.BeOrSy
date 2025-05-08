@@ -116,10 +116,10 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
         /// <param name="newline">Replacement for NewLine</param>
         /// <param name="seperator">Seperator for Columns</param>
         /// <returns>True if writing to file was sucessfull</returns>
-        private bool ExportCompaniesCSV(string targetFile, List<CompanyItem> companies, string newline, string seperator)
+        private bool ExportCompaniesCSV(string targetFile, List<CompanyItem> companies, string newline, char seperator)
         {
             string Template = Resources.CompanyTemplate;
-            Template = Template.Replace(";", seperator);
+            Template = Template.Replace(';', seperator);
 
             List<List<string>> DataLines = new List<List<string>>();
             foreach (CompanyItem Item in companies.OrderBy(oComp => oComp.TitleNoText))
@@ -268,11 +268,11 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
             if (this.rabNewlineBR.Checked) Newline = @"<br />";
             if (this.rabNewlineCustom.Checked) Newline = this.txtNewlineCustom.Text;
 
-            string Seperator = "";
-            if (this.rabSeperatorComma.Checked) Seperator = ",";
-            if (this.rabSeperatorSemicolon.Checked) Seperator = ";";
-            if (this.rabSeperatorTabulator.Checked) Seperator = "\t";
-            if (this.rabSeperatorCustom.Checked) Seperator = this.txtSeperatorCustom.Text;
+            char Seperator = ' ';
+            if (this.rabSeperatorComma.Checked) Seperator = ',';
+            if (this.rabSeperatorSemicolon.Checked) Seperator = ';';
+            if (this.rabSeperatorTabulator.Checked) Seperator = '\t';
+            if (this.rabSeperatorCustom.Checked && this.txtSeperatorCustom.Text.Length > 0) Seperator = char.Parse(this.txtSeperatorCustom.Text);
 
             switch (this._formMode)
             {
