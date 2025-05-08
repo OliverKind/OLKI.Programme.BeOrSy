@@ -340,14 +340,12 @@ namespace OLKI.Programme.BeOrSy.src.Project
                 //Read Companies und sub Elements
                 this.Companies.Clear();
                 XElement CompanyList = Serialize.GetFromXElement(inputProject, "CompanyList", new XElement("CompanyList"));
-                if (CompanyList != null)
+                if (CompanyList == null) return true;
+                foreach (XElement CompanyItem in CompanyList.Elements("CompanyItem"))
                 {
-                    foreach (XElement CompanyItem in CompanyList.Elements("CompanyItem"))
-                    {
-                        CompanyItem NewCompany = new CompanyItem(CompanyItem);
-                        this.Companies.Add(NewCompany.Id, NewCompany);
-                        this.Companies[NewCompany.Id].ItemChanged += new EventHandler(this.Item_Changed);
-                    }
+                    CompanyItem NewCompany = new CompanyItem(CompanyItem);
+                    this.Companies.Add(NewCompany.Id, NewCompany);
+                    this.Companies[NewCompany.Id].ItemChanged += new EventHandler(this.Item_Changed);
                 }
                 this._changed = false;
                 return true;
