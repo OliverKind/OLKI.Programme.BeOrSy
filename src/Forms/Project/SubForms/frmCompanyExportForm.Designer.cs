@@ -48,6 +48,7 @@
             this.rabExportFil = new System.Windows.Forms.RadioButton();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.grbHandleNewline.SuspendLayout();
             this.grbHandleSeperator.SuspendLayout();
             this.grbExportScope.SuspendLayout();
@@ -242,10 +243,10 @@
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Image = global::OLKI.Programme.BeOrSy.Properties.Resources.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(202, 368);
+            this.btnCancel.Location = new System.Drawing.Point(202, 446);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(110, 23);
-            this.btnCancel.TabIndex = 4;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "&Abbrechen";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -255,15 +256,25 @@
             // btnOk
             // 
             this.btnOk.Image = global::OLKI.Programme.BeOrSy.Properties.Resources.Ok;
-            this.btnOk.Location = new System.Drawing.Point(12, 368);
+            this.btnOk.Location = new System.Drawing.Point(12, 446);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(110, 23);
-            this.btnOk.TabIndex = 3;
+            this.btnOk.TabIndex = 4;
             this.btnOk.Text = "&Ok";
             this.btnOk.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnOk.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 365);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 78);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Es werden nur die Firmendaten exportiert.\r\nNicht exportiert werden:\r\n- Bewerbunge" +
+    "n\r\n- Dateianhänge\r\n- Erinnerungen\r\n- Kontakte";
             // 
             // CompanyExportForm
             // 
@@ -271,7 +282,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(324, 403);
+            this.ClientSize = new System.Drawing.Size(324, 481);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.grbExportScope);
@@ -292,6 +304,7 @@
             this.grbExportScope.ResumeLayout(false);
             this.grbExportScope.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -316,5 +329,6 @@
         private System.Windows.Forms.RadioButton rabExportFil;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Label label1;
     }
 }
