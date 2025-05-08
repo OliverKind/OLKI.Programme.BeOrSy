@@ -105,9 +105,6 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
             {
                 this.grbHandleNewline.Enabled = false;
                 this.grbHandleSeperator.Enabled = false;
-
-                this.btnCancel.Location = new System.Drawing.Point(this.btnCancel.Location.X, this.grbExportScope.Location.Y + this.grbExportScope.Size.Height + this.grbExportScope.Margin.Bottom + this.btnCancel.Margin.Top);
-                this.btnOk.Location = new System.Drawing.Point(this.btnOk.Location.X, this.grbExportScope.Location.Y + this.grbExportScope.Size.Height + this.grbExportScope.Margin.Bottom + this.btnOk.Margin.Top);
             }
         }
 
