@@ -28,8 +28,10 @@ using OLKI.Toolbox.Common;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
 {
@@ -38,6 +40,17 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
     /// </summary>
     public partial class CompanyExportForm : Form
     {
+        #region Enums
+        /// <summary>
+        /// Mode to show form
+        /// </summary>
+        public enum FormMode
+        {
+            ExportCSV,
+            ExportXML
+        }
+        #endregion
+
         #region Fields
         /// <summary>
         /// Items in Company ListView
@@ -50,9 +63,19 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
         private readonly ListView.SelectedListViewItemCollection _companyListViewItemsSelected;
 
         /// <summary>
+        /// Mode to show form
+        /// </summary>
+        private readonly FormMode _formMode;
+
+        /// <summary>
         /// Main Project
         /// </summary>
         private readonly src.Project.Project _project;
+
+        /// <summary>
+        /// Target Path to write copmanys to
+        /// </summary>
+        private readonly string _targetPath;
         #endregion
 
         #region Methods
@@ -61,34 +84,48 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
         /// </summary>
         /// <param name="companyListViewItems">Items in Company ListView</param>
         /// <param name="companyListViewItemsSelected">Selected Items in Company ListView</param>
+        /// <param name="formMode">Mo to show form</param>
         /// <param name="project">Main Project</param>
-        public CompanyExportForm(ListView.ListViewItemCollection companyListViewItems, ListView.SelectedListViewItemCollection companyListViewItemsSelected, src.Project.Project project)
+        /// <param name="targetPath">Target Path to write copmanys to</param>
+        public CompanyExportForm(ListView.ListViewItemCollection companyListViewItems, ListView.SelectedListViewItemCollection companyListViewItemsSelected, FormMode formMode, src.Project.Project project, string targetPath)
         {
             InitializeComponent();
 
             this._companyListViewItems = companyListViewItems;
             this._companyListViewItemsSelected = companyListViewItemsSelected;
+            this._formMode = formMode;
             this._project = project;
+            this._targetPath = targetPath;
 
             this.rabExportAll.Enabled = this._project.Companies.Count > 0;
             this.rabExportFil.Enabled = this._companyListViewItems.Count > 0;
             this.rabExportSel.Enabled = this._companyListViewItemsSelected.Count > 0;
+
+            if (this._formMode != FormMode.ExportCSV)
+            {
+                this.grbHandleNewline.Enabled = false;
+                this.grbHandleSeperator.Enabled = false;
+
+                this.btnCancel.Location = new System.Drawing.Point(this.btnCancel.Location.X, this.grbExportScope.Location.Y + this.grbExportScope.Size.Height + this.grbExportScope.Margin.Bottom + this.btnCancel.Margin.Top);
+                this.btnOk.Location = new System.Drawing.Point(this.btnOk.Location.X, this.grbExportScope.Location.Y + this.grbExportScope.Size.Height + this.grbExportScope.Margin.Bottom + this.btnOk.Margin.Top);
+            }
         }
 
         /// <summary>
-        /// Export Companies to target File
+        /// Export Companies to target CSV-File
         /// </summary>
-        /// <param name="targetFile">File to export to</param>
+        /// <param name="targetFile">CSV-File to export to</param>
         /// <param name="companies">Companies to export</param>
         /// <param name="newline">Replacement for NewLine</param>
         /// <param name="seperator">Seperator for Columns</param>
-        private bool ExportCompanies(string targetFile, List<CompanyItem> companies, string newline, string seperator)
+        /// <returns>True if writing to file was sucessfull</returns>
+        private bool ExportCompaniesCSV(string targetFile, List<CompanyItem> companies, string newline, string seperator)
         {
             string Template = Resources.CompanyTemplate;
             Template = Template.Replace(";", seperator);
 
             List<List<string>> DataLines = new List<List<string>>();
-            foreach (CompanyItem Item in companies.OrderBy(o => o.TitleNoText))
+            foreach (CompanyItem Item in companies.OrderBy(oComp => oComp.TitleNoText))
             {
                 List<string> ItemData = new List<string>
                 {
@@ -114,6 +151,48 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
             if (!CSVwriter.WriteCSVtoFile(targetFile, Template, DataLines, newline, seperator, out Exception Exception))
             {
                 MessageBox.Show(this, string.Format(Stringtable._0x0045m, new object[] { Exception.Message }), Stringtable._0x0045c, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Export Companies to target XML-File
+        /// </summary>
+        /// <param name="targetFile">XML-File to export to</param>
+        /// <param name="companies">Companies to export</param>
+        /// <returns>True if writing to file was sucessfull</returns>
+        private bool ExportCompaniesXML(string targetFile, List<CompanyItem> companies)
+        {
+            XElement ProjectRoot = new XElement("BeOrSy_ProjectData");
+            ProjectRoot.Add(new XAttribute("Version", Settings_AppConst.Default.ProjectFile_Version_Actual));
+
+            XElement CompList = new XElement("CompanyList");
+            foreach (CompanyItem Comp in companies.OrderBy(oComp => oComp.Id))
+            {
+                if (Comp.Delete == ItemBase.DeleteFlag.None) CompList.Add(Comp.ToXElement(true));
+            }
+            ProjectRoot.Add(CompList);
+
+            try
+            {
+                // Write data
+                char[] Content = ProjectRoot.ToString().ToCharArray();
+                using (StreamWriter StreamWriter = new StreamWriter(File.Open(targetFile, FileMode.Create), System.Text.Encoding.UTF8))
+                {
+                    StreamWriter.WriteLine(Settings_AppConst.Default.XMLheader);
+                    int ReadLength;
+                    int Limit = (int)Math.Ceiling((decimal)Content.Length / (decimal)Settings_AppConst.Default.WriteDataBufferLength);
+                    for (int i = 0; i < Limit; i++)
+                    {
+                        ReadLength = this._project.GetValidBufferReadLength(Content.Length, i, Settings_AppConst.Default.WriteDataBufferLength);
+                        StreamWriter.Write(Content, i * Settings_AppConst.Default.WriteDataBufferLength, ReadLength);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, string.Format(Stringtable._0x0045m, new object[] { ex.Message }), Stringtable._0x0045c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -182,18 +261,6 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
                 return;
             }
 
-            string TargetPath = string.Empty;
-            SaveFileDialog SaveFileDialog = new SaveFileDialog
-            {
-                DefaultExt = Settings_AppConst.Default.CompanyExportFile_DefaultExtension,
-                Filter = Settings_AppConst.Default.CompanyExportFile_FilterList,
-                FilterIndex = Settings_AppConst.Default.CompanyExportFile_FilterIndex,
-                InitialDirectory = Properties.Settings.Default.DirectoryFile_DefaultPath,
-                SupportMultiDottedExtensions = true
-            };
-            if (SaveFileDialog.ShowDialog(this) != DialogResult.OK) return;
-            TargetPath = SaveFileDialog.FileName;
-
             List<CompanyItem> Companies = new List<CompanyItem>();
             Companies = GetExportCompanies();
 
@@ -210,7 +277,17 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
             if (this.rabSeperatorTabulator.Checked) Seperator = "\t";
             if (this.rabSeperatorCustom.Checked) Seperator = this.txtSeperatorCustom.Text;
 
-            if (this.ExportCompanies(TargetPath, Companies, Newline, Seperator)) this.Close();
+            switch (this._formMode)
+            {
+                case FormMode.ExportCSV:
+                    if (this.ExportCompaniesCSV(this._targetPath, Companies, Newline, Seperator)) this.Close();
+                    break;
+                case FormMode.ExportXML:
+                    if (this.ExportCompaniesXML(this._targetPath, Companies)) this.Close();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
         #endregion
         #endregion
