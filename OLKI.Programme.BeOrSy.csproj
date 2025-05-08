@@ -375,6 +375,10 @@
     <None Include="Resources\Images\Icons\Application_VacantArchive.png" />
     <Content Include="Resources\Images\Icons\AutoArchive.ico" />
     <Content Include="Resources\Images\Icons\AutoArchive.png" />
+    <Content Include="Resources\Images\Icons\CompanyExport.ico" />
+    <Content Include="Resources\Images\Icons\CompanyExport.png" />
+    <Content Include="Resources\Images\Icons\CompanyImport.ico" />
+    <Content Include="Resources\Images\Icons\CompanyImport.png" />
     <Content Include="Resources\Images\Icons\Export.ico" />
     <Content Include="Resources\Images\Icons\Import.ico" />
     <Content Include="Resources\Images\Icons\Rename.ico" />

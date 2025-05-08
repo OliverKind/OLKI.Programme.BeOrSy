@@ -213,6 +213,26 @@ namespace OLKI.Programme.BeOrSy.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CompanyExport {
+            get {
+                object obj = ResourceManager.GetObject("CompanyExport", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CompanyImport {
+            get {
+                object obj = ResourceManager.GetObject("CompanyImport", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CompanySearch {
             get {
                 object obj = ResourceManager.GetObject("CompanySearch", resourceCulture);
