@@ -122,11 +122,11 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
             Template = Template.Replace(';', seperator);
 
             List<List<string>> DataLines = new List<List<string>>();
-            foreach (CompanyItem Item in companies.OrderBy(oComp => oComp.TitleNoText))
+            foreach (CompanyItem Item in companies.OrderBy(oComp => oComp.Title))
             {
                 List<string> ItemData = new List<string>
                 {
-                    Item.TitleNoText,
+                    Item.Title,
                     Item.Trade,
                     Item.Terminated.ToString(),
                     Item.AdressStreet.Replace("\r\n", newline),
