@@ -316,6 +316,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
         /// Set all project data from an specified XML formated string
         /// </summary>
         /// <param name="inputProject">Specifies an XML format string which represents the project</param>
+        /// <param name="mainForm">Main Form, to show messages</param>
         internal bool FromXElement(string inputProject, MainForm mainForm)
         {
             return this.FromXElement(XElement.Parse(inputProject), mainForm);
@@ -324,6 +325,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
         /// Set all project data from an specified XElement which parsed an XML formated string
         /// </summary>
         /// <param name="inputProject">Specifies XElement XElement which parsed an XML formated string which represents the project</param>
+        /// <param name="mainForm">Main Form, to show messages</param>
         internal bool FromXElement(XElement inputProject, MainForm mainForm)
         {
             try
