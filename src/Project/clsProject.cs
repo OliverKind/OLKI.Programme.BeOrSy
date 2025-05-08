@@ -283,7 +283,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
         /// <param name="FileVersion">Version of the file to check</param>
         /// <param name="ownerForm">Owner Form, to show messages</param>
         /// <returns>True if file is compatible or converted, otherwise false</returns>
-        private bool CheckFileVersion(string FileVersion, Form ownerForm)
+        public bool CheckFileVersion(string FileVersion, Form ownerForm)
         {
             // Create list with file Versions
             // Highest Version ist file version, lower versions are for compability with older versions
