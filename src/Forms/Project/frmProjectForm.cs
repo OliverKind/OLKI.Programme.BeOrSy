@@ -35,6 +35,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Linq;
 using System.Drawing;
+using System.IO;
 
 namespace OLKI.Programme.BeOrSy.src.Forms.Project
 {
@@ -651,8 +652,29 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
 
         private void mnuProjectForm_Company_Export_Click(object sender, EventArgs e)
         {
-            this._companyExportForm = new CompanyExportForm(this.lsvCompany.Items, this.lsvCompany.SelectedItems, this.Project);
-            this._companyExportForm.Show(this);
+            SaveFileDialog SaveFileDialog = new SaveFileDialog
+            {
+                DefaultExt = Settings_AppConst.Default.CompanyExportFile_DefaultExtension,
+                Filter = Settings_AppConst.Default.CompanyExportFile_FilterList,
+                FilterIndex = Settings_AppConst.Default.CompanyExportFile_FilterIndex,
+                InitialDirectory = Properties.Settings.Default.DirectoryFile_DefaultPath,
+                SupportMultiDottedExtensions = true
+            };
+            if (SaveFileDialog.ShowDialog(this) != DialogResult.OK) return;
+
+            switch (new FileInfo(SaveFileDialog.FileName).Extension.ToLower())
+            {
+                case ".csv":
+                    this._companyExportForm = new CompanyExportForm(this.lsvCompany.Items, this.lsvCompany.SelectedItems, CompanyExportForm.FormMode.ExportCSV, this.Project, SaveFileDialog.FileName);
+                    this._companyExportForm.Show(this);
+                    break;
+                case ".xml":
+                    this._companyExportForm = new CompanyExportForm(this.lsvCompany.Items, this.lsvCompany.SelectedItems, CompanyExportForm.FormMode.ExportXML, this.Project, SaveFileDialog.FileName);
+                    this._companyExportForm.Show(this);
+                    break;
+                default:
+                    return;
+            }
         }
 
         internal void mnuProjectForm_Company_Filter_Click(object sender, EventArgs e)

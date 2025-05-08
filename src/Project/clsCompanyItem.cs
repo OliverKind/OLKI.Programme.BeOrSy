@@ -542,14 +542,23 @@ namespace OLKI.Programme.BeOrSy.src.Project
         /// Create a new Company, get data from an XElement Object
         /// </summary>
         /// <param name="inputCompany">XElement to read Company data from</param>
-        public CompanyItem(XElement inputCompany)
+        public CompanyItem(XElement inputCompany) : this(inputCompany, 0)
+        {
+            base.Id = Serialize.GetFromXElement(inputCompany, "Id", base.Id);
+        }
+        /// <summary>
+        /// Create a new Company, get data from an XElement Object
+        /// </summary>
+        /// <param name="inputCompany">XElement to read Company data from</param>
+        /// <param name="id">Id for the new, empty Company</param>
+        public CompanyItem(XElement inputCompany, int id)
         {
             DateTime DateTimeTemp = DateTime.Now;
 
             base._comment = Serialize.GetFromXElement(inputCompany, "Comment", base._comment);
             base.DateItemCrated = DateTime.TryParse(Serialize.GetFromXElement(inputCompany, "DateItemCrated", ""), out DateTimeTemp) ? (DateTime?)DateTimeTemp : null;
             base.DateItemEdited = DateTime.TryParse(Serialize.GetFromXElement(inputCompany, "DateItemEdited", ""), out DateTimeTemp) ? (DateTime?)DateTimeTemp : null;
-            base.Id = Serialize.GetFromXElement(inputCompany, "Id", base.Id);
+            base.Id = id;
             base.NewItemState = NewItemStateFlag.NotNew;
             base._title = Serialize.GetFromXElement(inputCompany, "Title", base._title);
 
@@ -742,8 +751,9 @@ namespace OLKI.Programme.BeOrSy.src.Project
         /// <summary>
         /// Converts the Company Item to an XElement object
         /// </summary>
+        /// <param name="onlyCompany">Set to true if only company Data should been exportet, but no contacts, files, applications etc.</param>
         /// <returns>Company Item data as XElement</returns>
-        public XElement ToXElement()
+        public XElement ToXElement(bool onlyCompany)
         {
             base.NewItemState = NewItemStateFlag.NotNew;
             XElement Root = new XElement("CompanyItem");

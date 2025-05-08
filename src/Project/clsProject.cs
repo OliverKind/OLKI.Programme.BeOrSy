@@ -266,7 +266,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
             XElement CompList = new XElement("CompanyList");
             foreach (CompanyItem Comp in this.Companies.Values.OrderBy(oComp => oComp.Id))
             {
-                if (Comp.Delete == ItemBase.DeleteFlag.None) CompList.Add(Comp.ToXElement());
+                if (Comp.Delete == ItemBase.DeleteFlag.None) CompList.Add(Comp.ToXElement(false));
                 if (Comp.Delete == ItemBase.DeleteFlag.DeleteDirectory && !string.IsNullOrEmpty(Comp.Directory))
                 {
                     Toolbox.DirectoryAndFile.Directory.Delete(Comp.Directory, false, false, out _);
@@ -363,7 +363,7 @@ namespace OLKI.Programme.BeOrSy.src.Project
         /// <param name="readStart">The actual rad position</param>
         /// <param name="maxBufferLength">Maximum allowed buffer length</param>
         /// <returns>The maximum allowed read buffer length</returns>
-        private int GetValidBufferReadLength(int dataBufferLength, int readStart, int maxBufferLength)
+        public int GetValidBufferReadLength(int dataBufferLength, int readStart, int maxBufferLength)
         {
             if ((readStart * maxBufferLength + maxBufferLength) > dataBufferLength)
             {
