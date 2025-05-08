@@ -125,7 +125,6 @@
             // 
             this.txtNewlineCustom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtNewlineCustom.Location = new System.Drawing.Point(119, 111);
-            this.txtNewlineCustom.MaxLength = 20;
             this.txtNewlineCustom.Name = "txtNewlineCustom";
             this.txtNewlineCustom.Size = new System.Drawing.Size(175, 20);
             this.txtNewlineCustom.TabIndex = 5;
@@ -148,7 +147,7 @@
             // 
             this.txtSeperatorCustom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtSeperatorCustom.Location = new System.Drawing.Point(119, 87);
-            this.txtSeperatorCustom.MaxLength = 20;
+            this.txtSeperatorCustom.MaxLength = 1;
             this.txtSeperatorCustom.Name = "txtSeperatorCustom";
             this.txtSeperatorCustom.Size = new System.Drawing.Size(175, 20);
             this.txtSeperatorCustom.TabIndex = 4;
