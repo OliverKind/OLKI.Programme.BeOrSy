@@ -96,7 +96,7 @@
       <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="CompanyExportFile_FilterList" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">CSV-Datei (*.csv)|*.csv</Value>
+      <Value Profile="(Default)">CSV-Datei (*.csv)|*.csv|XML-Datei (*.xml)|*.xml</Value>
     </Setting>
   </Settings>
 </SettingsFile>
