@@ -666,11 +666,11 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
             {
                 case ".csv":
                     this._companyExportForm = new CompanyExportForm(this.lsvCompany.Items, this.lsvCompany.SelectedItems, CompanyExportForm.FormMode.ExportCSV, this.Project, SaveFileDialog.FileName);
-                    this._companyExportForm.Show(this);
+                    this._companyExportForm.ShowDialog(this);
                     break;
                 case ".xml":
                     this._companyExportForm = new CompanyExportForm(this.lsvCompany.Items, this.lsvCompany.SelectedItems, CompanyExportForm.FormMode.ExportXML, this.Project, SaveFileDialog.FileName);
-                    this._companyExportForm.Show(this);
+                    this._companyExportForm.ShowDialog(this);
                     break;
                 default:
                     return;
