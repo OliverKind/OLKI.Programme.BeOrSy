@@ -141,7 +141,7 @@ namespace OLKI.Programme.BeOrSy.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("dd.MM.yyy HH:mm:ss")]
+        [global::System.Configuration.DefaultSettingValueAttribute("dd.MM.yyyy HH:mm:ss")]
         [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public string DateTimeFormat {
             get {

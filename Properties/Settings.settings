@@ -30,7 +30,7 @@
       <Value Profile="(Default)">-1;-1</Value>
     </Setting>
     <Setting Name="DateTimeFormat" Roaming="true" Type="System.String" Scope="User">
-      <Value Profile="(Default)">dd.MM.yyy HH:mm:ss</Value>
+      <Value Profile="(Default)">dd.MM.yyyy HH:mm:ss</Value>
     </Setting>
     <Setting Name="Startup_DefaultLoadEmptyProject" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
