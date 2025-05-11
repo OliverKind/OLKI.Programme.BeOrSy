@@ -153,9 +153,9 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
             listViewItem.SubItems[3].Text = this._projectForm.Project.Companies[remIidSet[IdBelongingIndikator.Company]].TitleNoText;
             listViewItem.SubItems[4].Text = remIidSet[IdBelongingIndikator.Application] == 0 ? "" : this._projectForm.Project.Companies[remIidSet[IdBelongingIndikator.Company]].Applications[remIidSet[IdBelongingIndikator.Application]].TitleNoText;
             listViewItem.SubItems[5].Tag = remIidSet[IdBelongingIndikator.Company];
-            listViewItem.SubItems[5].Text = remIidSet[IdBelongingIndikator.Reminder].ToString();
+            listViewItem.SubItems[5].Text = remIidSet[IdBelongingIndikator.Company].ToString();
             listViewItem.SubItems[6].Tag = remIidSet[IdBelongingIndikator.Application];
-            listViewItem.SubItems[6].Text = remIidSet[IdBelongingIndikator.Reminder].ToString();
+            listViewItem.SubItems[6].Text = remIidSet[IdBelongingIndikator.Application].ToString();
             listViewItem.SubItems[7].Tag = remIidSet[IdBelongingIndikator.Reminder];
             listViewItem.SubItems[7].Text = remIidSet[IdBelongingIndikator.Reminder].ToString();
         }
