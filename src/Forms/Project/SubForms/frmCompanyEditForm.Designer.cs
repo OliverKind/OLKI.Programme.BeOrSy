@@ -340,9 +340,9 @@
             this.lblAdressCity.AutoSize = true;
             this.lblAdressCity.Location = new System.Drawing.Point(352, 21);
             this.lblAdressCity.Name = "lblAdressCity";
-            this.lblAdressCity.Size = new System.Drawing.Size(32, 13);
+            this.lblAdressCity.Size = new System.Drawing.Size(35, 13);
             this.lblAdressCity.TabIndex = 8;
-            this.lblAdressCity.Text = "Statt:";
+            this.lblAdressCity.Text = "Stadt:";
             // 
             // txtAdressPostcode
             // 
