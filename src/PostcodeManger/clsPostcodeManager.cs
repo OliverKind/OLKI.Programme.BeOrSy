@@ -275,6 +275,7 @@ namespace OLKI.Programme.BeOrSy.src.PostcodeManger
         {
             try
             {
+                searchCode = searchCode.Trim();
                 if (string.IsNullOrEmpty(searchCode) || this.PostcodeList == null || this.PostcodeList.Count == 0) return null;
                 List<PostcodeItem> ResultList = new List<PostcodeItem>();
                 foreach (PostcodeItem Item in this.PostcodeList)
