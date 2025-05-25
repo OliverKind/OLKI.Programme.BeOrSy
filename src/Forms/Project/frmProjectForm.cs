@@ -501,8 +501,10 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
 
             if (this._applicationEditForm.ShowDialog(this) == DialogResult.OK)
             {
-                CompSel.Applications.Add(NewId, this._applicationEditForm.Application);
                 this._applicationEditForm.Application.ItemChanged += new EventHandler(CompSel.Item_Changed);
+                this._applicationEditForm.Application.NewItemState = ItemBase.NewItemStateFlag.NewNotSaved;
+                CompSel.Applications.Add(NewId, this._applicationEditForm.Application);
+
                 this.Project.IdSet.Appl = NewId;
                 this.Project.IdSet.Cont = this._applicationEditForm.IdSet.Cont;
                 this.Project.IdSet.File = this._applicationEditForm.IdSet.File;
@@ -611,8 +613,10 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
 
             if (this._companyEditForm.ShowDialog(this) == DialogResult.OK)
             {
-                this.Project.Companies.Add(NewId, this._companyEditForm.Company);
                 this._companyEditForm.Company.ItemChanged += new EventHandler(this.Project.Item_Changed);
+                this._companyEditForm.Company.NewItemState = ItemBase.NewItemStateFlag.NewNotSaved;
+                this.Project.Companies.Add(NewId, this._companyEditForm.Company);
+
                 this.Project.IdSet.Comp = NewId;
                 this.Project.IdSet.Cont = this._companyEditForm.IdSet.Cont;
                 this.Project.IdSet.File = this._companyEditForm.IdSet.File;
