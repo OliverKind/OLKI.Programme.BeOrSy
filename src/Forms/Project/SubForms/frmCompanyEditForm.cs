@@ -82,7 +82,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
             this.Width = this.Width - Settings_AppConst.Default.Debug_FormWidthOffset;
             this.tabCompany.Width = this.tabCompany.Width - Settings_AppConst.Default.Debug_FormWidthOffset;
 #endif
-            this.btnAccept.Enabled = company.Id > 0;
+            this.btnAccept.Enabled = company.Id > 0 && company.NewItemState != ItemBase.NewItemStateFlag.NewInitial;
 
             this._systemChanged = true;
             this.Company = company;

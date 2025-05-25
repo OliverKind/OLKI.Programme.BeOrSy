@@ -215,6 +215,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms.Controles
 
             if (this._contactEditForm.ShowDialog(this) == DialogResult.OK)
             {
+                this._contactEditForm.Contact.NewItemState = ItemBase.NewItemStateFlag.NewNotSaved;
                 this.Items.Add(NewId, this._contactEditForm.Contact);
                 this.IdSet.Cont = NewId;
 

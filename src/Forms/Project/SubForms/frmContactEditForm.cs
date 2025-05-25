@@ -87,7 +87,7 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project.SubForms
             this.Width = this.Width + Settings_AppConst.Default.Debug_FormWidthOffset;
             this.tapContact.Width = this.tapContact.Width + Settings_AppConst.Default.Debug_FormWidthOffset;
 #endif
-            this.btnAccept.Enabled = contact.Id > 0;
+            this.btnAccept.Enabled = contact.Id > 0 && contact.NewItemState != ItemBase.NewItemStateFlag.NewInitial;
 
             this._systemChanged = true;
             this.CompanyId = companyId;
