@@ -504,6 +504,10 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
                 CompSel.Applications.Add(NewId, this._applicationEditForm.Application);
                 this._applicationEditForm.Application.ItemChanged += new EventHandler(CompSel.Item_Changed);
                 this.Project.IdSet.Appl = NewId;
+                this.Project.IdSet.Cont = this._applicationEditForm.IdSet.Cont;
+                this.Project.IdSet.File = this._applicationEditForm.IdSet.File;
+                this.Project.IdSet.Prog = this._applicationEditForm.IdSet.Prog;
+                this.Project.IdSet.Remi = this._applicationEditForm.IdSet.Remi;
 
                 ListViewItem NewItem = new ListViewItem();
                 this.lsvApplication.FillUpSubItems(NewItem);
@@ -610,6 +614,10 @@ namespace OLKI.Programme.BeOrSy.src.Forms.Project
                 this.Project.Companies.Add(NewId, this._companyEditForm.Company);
                 this._companyEditForm.Company.ItemChanged += new EventHandler(this.Project.Item_Changed);
                 this.Project.IdSet.Comp = NewId;
+                this.Project.IdSet.Cont = this._companyEditForm.IdSet.Cont;
+                this.Project.IdSet.File = this._companyEditForm.IdSet.File;
+                this.Project.IdSet.Prog = this._companyEditForm.IdSet.Prog;
+                this.Project.IdSet.Remi = this._companyEditForm.IdSet.Remi;
 
                 ListViewItem NewItem = new ListViewItem();
                 this.lsvCompany.FillUpSubItems(NewItem);
