@@ -197,7 +197,6 @@ namespace OLKI.Programme.BeOrSy.src.Forms.MainForm.SubForms
             if (FolderBrowserDialog.ShowDialog(this) == DialogResult.OK)
             {
                 this.txtStartupDefaultFileOpen.Text = FolderBrowserDialog.SelectedPath;
-                Settings.Default.DirectoryFile_DefaultPath = FolderBrowserDialog.SelectedPath;
             }
         }
 
