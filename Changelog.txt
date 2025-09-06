@@ -1,4 +1,11 @@
 # BeOrSy - Bewerbungsorganisationssystem
+## [3.3.0.20] - 2025-07-06
+### Changed
+- Set required .NET-Framework to Version 4.8.1
+
+### Fixed
+- Default Directory settings not handled correctly
+
 ## [3.2.0.19] - 2025-07-06
 ### Added
 - Note for known issues added
