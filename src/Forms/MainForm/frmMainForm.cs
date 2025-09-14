@@ -408,6 +408,12 @@ namespace OLKI.Programme.BeOrSy.src.Forms.MainForm
                 ShowUpdateControles = true,
                 UpdateOnStartup = Settings.Default.AppUpdate_CheckAtStartUp
             };
+            AboutForm.CheckForUpdate += new LinkLabelLinkClickedEventHandler(this.mnuMain_Help_CheckUpdate_Click);
+            AboutForm.UpdateOnStartupChanged += new EventHandler(delegate (object s, EventArgs ea)
+            {
+                Settings.Default.AppUpdate_CheckAtStartUp = AboutForm.UpdateOnStartup;
+                Settings.Default.Save();
+            });
             AboutForm.Show(this);
         }
 
