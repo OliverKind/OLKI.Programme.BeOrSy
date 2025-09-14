@@ -1,4 +1,8 @@
 # BeOrSy - Bewerbungsorganisationssystem
+## [3.3.1.21] - 2025-09-14
+### Fixed
+- Update check in AboutForm not working
+
 ## [3.3.0.20] - 2025-07-06
 ### Changed
 - Set required .NET-Framework to Version 4.8.1
