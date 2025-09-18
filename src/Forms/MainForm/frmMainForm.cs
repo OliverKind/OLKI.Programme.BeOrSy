@@ -242,6 +242,8 @@ namespace OLKI.Programme.BeOrSy.src.Forms.MainForm
             {
                 this.Invoke((Action)delegate { MessageBox.Show(this, Stringtable._0x0021m, Stringtable._0x0021c, MessageBoxButtons.OK, MessageBoxIcon.Error); });
             }
+            if (this.WindowState == FormWindowState.Normal) Settings_AppVar.Default.MainForm_Size = this.Size;
+            Settings_AppVar.Default.MainForm_State = this.WindowState;
             Settings_AppVar.Default.TempFileList = "";
             Settings_AppVar.Default.Save();
         }
