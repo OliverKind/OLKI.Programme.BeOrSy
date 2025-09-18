@@ -1,4 +1,8 @@
 # BeOrSy - Bewerbungsorganisationssystem
+## [3.3.2.22] - 2025-09-18
+### Fixed
+- Apllication MainForm state and size not saved
+
 ## [3.3.1.21] - 2025-09-14
 ### Fixed
 - Update check in AboutForm not working
